@@ -1,0 +1,2350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phinanké — Asesor de Seguros Personalizado | Primera asesoría gratis</title>
+  <meta name="description" content="Asesoría personalizada en seguros de vida, gastos médicos, retiro y educación. Sin marcas, sin presiones — solo la solución que realmente necesitas. +8 años de experiencia. Primera consulta gratis." />
+  <meta name="keywords" content="asesor de seguros, seguros de vida, gastos médicos mayores, plan de retiro, seguros educativos, seguros personalizados, Phinanké, Erón Bello" />
+  <meta name="author" content="Erón Bello León — Phinanké" />
+  <link rel="canonical" href="https://phinanke.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://phinanke.com/" />
+  <meta property="og:title" content="Phinanké — Asesor de Seguros que trabaja para ti, no para una marca" />
+  <meta property="og:description" content="Diagnóstico personalizado gratuito. Te recomendamos exactamente lo que necesitas: seguros de vida, salud, retiro y educación. +8 años de experiencia." />
+  <meta property="og:image" content="https://phinanke.com/img/og-cover.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Phinanké — Asesor de Seguros Personalizado" />
+  <meta name="twitter:description" content="Primera asesoría gratis. Te decimos exactamente qué seguro necesitas según tu situación de vida." />
+  <meta name="twitter:image" content="https://phinanke.com/img/og-cover.jpg" />
+
+  <!-- Schema: Person + LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://phinanke.com/#advisor",
+        "name": "Erón Bello León",
+        "jobTitle": "Asesor de Seguros",
+        "description": "Asesor de seguros independiente con más de 8 años de experiencia en seguros de vida, gastos médicos, retiro y educación.",
+        "url": "https://phinanke.com",
+        "sameAs": [
+          "https://www.instagram.com/eronbelloleon",
+          "https://www.tiktok.com/@eronbelloleon",
+          "https://www.facebook.com/share/1CYF6nJ7q2/"
+        ]
+      },
+      {
+        "@type": "FinancialService",
+        "@id": "https://phinanke.com/#business",
+        "name": "Phinanké",
+        "description": "Asesoría personalizada en seguros de vida, gastos médicos mayores, retiro y educación. Primera consulta gratuita.",
+        "url": "https://phinanke.com",
+        "founder": { "@id": "https://phinanke.com/#advisor" },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "MXN",
+          "description": "Primera asesoría de seguros completamente gratuita y sin compromiso"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"¿La primera asesoría es realmente gratis?","acceptedAnswer":{"@type":"Answer","text":"Sí, 100% gratis y sin compromiso. La primera sesión es para entender tu situación y ver si podemos ayudarte. No hay ningún costo ni obligación de contratar nada."}},
+      {"@type":"Question","name":"¿Con qué aseguradoras trabajan?","acceptedAnswer":{"@type":"Answer","text":"Trabajamos principalmente con Allianz y Seguros Monterrey New York Life, dos de las aseguradoras más sólidas de México. Elegimos la que mejor se adapta a tu situación."}},
+      {"@type":"Question","name":"¿Cuánto tiempo toma tener un seguro activo?","acceptedAnswer":{"@type":"Answer","text":"Desde la primera conversación hasta tener tu póliza activa, el proceso típico toma entre 3 y 7 días hábiles, dependiendo del tipo de cobertura y si se requiere examen médico."}},
+      {"@type":"Question","name":"¿Puedo cancelar cuando quiero?","acceptedAnswer":{"@type":"Answer","text":"Sí. Los seguros son contratos flexibles. Te explicamos en detalle las condiciones de cada producto antes de firmar para que sepas exactamente qué pasa si decides cancelar."}},
+      {"@type":"Question","name":"¿Qué pasa si ya tengo un seguro con otra persona?","acceptedAnswer":{"@type":"Answer","text":"Sin problema. Hacemos un diagnóstico gratuito de lo que tienes para ver si cubre bien tus necesidades actuales. Si está bien, te lo decimos. Si hay huecos o estás pagando de más, también."}},
+      {"@type":"Question","name":"¿Tengo que saber de seguros para hablar con ustedes?","acceptedAnswer":{"@type":"Answer","text":"Para nada. Nuestro trabajo es traducirte el mundo de los seguros a términos que tengan sentido para tu vida. No necesitas saber nada previo, solo contarnos tu situación."}}
+    ]
+  }
+  </script>
+  <link rel="icon" href="img/logo-icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="img/logo-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ═══════════════════════════════
+       RESET & TOKENS
+    ═══════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #03045e;
+      --b1:     #023e8a;
+      --b2:     #0077b6;
+      --b3:     #0096c7;
+      --b4:     #00b4d8;
+      --b5:     #48cae4;
+      --b6:     #90e0ef;
+      --b7:     #ade8f4;
+      --b8:     #caf0f8;
+
+      --surface-0: #060818;
+      --surface-1: #0b1023;
+      --surface-2: #111827;
+      --surface-3: rgba(255,255,255,.04);
+      --border:    rgba(255,255,255,.08);
+      --border-hi: rgba(72,202,228,.3);
+
+      --text-1: #ffffff;
+      --text-2: rgba(255,255,255,.65);
+      --text-3: rgba(255,255,255,.38);
+
+      --r-sm: 12px;
+      --r-md: 20px;
+      --r-lg: 28px;
+      --r-xl: 36px;
+
+      --ease: cubic-bezier(.4,0,.2,1);
+      --t: .3s var(--ease);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--surface-0);
+      color: var(--text-1);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1,h2,h3,h4 {
+      font-family: 'Geist', 'Inter', system-ui, sans-serif;
+      line-height: 1.1;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ── Utility ── */
+    .container { width: 92%; max-width: 1200px; margin: 0 auto; }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .4em 1.1em;
+      border-radius: 999px;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      background: rgba(72,202,228,.12);
+      border: 1px solid rgba(72,202,228,.28);
+      color: var(--b5);
+    }
+    .pill-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--b5);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%,100% { opacity:1; transform:scale(1); }
+      50%      { opacity:.5; transform:scale(.7); }
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      padding: .85rem 1.75rem;
+      border-radius: 999px;
+      font-family: 'Geist','Inter',sans-serif;
+      font-size: .9rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all var(--t);
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--b3);
+      color: #fff;
+      box-shadow: 0 0 0 0 rgba(0,150,199,0);
+    }
+    .btn-primary:hover {
+      background: var(--b2);
+      box-shadow: 0 0 40px rgba(0,150,199,.5);
+      transform: translateY(-2px);
+    }
+    .btn-ghost {
+      background: var(--surface-3);
+      color: var(--text-2);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+    }
+    .btn-ghost:hover {
+      background: rgba(255,255,255,.08);
+      border-color: var(--border-hi);
+      color: var(--text-1);
+    }
+    .btn-wa {
+      background: #22c55e;
+      color: #fff;
+    }
+    .btn-wa:hover {
+      background: #16a34a;
+      box-shadow: 0 0 32px rgba(34,197,94,.4);
+      transform: translateY(-2px);
+    }
+
+    /* ═══════════════════════════════
+       NAV
+    ═══════════════════════════════ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 999;
+      padding: 16px 0;
+      transition: background var(--t), border var(--t);
+    }
+    nav.scrolled {
+      background: rgba(6,8,24,.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      flex-shrink: 0;
+    }
+    .nav-horse {
+      height: 36px;
+      width: auto;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .logo-text { font-family:'Geist',sans-serif; font-weight: 900; font-size: 1.05rem; letter-spacing: .06em; color: var(--text-1); }
+    .logo-sub  { font-size: .58rem; color: var(--text-3); font-weight: 500; margin-top: .1rem; letter-spacing: .08em; text-transform: uppercase; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: .85rem;
+      font-weight: 500;
+      color: var(--text-2);
+      transition: color var(--t);
+    }
+    .nav-links a:hover { color: var(--text-1); }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px; height: 2px;
+      background: var(--text-2);
+      border-radius: 2px;
+      transition: all var(--t);
+    }
+
+    /* ═══════════════════════════════
+       HERO
+    ═══════════════════════════════ */
+    .hero {
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 120px 0 80px;
+      overflow: hidden;
+    }
+
+    /* Orbs */
+    .hero::before,
+    .hero::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      pointer-events: none;
+    }
+    .hero::before {
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(0,119,182,.35) 0%, transparent 70%);
+      top: -200px; left: -200px;
+      animation: orb1 12s ease-in-out infinite alternate;
+    }
+    .hero::after {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(72,202,228,.2) 0%, transparent 70%);
+      bottom: -100px; right: -100px;
+      animation: orb2 10s ease-in-out infinite alternate;
+    }
+    @keyframes orb1 {
+      from { transform: translate(0,0) scale(1); }
+      to   { transform: translate(60px,40px) scale(1.15); }
+    }
+    @keyframes orb2 {
+      from { transform: translate(0,0) scale(1); }
+      to   { transform: translate(-40px,30px) scale(1.1); }
+    }
+
+    /* Noise overlay */
+    .hero-noise {
+      position: absolute;
+      inset: 0;
+      opacity: .035;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-size: 200px;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 440px;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .hero-eyebrow { margin-bottom: 1.5rem; }
+
+    .hero h1 {
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(180deg, #fff 30%, rgba(255,255,255,.55) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(90deg, var(--b4), var(--b5));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-desc {
+      font-size: 1.1rem;
+      color: var(--text-2);
+      max-width: 500px;
+      margin-bottom: 2.5rem;
+      line-height: 1.75;
+    }
+
+    .hero-actions { display: flex; gap: .75rem; flex-wrap: wrap; margin-bottom: 3rem; }
+
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    .trust-avatars {
+      display: flex;
+      margin-right: .25rem;
+    }
+    .trust-avatars span {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--b2), var(--b5));
+      border: 2px solid var(--surface-0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .65rem;
+      font-weight: 700;
+      margin-left: -8px;
+    }
+    .trust-avatars span:first-child { margin-left: 0; }
+    .trust-text { font-size: .8rem; color: var(--text-3); }
+    .trust-text strong { color: var(--text-2); }
+
+    /* Hero card / visual */
+    .hero-card-wrap {
+      position: relative;
+    }
+    .hero-card-glow {
+      position: absolute;
+      inset: -40px;
+      background: radial-gradient(circle at 50% 50%, rgba(0,150,199,.25) 0%, transparent 70%);
+      filter: blur(30px);
+      pointer-events: none;
+    }
+    .hero-glass-card {
+      position: relative;
+      background: rgba(255,255,255,.04);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--r-xl);
+      padding: 2rem;
+      overflow: hidden;
+    }
+    .hero-glass-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.2), transparent);
+    }
+
+    .advisor-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+    .advisor-avatar {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(160deg, var(--b1) 0%, var(--b3) 100%);
+      border: 2px solid rgba(72,202,228,.35);
+      overflow: hidden;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1rem;
+      flex-shrink: 0;
+      box-shadow: 0 0 20px rgba(0,150,199,.3);
+    }
+    .advisor-avatar img {
+      width: 130%;
+      height: 130%;
+      object-fit: cover;
+      object-position: top center;
+      margin-top: -4px;
+    }
+    .advisor-name { font-family:'Geist',sans-serif; font-weight:700; font-size:.95rem; }
+    .advisor-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      font-size: .7rem;
+      color: #4ade80;
+      background: rgba(74,222,128,.1);
+      border: 1px solid rgba(74,222,128,.25);
+      border-radius: 999px;
+      padding: .2em .7em;
+      margin-top: .25rem;
+    }
+    .advisor-badge-dot { width:5px; height:5px; border-radius:50%; background:#4ade80; }
+
+    .glass-checklist { list-style: none; display: flex; flex-direction: column; gap: .85rem; margin-bottom: 1.75rem; }
+    .glass-checklist li {
+      display: flex;
+      align-items: center;
+      gap: .85rem;
+      font-size: .88rem;
+      color: var(--text-2);
+    }
+    .check-ico {
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      background: rgba(0,150,199,.2);
+      border: 1px solid rgba(0,150,199,.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: .65rem;
+      color: var(--b5);
+    }
+
+    .free-banner {
+      background: linear-gradient(135deg, rgba(0,119,182,.25), rgba(72,202,228,.15));
+      border: 1px solid rgba(72,202,228,.25);
+      border-radius: var(--r-sm);
+      padding: .9rem 1.25rem;
+      text-align: center;
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--b7);
+    }
+
+    .stat-chips {
+      display: flex;
+      gap: .75rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .stat-chip {
+      flex: 1;
+      min-width: 100px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--border);
+      border-radius: var(--r-sm);
+      padding: .75rem 1rem;
+      text-align: center;
+    }
+    .stat-chip .num {
+      font-family: 'Geist',sans-serif;
+      font-size: 1.4rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--b4), var(--b5));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stat-chip .lbl { font-size: .68rem; color: var(--text-3); margin-top: .15rem; }
+
+    /* ═══════════════════════════════
+       BENTO — PROPUESTA DE VALOR
+    ═══════════════════════════════ */
+    .section { padding: 100px 0; }
+
+    .section-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .eyebrow-line {
+      flex: 0 0 40px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--b3), transparent);
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      margin-bottom: 1rem;
+      background: linear-gradient(180deg, #fff 40%, rgba(255,255,255,.6) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+    }
+    .section-sub {
+      font-size: 1rem;
+      color: var(--text-2);
+      max-width: 540px;
+      line-height: 1.7;
+    }
+
+    .section-header { margin-bottom: 56px; }
+
+    /* Bento grid */
+    .bento {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto;
+      gap: 16px;
+    }
+
+    .bento-card {
+      background: var(--surface-1);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: all var(--t);
+    }
+    .bento-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,.03) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .bento-card:hover {
+      border-color: var(--border-hi);
+      transform: translateY(-3px);
+      box-shadow: 0 20px 60px rgba(0,0,0,.4), 0 0 40px rgba(0,150,199,.08);
+    }
+
+    .bento-card-accent {
+      background: linear-gradient(135deg, var(--navy), var(--b1));
+      border-color: rgba(0,119,182,.4);
+    }
+    .bento-card-glow {
+      background: linear-gradient(135deg, rgba(0,150,199,.15), rgba(72,202,228,.08));
+      border-color: rgba(72,202,228,.2);
+    }
+
+    /* Bento grid positions */
+    .bc-1 { grid-column: span 4; }
+    .bc-2 { grid-column: span 4; }
+    .bc-3 { grid-column: span 4; }
+    .bc-4 { grid-column: span 6; }
+    .bc-5 { grid-column: span 6; }
+    .bc-6 { grid-column: span 12; }
+
+    .bento-icon {
+      width: 48px; height: 48px;
+      border-radius: var(--r-sm);
+      background: linear-gradient(135deg, rgba(0,150,199,.25), rgba(72,202,228,.15));
+      border: 1px solid rgba(72,202,228,.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    .bento-card h3 {
+      font-family: 'Geist',sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-1);
+      margin-bottom: .5rem;
+      letter-spacing: -.02em;
+    }
+    .bento-card p {
+      font-size: .85rem;
+      color: var(--text-2);
+      line-height: 1.65;
+    }
+
+    .bento-big-num {
+      font-family: 'Geist',sans-serif;
+      font-size: 4rem;
+      font-weight: 900;
+      letter-spacing: -.06em;
+      background: linear-gradient(135deg, var(--b4), var(--b5));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: .5rem;
+    }
+
+    /* Inline list inside bento */
+    .bento-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+      margin-top: .75rem;
+    }
+    .bento-list li {
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      font-size: .82rem;
+      color: var(--text-2);
+    }
+    .bento-list li span {
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: rgba(0,150,199,.2);
+      border: 1px solid rgba(0,150,199,.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .6rem;
+      color: var(--b5);
+      flex-shrink: 0;
+    }
+
+    .bento-wide-inner {
+      display: grid;
+      grid-template-columns: 1fr 1px 1fr 1px 1fr;
+      gap: 0;
+      align-items: center;
+    }
+    .bento-wide-item { padding: 1.5rem 2rem; }
+    .bento-wide-sep { background: var(--border); height: 60px; width: 1px; }
+    .bento-wide-item .label {
+      font-size: .72rem;
+      color: var(--text-3);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-weight: 600;
+      margin-bottom: .5rem;
+    }
+    .bento-wide-item .value {
+      font-family: 'Geist',sans-serif;
+      font-size: 1.75rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--b4), var(--b5));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -.04em;
+    }
+    .bento-wide-item .desc {
+      font-size: .8rem;
+      color: var(--text-2);
+      margin-top: .35rem;
+    }
+
+    /* Avatar initials fallback */
+    .avatar-initials {
+      width: 100%; height: 100%;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Geist',sans-serif;
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: white;
+    }
+
+    /* ═══════════════════════════════
+       SITUACIONES — SECCIÓN AUDIENCIA
+    ═══════════════════════════════ */
+    .situations-section {
+      background: var(--surface-1);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .situations-section::before {
+      content: '';
+      position: absolute;
+      width: 700px; height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,119,182,.12) 0%, transparent 65%);
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      filter: blur(80px);
+      pointer-events: none;
+    }
+
+    .situations-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 52px;
+    }
+
+    .sit-card {
+      background: var(--surface-0);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 1.75rem;
+      transition: all var(--t);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .sit-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--b2), var(--b5));
+      opacity: 0;
+      transition: opacity var(--t);
+    }
+    .sit-card:hover {
+      border-color: var(--border-hi);
+      transform: translateY(-4px);
+      box-shadow: 0 24px 56px rgba(0,0,0,.4);
+    }
+    .sit-card:hover::before { opacity: 1; }
+
+    .sit-icon {
+      width: 44px; height: 44px;
+      border-radius: var(--r-sm);
+      background: linear-gradient(135deg, rgba(0,150,199,.2), rgba(72,202,228,.1));
+      border: 1px solid rgba(72,202,228,.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .sit-card blockquote {
+      font-family: 'Geist', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-1);
+      line-height: 1.4;
+      letter-spacing: -.02em;
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+    .sit-card p {
+      font-size: .83rem;
+      color: var(--text-2);
+      line-height: 1.65;
+      flex: 1;
+    }
+    .sit-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--b5);
+      opacity: .75;
+    }
+
+    .situations-cta {
+      margin-top: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(135deg, rgba(0,119,182,.15), rgba(72,202,228,.08));
+      border: 1px solid rgba(72,202,228,.2);
+      border-radius: var(--r-lg);
+      padding: 2rem 2.5rem;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .situations-cta-text h3 {
+      font-family: 'Geist',sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: -.03em;
+      margin-bottom: .35rem;
+    }
+    .situations-cta-text p {
+      font-size: .875rem;
+      color: var(--text-2);
+    }
+
+    /* ═══════════════════════════════
+       PROCESS
+    ═══════════════════════════════ */
+    .process-wrap {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+    }
+    .process-step {
+      background: var(--surface-1);
+      padding: 2.5rem 2rem;
+      position: relative;
+      transition: background var(--t);
+    }
+    .process-step:hover { background: rgba(0,150,199,.07); }
+    .step-num-wrap {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      margin-bottom: 1.25rem;
+    }
+    .step-num {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--b2), var(--b4));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Geist',sans-serif;
+      font-weight: 900;
+      font-size: .95rem;
+      box-shadow: 0 0 20px rgba(0,150,199,.4);
+    }
+    .step-connector {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(0,150,199,.4), transparent);
+    }
+    .process-step:last-child .step-connector { display: none; }
+    .process-step h3 {
+      font-family: 'Geist',sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: .5rem;
+      letter-spacing: -.02em;
+    }
+    .process-step p { font-size: .82rem; color: var(--text-2); line-height: 1.65; }
+
+    /* ═══════════════════════════════
+       SERVICES
+    ═══════════════════════════════ */
+    .services-section {
+      background: var(--surface-1);
+      border-top: 1px solid var(--border);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .service-card {
+      background: var(--surface-0);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 1.75rem;
+      transition: all var(--t);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--b2), var(--b5));
+      opacity: 0;
+      transition: opacity var(--t);
+    }
+    .service-card:hover {
+      border-color: var(--border-hi);
+      transform: translateY(-4px);
+      box-shadow: 0 24px 64px rgba(0,0,0,.5), 0 0 0 1px rgba(72,202,228,.08);
+    }
+    .service-card:hover::after { opacity: 1; }
+
+    .service-card-featured {
+      background: linear-gradient(135deg, rgba(0,119,182,.15), rgba(72,202,228,.08));
+      border-color: rgba(72,202,228,.25);
+      grid-column: span 1;
+    }
+
+    .service-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; }
+    .s-icon {
+      width: 44px; height: 44px;
+      border-radius: var(--r-sm);
+      background: linear-gradient(135deg, rgba(0,150,199,.3), rgba(72,202,228,.2));
+      border: 1px solid rgba(72,202,228,.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+    .s-badge {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: .3em .8em;
+      border-radius: 999px;
+      background: rgba(72,202,228,.1);
+      border: 1px solid rgba(72,202,228,.2);
+      color: var(--b5);
+    }
+    .service-card h3 {
+      font-family: 'Geist',sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -.02em;
+      margin-bottom: .4rem;
+    }
+    .service-for {
+      font-size: .75rem;
+      color: var(--b4);
+      font-weight: 600;
+      margin-bottom: .85rem;
+      display: block;
+    }
+    .service-card p { font-size: .84rem; color: var(--text-2); line-height: 1.65; flex: 1; margin-bottom: 1.25rem; }
+    .chip-row { display: flex; flex-wrap: wrap; gap: .4rem; }
+    .chip {
+      font-size: .68rem;
+      font-weight: 600;
+      padding: .3em .75em;
+      border-radius: 999px;
+      background: rgba(0,150,199,.1);
+      border: 1px solid rgba(0,150,199,.2);
+      color: var(--b6);
+    }
+
+    .service-cta-card {
+      background: linear-gradient(135deg, var(--navy), var(--b1));
+      border-color: rgba(0,119,182,.5);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      grid-column: span 1;
+    }
+    .service-cta-card:hover { transform: translateY(-4px); }
+    .service-cta-card p { color: rgba(255,255,255,.7); }
+    .service-cta-card h3 { font-size: 1.3rem; letter-spacing: -.03em; margin-bottom: .5rem; }
+
+    /* ═══════════════════════════════
+       ABOUT
+    ═══════════════════════════════ */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .about-photo-area { position: relative; }
+    .about-photo-frame {
+      width: 100%;
+      aspect-ratio: 3/4;
+      border-radius: var(--r-xl);
+      background: radial-gradient(ellipse at 60% 30%, rgba(0,119,182,.35) 0%, rgba(6,8,24,.9) 70%);
+      border: 1px solid rgba(0,150,199,.25);
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      position: relative;
+    }
+    .about-photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: bottom center;
+    }
+    .about-photo-frame::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 15%;
+      background: linear-gradient(to top, var(--surface-0) 0%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .about-badge {
+      position: absolute;
+      bottom: 24px;
+      right: -20px;
+      background: var(--surface-1);
+      border: 1px solid var(--border-hi);
+      border-radius: var(--r-md);
+      padding: 1rem 1.25rem;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 20px 48px rgba(0,0,0,.4);
+    }
+    .about-badge .num {
+      font-family: 'Geist',sans-serif;
+      font-size: 2.25rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--b4), var(--b5));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+    }
+    .about-badge .lbl { font-size: .72rem; color: var(--text-2); margin-top: .2rem; }
+
+    .about-badge-2 {
+      position: absolute;
+      top: 24px;
+      left: -20px;
+      background: linear-gradient(135deg, rgba(0,150,199,.2), rgba(72,202,228,.1));
+      border: 1px solid rgba(72,202,228,.3);
+      border-radius: var(--r-sm);
+      padding: .6rem 1rem;
+      backdrop-filter: blur(12px);
+      font-size: .8rem;
+      font-weight: 700;
+      color: var(--b5);
+    }
+
+    .about-content .section-title { margin-bottom: 1rem; }
+    .about-content p { color: var(--text-2); font-size: .95rem; line-height: 1.8; margin-bottom: 1rem; }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 1.75rem 0;
+    }
+    .value-item {
+      background: var(--surface-1);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 1rem;
+      transition: all var(--t);
+    }
+    .value-item:hover { border-color: var(--border-hi); }
+    .value-item .vi-icon { font-size: 1.25rem; margin-bottom: .5rem; }
+    .value-item h4 {
+      font-family: 'Geist',sans-serif;
+      font-size: .85rem;
+      font-weight: 700;
+      margin-bottom: .2rem;
+      letter-spacing: -.01em;
+    }
+    .value-item p { font-size: .76rem; color: var(--text-2); line-height: 1.5; }
+
+    /* ═══════════════════════════════
+       CTA FINAL
+    ═══════════════════════════════ */
+    .cta-section {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: 120px 0;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      width: 800px; height: 800px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,119,182,.25) 0%, transparent 65%);
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      filter: blur(80px);
+      pointer-events: none;
+    }
+
+    .cta-inner { position: relative; z-index: 1; }
+    .cta-section h2 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 900;
+      letter-spacing: -.05em;
+      margin-bottom: 1.25rem;
+      background: linear-gradient(180deg, #fff 30%, rgba(255,255,255,.55));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .cta-section p { font-size: 1.1rem; color: var(--text-2); max-width: 480px; margin: 0 auto 2.5rem; line-height: 1.7; }
+    .cta-actions { display: flex; justify-content: center; gap: .75rem; flex-wrap: wrap; }
+
+    .cta-note { font-size: .78rem; color: var(--text-3); margin-top: 1.5rem; }
+
+    /* ═══════════════════════════════
+       FOOTER
+    ═══════════════════════════════ */
+    footer {
+      background: var(--surface-1);
+      border-top: 1px solid var(--border);
+      padding: 56px 0 32px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 40px;
+    }
+    .footer-brand p { font-size: .85rem; color: var(--text-2); line-height: 1.7; max-width: 300px; margin: 1rem 0; }
+
+    .social-row { display: flex; gap: .6rem; }
+    .soc-btn {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--surface-3);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .72rem;
+      font-weight: 700;
+      transition: all var(--t);
+      cursor: pointer;
+    }
+    .soc-btn:hover { background: var(--b2); border-color: var(--b2); color: #fff; }
+
+    .footer-col h4 {
+      font-family: 'Geist',sans-serif;
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: 1rem;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+    .footer-col ul a { font-size: .85rem; color: var(--text-2); transition: color var(--t); }
+    .footer-col ul a:hover { color: var(--text-1); }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: .78rem;
+      color: var(--text-3);
+      flex-wrap: wrap;
+      gap: .5rem;
+    }
+
+    /* ═══════════════════════════════
+       FLOATING WA BUTTON
+    ═══════════════════════════════ */
+    .wa-float {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      width: 56px; height: 56px;
+      background: #22c55e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 24px rgba(34,197,94,.45), 0 0 0 0 rgba(34,197,94,.3);
+      z-index: 900;
+      transition: all var(--t);
+      animation: wa-ring 3s ease-in-out infinite;
+    }
+    @keyframes wa-ring {
+      0%,100% { box-shadow: 0 4px 24px rgba(34,197,94,.45), 0 0 0 0 rgba(34,197,94,.3); }
+      50%      { box-shadow: 0 4px 24px rgba(34,197,94,.45), 0 0 0 10px rgba(34,197,94,.0); }
+    }
+    .wa-float:hover { transform: scale(1.1); background: #16a34a; }
+    .wa-float svg { width: 28px; height: 28px; }
+
+    /* ═══════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════ */
+    /* ═══════════════════════════════
+       MOBILE MENU DRAWER
+    ═══════════════════════════════ */
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      z-index: 998;
+      display: flex;
+      flex-direction: column;
+      background: var(--surface-1);
+      transform: translateX(100%);
+      transition: transform .35s cubic-bezier(.4,0,.2,1);
+      overflow-y: auto;
+    }
+    .mobile-menu.open { transform: translateX(0); }
+    .mobile-menu-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-menu-close {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--surface-3);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      color: var(--text-1);
+      font-size: 1.2rem;
+    }
+    .mobile-menu-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem 24px;
+      gap: .25rem;
+      flex: 1;
+    }
+    .mobile-menu-links a {
+      display: block;
+      padding: 1rem 1.25rem;
+      border-radius: var(--r-sm);
+      font-family: 'Geist',sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-2);
+      transition: all var(--t);
+      letter-spacing: -.02em;
+    }
+    .mobile-menu-links a:hover,
+    .mobile-menu-links a:active {
+      background: rgba(0,150,199,.1);
+      color: var(--text-1);
+      padding-left: 1.75rem;
+    }
+    .mobile-menu-footer {
+      padding: 1.5rem 24px 2rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+    }
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+    /* ═══════════════════════════════
+       MOBILE ADVISOR STRIP (hero)
+    ═══════════════════════════════ */
+    .mobile-advisor-strip {
+      display: none;
+      align-items: center;
+      gap: .75rem;
+      background: rgba(255,255,255,.05);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: .875rem 1rem;
+      margin-top: 1.5rem;
+    }
+    .mas-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--b2), var(--b4));
+      border: 2px solid rgba(72,202,228,.3);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .mas-avatar img { width:100%; height:100%; object-fit:cover; object-position: top center; }
+    .mas-info { flex: 1; }
+    .mas-name { font-family:'Geist',sans-serif; font-weight:700; font-size:.85rem; }
+    .mas-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      font-size: .65rem;
+      color: #4ade80;
+      font-weight: 600;
+    }
+    .mas-dot { width:5px; height:5px; border-radius:50%; background:#4ade80; }
+    .mas-chips { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .5rem; }
+    .mas-chip {
+      font-size: .65rem;
+      font-weight: 600;
+      padding: .25em .7em;
+      border-radius: 999px;
+      background: rgba(0,150,199,.15);
+      border: 1px solid rgba(0,150,199,.25);
+      color: var(--b6);
+    }
+
+    /* ═══════════════════════════════
+       MOBILE BOTTOM CTA BAR
+    ═══════════════════════════════ */
+    .mobile-cta-bar {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 890;
+      background: rgba(11,16,35,.95);
+      backdrop-filter: blur(16px);
+      border-top: 1px solid var(--border);
+      padding: .875rem 1.25rem;
+      padding-bottom: calc(.875rem + env(safe-area-inset-bottom));
+      align-items: center;
+      gap: .75rem;
+    }
+    .mobile-cta-bar .btn { flex: 1; justify-content: center; padding: .8rem 1rem; font-size: .88rem; }
+
+    /* ═══════════════════════════════
+       SCROLL ANIMATIONS
+    ═══════════════════════════════ */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .6s var(--ease), transform .6s var(--ease);
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .fade-up-delay-1 { transition-delay: .1s; }
+    .fade-up-delay-2 { transition-delay: .2s; }
+    .fade-up-delay-3 { transition-delay: .3s; }
+    .fade-up-delay-4 { transition-delay: .4s; }
+    .fade-up-delay-5 { transition-delay: .5s; }
+
+    /* ═══════════════════════════════
+       TESTIMONIOS
+    ═══════════════════════════════ */
+    .testimonials-section {
+      background: var(--surface-1);
+      border-top: 1px solid var(--border);
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 52px;
+    }
+    .testi-card {
+      background: var(--surface-0);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: all var(--t);
+      position: relative;
+    }
+    .testi-card:hover {
+      border-color: var(--border-hi);
+      transform: translateY(-3px);
+    }
+    .testi-stars { display: flex; gap: 3px; }
+    .testi-star { color: #fbbf24; font-size: .9rem; }
+    .testi-quote {
+      font-size: .95rem;
+      color: var(--text-1);
+      line-height: 1.7;
+      flex: 1;
+      font-style: italic;
+    }
+    .testi-quote::before { content: '"'; font-size: 1.5rem; color: var(--b4); line-height: 0; vertical-align: -0.4em; margin-right: 2px; }
+    .testi-quote::after  { content: '"'; font-size: 1.5rem; color: var(--b4); line-height: 0; vertical-align: -0.4em; margin-left:  2px; }
+    .testi-author { display: flex; align-items: center; gap: .75rem; }
+    .testi-avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--b2), var(--b5));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Geist',sans-serif;
+      font-weight: 800; font-size: .75rem;
+      flex-shrink: 0;
+    }
+    .testi-name { font-family:'Geist',sans-serif; font-weight:700; font-size:.85rem; }
+    .testi-role { font-size: .72rem; color: var(--text-3); }
+    .testi-result {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .72rem;
+      font-weight: 700;
+      padding: .35em .85em;
+      border-radius: 999px;
+      background: rgba(74,222,128,.1);
+      border: 1px solid rgba(74,222,128,.25);
+      color: #4ade80;
+      align-self: flex-start;
+    }
+
+    /* ═══════════════════════════════
+       FAQ
+    ═══════════════════════════════ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 52px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .faq-item {
+      background: var(--surface-1);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+      transition: border-color var(--t);
+    }
+    .faq-item.open { border-color: var(--border-hi); }
+    .faq-trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.25rem 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      color: var(--text-1);
+    }
+    .faq-trigger h3 {
+      font-family: 'Geist',sans-serif;
+      font-size: .95rem;
+      font-weight: 700;
+      letter-spacing: -.02em;
+      line-height: 1.3;
+    }
+    .faq-icon {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--surface-3);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .75rem;
+      flex-shrink: 0;
+      transition: transform var(--t), background var(--t);
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); background: rgba(0,150,199,.2); border-color: var(--border-hi); }
+    .faq-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s var(--ease);
+    }
+    .faq-body-inner {
+      padding: 0 1.5rem 1.25rem;
+      font-size: .9rem;
+      color: var(--text-2);
+      line-height: 1.75;
+    }
+    .faq-body-inner strong { color: var(--b5); font-weight: 600; }
+
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-card-wrap { display: none; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .bento .bc-1,.bento .bc-2,.bento .bc-3 { grid-column: span 6; }
+      .bento .bc-4,.bento .bc-5 { grid-column: span 12; }
+      .bento-wide-inner { grid-template-columns: 1fr; gap: 1rem; }
+      .bento-wide-sep { display: none; }
+      .process-wrap { grid-template-columns: repeat(2, 1fr); }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-photo-area { max-width: 380px; }
+      .situations-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: 72px 0; }
+      .hero { padding: 100px 0 100px; }
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .services-grid { grid-template-columns: 1fr; }
+      .bento .bc-1,.bento .bc-2,.bento .bc-3,
+      .bento .bc-4,.bento .bc-5,.bento .bc-6 { grid-column: span 12; }
+      .process-wrap { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .about-badge { right: 0; }
+      .about-badge-2 { left: 0; }
+      .values-grid { grid-template-columns: 1fr; }
+      .situations-grid { grid-template-columns: 1fr; }
+      .situations-cta { flex-direction: column; text-align: center; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .mobile-advisor-strip { display: flex; }
+      .mobile-cta-bar { display: flex; }
+      .wa-float { bottom: 90px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ════════════════════ NAV ════════════════════ -->
+  <header>
+  <nav id="nav" aria-label="Navegación principal">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#" class="nav-logo">
+          <img src="img/logo-icon.png" alt="" aria-hidden="true" class="nav-horse" />
+          <div>
+            <div class="logo-text">PHINANKÉ</div>
+            <div class="logo-sub">Protegiendo lo más valioso de tu vida</div>
+          </div>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#valor">Por qué yo</a></li>
+          <li><a href="#proceso">Proceso</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#nosotros">Sobre mí</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+
+        <div class="nav-cta">
+          <a href="https://wa.me/message/3D7EGH3EH4FGE1" class="btn btn-primary" target="_blank" rel="noopener">
+            Asesoría Gratis
+          </a>
+        </div>
+
+        <button class="hamburger" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+    <div class="mobile-menu-header">
+      <div style="display:flex;align-items:center;gap:.65rem;">
+        <img src="img/logo-icon.png" alt="" aria-hidden="true" style="height:32px;width:auto;" loading="lazy" />
+        <span style="font-family:'Geist',sans-serif;font-weight:900;font-size:1rem;letter-spacing:.05em;">PHINANKÉ</span>
+      </div>
+      <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Cerrar menú">✕</button>
+    </div>
+    <ul class="mobile-menu-links">
+      <li><a href="#valor"    onclick="closeMenu()">¿Por qué Erón?</a></li>
+      <li><a href="#proceso"  onclick="closeMenu()">Cómo funciona</a></li>
+      <li><a href="#servicios" onclick="closeMenu()">Servicios</a></li>
+      <li><a href="#clientes" onclick="closeMenu()">¿Es para mí?</a></li>
+      <li><a href="#nosotros" onclick="closeMenu()">Sobre mí</a></li>
+      <li><a href="#faq"      onclick="closeMenu()">Preguntas frecuentes</a></li>
+    </ul>
+    <div class="mobile-menu-footer">
+      <a href="https://wa.me/message/3D7EGH3EH4FGE1" class="btn btn-wa" target="_blank" rel="noopener" style="justify-content:center;" onclick="closeMenu()">
+        Asesoría Gratis por WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <main>
+  <!-- ════════════════════ HERO ════════════════════ -->
+  <section class="hero" aria-label="Propuesta principal de Phinanké">
+    <div class="hero-noise"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <div>
+          <div class="hero-eyebrow">
+            <span class="pill">
+              <span class="pill-dot"></span>
+              Primera asesoría 100% gratis
+            </span>
+          </div>
+
+          <h1>
+            Tu seguridad,<br />
+            diseñada para<br />
+            <em>tu vida real</em>
+          </h1>
+
+          <p class="hero-desc">
+            No te vendo pólizas. Analizo tu situación, entiendo lo que necesitas y te recomiendo exactamente lo que te conviene — sin complicaciones ni letra chica.
+          </p>
+
+          <div class="hero-actions">
+            <a href="https://wa.me/message/3D7EGH3EH4FGE1" class="btn btn-wa" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Escríbeme por WhatsApp
+            </a>
+            <a href="#servicios" class="btn btn-ghost">Ver mis servicios</a>
+          </div>
+
+          <!-- Visible solo en móvil — reemplaza la card del asesor -->
+          <div class="mobile-advisor-strip">
+            <div class="mas-avatar">
+              <img src="img/eron-hero.png" alt="Erón Bello" loading="lazy"
+                onerror="this.style.display='none';" />
+            </div>
+            <div class="mas-info">
+              <div class="mas-name">Erón Bello León</div>
+              <div class="mas-badge"><span class="mas-dot"></span> Disponible hoy</div>
+              <div class="mas-chips">
+                <span class="mas-chip">+8 años exp.</span>
+                <span class="mas-chip">1ª cita gratis</span>
+                <span class="mas-chip">Sin compromiso</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-trust">
+            <div class="trust-avatars">
+              <span>JM</span><span>AL</span><span>CR</span><span>+</span>
+            </div>
+            <div class="trust-text">
+              <strong>+8 años</strong> acompañando familias y profesionistas
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card-wrap">
+          <div class="hero-card-glow"></div>
+          <div class="hero-glass-card">
+            <div class="advisor-row">
+              <div class="advisor-avatar">
+                <img src="img/eron-hero.png" alt="Foto de Erón Bello León, asesor de seguros Phinanké"
+                  loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+                <span class="avatar-initials" style="display:none;">EB</span>
+              </div>
+              <div>
+                <div class="advisor-name">Erón Bello León</div>
+                <div class="advisor-badge">
+                  <span class="advisor-badge-dot"></span>
+                  Disponible hoy
+                </div>
+              </div>
+            </div>
+
+            <ul class="glass-checklist">
+              <li><span class="check-ico">✓</span> Diagnóstico personalizado sin costo</li>
+              <li><span class="check-ico">✓</span> Solo te recomiendo lo que necesitas</li>
+              <li><span class="check-ico">✓</span> Acompañamiento en cada etapa</li>
+              <li><span class="check-ico">✓</span> Sin tecnicismos ni letra chica</li>
+            </ul>
+
+            <div class="free-banner">🎁 Primera asesoría totalmente gratis</div>
+
+            <div class="stat-chips">
+              <div class="stat-chip">
+                <div class="num">+8</div>
+                <div class="lbl">Años exp.</div>
+              </div>
+              <div class="stat-chip">
+                <div class="num">5</div>
+                <div class="lbl">Soluciones</div>
+              </div>
+              <div class="stat-chip">
+                <div class="num">Gratis</div>
+                <div class="lbl">Primera cita</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ PROPUESTA DE VALOR — BENTO ════════════════════ -->
+  <section class="section" id="valor">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="pill">Por qué trabajar conmigo</span>
+        </div>
+        <h2 class="section-title">Un asesor que trabaja<br />para ti, no para una marca</h2>
+        <p class="section-sub">Mi prioridad es entender tu situación y ayudarte a proteger lo que más importa, con opciones claras y sin presión.</p>
+      </div>
+
+      <div class="bento">
+        <div class="bento-card bc-1">
+          <div class="bento-icon">🎯</div>
+          <h3>Diagnóstico personalizado</h3>
+          <p>Antes de recomendarte cualquier cosa, escucho tu situación, tus metas y lo que realmente te preocupa.</p>
+        </div>
+
+        <div class="bento-card bc-2">
+          <div class="bento-icon">🔍</div>
+          <h3>Solo lo que necesitas</h3>
+          <p>No te ofreceré más de lo que requieres. Comparo opciones y presento únicamente lo que tiene sentido para ti.</p>
+        </div>
+
+        <div class="bento-card bc-3">
+          <div class="bento-icon">🤝</div>
+          <h3>Relación de largo plazo</h3>
+          <p>No desaparezco después de la firma. Estoy contigo en cada renovación, ajuste y momento que necesites apoyo.</p>
+        </div>
+
+        <div class="bento-card bento-card-accent bc-4">
+          <div class="bento-big-num">+8</div>
+          <h3>Años de experiencia</h3>
+          <p style="color:rgba(255,255,255,.6);font-size:.88rem;margin-top:.5rem;">Acompañando a familias, profesionistas y empresarios a proteger lo que más importa.</p>
+          <ul class="bento-list" style="margin-top:1rem;">
+            <li><span>✓</span> Seguros de vida y retiro</li>
+            <li><span>✓</span> Gastos médicos mayores</li>
+            <li><span>✓</span> Planes educativos y patrimoniales</li>
+          </ul>
+        </div>
+
+        <div class="bento-card bc-5">
+          <div class="bento-icon">💡</div>
+          <h3>Sin tecnicismos</h3>
+          <p>Te explico todo en términos simples. Sabrás exactamente qué tienes, cómo funciona y cuándo aplica.</p>
+          <div style="margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--border);">
+            <div class="bento-icon" style="width:40px;height:40px;font-size:1rem;">🔒</div>
+            <h3 style="margin-top:.75rem;">Transparencia total</h3>
+            <p style="margin-top:.35rem;">Costos, coberturas y limitaciones sin ocultar nada. Tú decides con información completa.</p>
+          </div>
+        </div>
+
+        <div class="bento-card bento-card-glow bc-6">
+          <div class="bento-wide-inner">
+            <div class="bento-wide-item">
+              <div class="label">Experiencia</div>
+              <div class="value">+8 años</div>
+              <div class="desc">asesorando con resultados reales</div>
+            </div>
+            <div class="bento-wide-sep"></div>
+            <div class="bento-wide-item">
+              <div class="label">Primera consulta</div>
+              <div class="value">$0</div>
+              <div class="desc">sin costo ni compromiso</div>
+            </div>
+            <div class="bento-wide-sep"></div>
+            <div class="bento-wide-item">
+              <div class="label">Disponibilidad</div>
+              <div class="value">Siempre</div>
+              <div class="desc">WhatsApp, Instagram y TikTok</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ SITUACIONES ════════════════════ -->
+  <section class="section situations-section" id="clientes" aria-label="¿Para quién es esta asesoría?">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="pill">¿Te suena familiar?</span>
+        </div>
+        <h2 class="section-title">Si alguna de estas situaciones<br />te describe, podemos ayudarte</h2>
+        <p class="section-sub">No necesitas saber nada de seguros. Solo cuéntame qué te preocupa y encontramos la solución juntos.</p>
+      </div>
+
+      <div class="situations-grid">
+
+        <article class="sit-card">
+          <div class="sit-icon">💼</div>
+          <blockquote>"Tengo buen trabajo y sueldo estable. Pero si algo me pasa mañana… ¿mi familia estaría bien?"</blockquote>
+          <p>Muchas personas con ingresos sólidos no tienen protección real fuera de lo que da la empresa. Un accidente o enfermedad grave puede cambiarlo todo.</p>
+          <span class="sit-tag">→ Protección de vida y continuidad familiar</span>
+        </article>
+
+        <article class="sit-card">
+          <div class="sit-icon">🏗️</div>
+          <blockquote>"Llevo años construyendo mi negocio. Una hospitalización larga podría poner en riesgo todo lo que he logrado."</blockquote>
+          <p>Los dueños de negocio suelen proteger su empresa pero olvidar protegerse a sí mismos. Sin ti, el negocio no funciona.</p>
+          <span class="sit-tag">→ Protección del ingreso y patrimonio</span>
+        </article>
+
+        <article class="sit-card">
+          <div class="sit-icon">🖥️</div>
+          <blockquote>"Trabajo por mi cuenta. No tengo IMSS, no tengo prestaciones. Si me enfermo, dejo de ganar."</blockquote>
+          <p>Ser independiente tiene muchas ventajas, pero también significa que eres tú quien debe construir su red de seguridad.</p>
+          <span class="sit-tag">→ Gastos médicos y protección de ingresos</span>
+        </article>
+
+        <article class="sit-card">
+          <div class="sit-icon">👶</div>
+          <blockquote>"Quiero que mis hijos estudien donde quieran. Pero los costos de educación no paran de subir."</blockquote>
+          <p>Un plan educativo iniciado hoy, cuando tu hijo tiene menos de 3 años, puede garantizar su futuro sin importar lo que pase.</p>
+          <span class="sit-tag">→ Plan educativo garantizado</span>
+        </article>
+
+        <article class="sit-card">
+          <div class="sit-icon">🌅</div>
+          <blockquote>"Sé que debería estar ahorrando para el retiro, pero cada mes se va el dinero en otras cosas."</blockquote>
+          <p>Cada año sin un plan de retiro es tiempo y rendimientos que ya no recuperas. La buena noticia: nunca es tarde para empezar, pero sí hay un costo por esperar.</p>
+          <span class="sit-tag">→ Plan de ahorro y retiro</span>
+        </article>
+
+        <article class="sit-card">
+          <div class="sit-icon">🏥</div>
+          <blockquote>"He visto a conocidos quedar endeudados por una emergencia médica. No quiero que eso me pase."</blockquote>
+          <p>Una hospitalización sin seguro puede costarte entre $200,000 y más de $1,000,000 de pesos. Con la cobertura correcta, tú solo te preocupas por recuperarte.</p>
+          <span class="sit-tag">→ Cobertura de gastos médicos mayores</span>
+        </article>
+
+      </div>
+
+      <div class="situations-cta">
+        <div class="situations-cta-text">
+          <h3>¿Alguna de estas situaciones te describe?</h3>
+          <p>Cuéntamela. En una sola llamada te digo qué solución tiene sentido para ti — sin costo, sin compromiso.</p>
+        </div>
+        <a href="https://wa.me/message/3D7EGH3EH4FGE1"
+           class="btn btn-primary" target="_blank" rel="noopener">
+          Quiero hablar con Erón →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ PROCESO ════════════════════ -->
+  <section class="section" id="proceso">
+    <div class="container">
+      <div class="section-header" style="text-align:center;">
+        <div class="section-eyebrow" style="justify-content:center;">
+          <span class="pill">¿Cómo funciona?</span>
+        </div>
+        <h2 class="section-title">De la primera llamada<br />a tu tranquilidad total</h2>
+        <p class="section-sub" style="margin:0 auto;">Un proceso simple, sin complicaciones. En cuatro pasos tienes una solución hecha a tu medida.</p>
+      </div>
+
+      <div class="process-wrap">
+        <div class="process-step">
+          <div class="step-num-wrap">
+            <div class="step-num">1</div>
+            <div class="step-connector"></div>
+          </div>
+          <h3>Conversamos</h3>
+          <p>Me cuentas tu situación, tus metas y lo que te preocupa. Sin cuestionarios largos, solo una plática real.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num-wrap">
+            <div class="step-num">2</div>
+            <div class="step-connector"></div>
+          </div>
+          <h3>Analizo opciones</h3>
+          <p>Reviso alternativas del mercado y selecciono las que realmente encajan con tu vida y tu presupuesto.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num-wrap">
+            <div class="step-num">3</div>
+            <div class="step-connector"></div>
+          </div>
+          <h3>Te presento la solución</h3>
+          <p>Te explico cada opción en términos claros. Comparas y decides con toda la información en la mano.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num-wrap">
+            <div class="step-num">4</div>
+          </div>
+          <h3>Te acompaño siempre</h3>
+          <p>Reviso tu protección cada año y estoy cuando necesites hacer un ajuste o un trámite.</p>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:2.5rem;">
+        <a href="https://wa.me/message/3D7EGH3EH4FGE1" class="btn btn-primary" target="_blank" rel="noopener">
+          Empezar ahora — es gratis
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ SERVICIOS ════════════════════ -->
+  <section class="section services-section" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="pill">Mis servicios</span>
+        </div>
+        <h2 class="section-title">Soluciones para cada<br />etapa de tu vida</h2>
+        <p class="section-sub">Trabajo con distintas herramientas de protección. Dependiendo de tu situación, te recomiendo la que mejor se adapta a ti.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-top">
+            <div class="s-icon">🌱</div>
+            <span class="s-badge">Retiro</span>
+          </div>
+          <h3>Plan de Retiro con Ahorro</h3>
+          <span class="service-for">Profesionistas y dueños de negocio</span>
+          <p>Combina protección de vida con ahorro de largo plazo. Tu dinero crece y tú tienes la tranquilidad de que algo te espera cuando decides descansar.</p>
+          <div class="chip-row">
+            <span class="chip">Ahorro a largo plazo</span>
+            <span class="chip">Protección de vida</span>
+            <span class="chip">Beneficios fiscales</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-top">
+            <div class="s-icon">🏥</div>
+            <span class="s-badge">Salud</span>
+          </div>
+          <h3>Protección de Gastos Médicos</h3>
+          <span class="service-for">Independientes, médicos y familias</span>
+          <p>Una emergencia médica no tiene por qué convertirse en una crisis financiera. Te ayudo a elegir la cobertura que realmente te protege sin pagar de más.</p>
+          <div class="chip-row">
+            <span class="chip">Hospitalización</span>
+            <span class="chip">Especialistas</span>
+            <span class="chip">Sin sorpresas</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-top">
+            <div class="s-icon">🎓</div>
+            <span class="s-badge">Educación</span>
+          </div>
+          <h3>Plan Educativo para tus Hijos</h3>
+          <span class="service-for">Padres de niños de 0 a 3 años</span>
+          <p>Empieza hoy y asegura la educación de tus hijos sin importar lo que pase. Tu inversión crece mientras ellos crecen.</p>
+          <div class="chip-row">
+            <span class="chip">Garantía educativa</span>
+            <span class="chip">Protección familiar</span>
+            <span class="chip">Rendimiento garantizado</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-top">
+            <div class="s-icon">⭐</div>
+            <span class="s-badge">Premium</span>
+          </div>
+          <h3>Plan Patrimonial Elite</h3>
+          <span class="service-for">Profesionistas de alto perfil</span>
+          <p>Para quienes quieren proteger su patrimonio con cobertura premium, acceso a hospitales de primer nivel y beneficios exclusivos.</p>
+          <div class="chip-row">
+            <span class="chip">Cobertura premium</span>
+            <span class="chip">Hospitales privados</span>
+            <span class="chip">Internacional</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-top">
+            <div class="s-icon">💜</div>
+            <span class="s-badge">Mujer</span>
+          </div>
+          <h3>Vida Mujer</h3>
+          <span class="service-for">Mujeres entre 28 y 50 años</span>
+          <p>Un plan diseñado para las necesidades de la mujer moderna: protección de vida, salud femenina y ahorro en un solo lugar.</p>
+          <div class="chip-row">
+            <span class="chip">Cobertura femenina</span>
+            <span class="chip">Ahorro integrado</span>
+            <span class="chip">Maternidad</span>
+          </div>
+        </div>
+
+        <div class="service-card service-cta-card">
+          <div>
+            <div class="s-icon" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.15);margin-bottom:1.25rem;">🎁</div>
+            <h3>¿No sabes por dónde empezar?</h3>
+            <p style="color:rgba(255,255,255,.65);font-size:.88rem;margin:.5rem 0 1.5rem;">Cuéntame tu situación y yo te digo qué tiene sentido para ti. Sin presión ni compromiso.</p>
+          </div>
+          <a href="https://wa.me/message/3D7EGH3EH4FGE1" class="btn btn-wa" style="width:100%;justify-content:center;" target="_blank" rel="noopener">
+            Hablar con Erón →
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ SOBRE MÍ ════════════════════ -->
+  <section class="section" id="nosotros">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-photo-area">
+          <div class="about-photo-frame">
+            <img src="img/eron-about.png" alt="Erón Bello León, asesor de seguros Phinanké"
+              loading="lazy" onerror="this.style.display='none';" />
+          </div>
+          <div class="about-badge">
+            <div class="num">+8</div>
+            <div class="lbl">años de experiencia</div>
+          </div>
+          <div class="about-badge-2">🎁 Primera asesoría gratis</div>
+        </div>
+
+        <div class="about-content">
+          <div class="section-eyebrow">
+            <span class="eyebrow-line"></span>
+            <span class="pill">Sobre mí</span>
+          </div>
+          <h2 class="section-title" style="margin-top:.75rem;">Hola,<br />soy Erón Bello León</h2>
+          <p>
+            Soy asesor de seguros con más de ocho años acompañando a familias, profesionistas y empresarios a encontrar la protección que realmente necesitan.
+          </p>
+          <p>
+            Me apasiona el tema porque creo que la tranquilidad no es un lujo — es algo que todos merecen tener sin complicaciones ni letra chica. Por eso trabajo diferente: primero te escucho, luego recomiendo.
+          </p>
+
+          <div class="values-grid">
+            <div class="value-item">
+              <div class="vi-icon">🎯</div>
+              <h4>Honestidad</h4>
+              <p>Por encima de cualquier comisión</p>
+            </div>
+            <div class="value-item">
+              <div class="vi-icon">💡</div>
+              <h4>Educación</h4>
+              <p>Financiera como parte del servicio</p>
+            </div>
+            <div class="value-item">
+              <div class="vi-icon">📱</div>
+              <h4>Disponibilidad</h4>
+              <p>Real cuando me necesitas</p>
+            </div>
+            <div class="value-item">
+              <div class="vi-icon">✨</div>
+              <h4>Personalización</h4>
+              <p>Soluciones hechas a tu medida</p>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
+            <a href="https://wa.me/message/3D7EGH3EH4FGE1" class="btn btn-primary" target="_blank" rel="noopener">
+              Agendar mi asesoría gratis
+            </a>
+            <a href="https://www.instagram.com/eronbelloleon" class="btn btn-ghost" target="_blank" rel="noopener">
+              Seguir en Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ TESTIMONIOS ════════════════════ -->
+  <section class="section testimonials-section" id="testimonios" aria-label="Testimonios de clientes">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="section-eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="pill">Lo que dicen mis clientes</span>
+        </div>
+        <h2 class="section-title">Resultados reales,<br />personas reales</h2>
+        <p class="section-sub">Cada historia es diferente. Estas son algunas de las personas a las que he acompañado.</p>
+      </div>
+      <div class="testimonials-grid">
+        <article class="testi-card fade-up fade-up-delay-1">
+          <div class="testi-stars">
+            <span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span>
+          </div>
+          <p class="testi-quote">Erón me explicó todo desde cero, sin presionarme. Al final encontramos un plan que cabe perfecto en mi presupuesto y me da la tranquilidad que necesitaba para mi familia.</p>
+          <div class="testi-result">✓ Plan de vida activo desde 2022</div>
+          <div class="testi-author">
+            <div class="testi-avatar">MR</div>
+            <div>
+              <div class="testi-name">María R.</div>
+              <div class="testi-role">Médico · CDMX</div>
+            </div>
+          </div>
+        </article>
+        <article class="testi-card fade-up fade-up-delay-2">
+          <div class="testi-stars">
+            <span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span>
+          </div>
+          <p class="testi-quote">Lo que más me gustó fue que nunca sentí que me estaban vendiendo algo. Erón revisó lo que ya tenía, me dijo qué estaba de más y qué me faltaba. Eso vale mucho.</p>
+          <div class="testi-result">✓ Gastos médicos y PPR contratados</div>
+          <div class="testi-author">
+            <div class="testi-avatar">JC</div>
+            <div>
+              <div class="testi-name">Jorge C.</div>
+              <div class="testi-role">Dueño de negocio · Monterrey</div>
+            </div>
+          </div>
+        </article>
+        <article class="testi-card fade-up fade-up-delay-3">
+          <div class="testi-stars">
+            <span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span>
+          </div>
+          <p class="testi-quote">Soy independiente y siempre lo dejé para después. La primera llamada con Erón fue gratis y terminé con un plan educativo para mi hija y cobertura médica para mí. Ojalá lo hubiera hecho antes.</p>
+          <div class="testi-result">✓ Plan educativo + GMM activos</div>
+          <div class="testi-author">
+            <div class="testi-avatar">AL</div>
+            <div>
+              <div class="testi-name">Ana L.</div>
+              <div class="testi-role">Freelancer · Guadalajara</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ FAQ ════════════════════ -->
+  <section class="section" id="faq" aria-label="Preguntas frecuentes">
+    <div class="container">
+      <div class="section-header fade-up" style="text-align:center;">
+        <div class="section-eyebrow" style="justify-content:center;">
+          <span class="pill">Preguntas frecuentes</span>
+        </div>
+        <h2 class="section-title">Todo lo que quieres saber<br />antes de contactarme</h2>
+        <p class="section-sub" style="margin:0 auto;">Si tienes otra pregunta, escríbeme — respondo el mismo día.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item fade-up">
+          <button class="faq-trigger" aria-expanded="false">
+            <h3>¿La primera asesoría es realmente gratis?</h3>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">Sí, <strong>100% gratis y sin compromiso</strong>. La primera sesión es para entender tu situación y ver si puedo ayudarte. No hay ningún costo ni obligación de contratar nada.</div>
+          </div>
+        </div>
+        <div class="faq-item fade-up fade-up-delay-1">
+          <button class="faq-trigger" aria-expanded="false">
+            <h3>¿Con qué aseguradoras trabajas?</h3>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">Trabajo principalmente con <strong>Allianz</strong> y <strong>Seguros Monterrey New York Life</strong>, dos de las aseguradoras más sólidas y reconocidas de México. Elijo la que mejor se adapta a tu situación, no la que me conviene más a mí.</div>
+          </div>
+        </div>
+        <div class="faq-item fade-up fade-up-delay-2">
+          <button class="faq-trigger" aria-expanded="false">
+            <h3>¿Cuánto tiempo toma tener un seguro activo?</h3>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">Desde la primera conversación hasta tener tu póliza activa, el proceso típico toma entre <strong>3 y 7 días hábiles</strong>, dependiendo del tipo de cobertura y si se requiere examen médico.</div>
+          </div>
+        </div>
+        <div class="faq-item fade-up fade-up-delay-3">
+          <button class="faq-trigger" aria-expanded="false">
+            <h3>¿Puedo cancelar cuando quiero?</h3>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">Sí. Los seguros son contratos flexibles. Te explico en detalle las condiciones de cada producto antes de firmar para que sepas exactamente qué pasa si decides cancelar, cuándo y cómo.</div>
+          </div>
+        </div>
+        <div class="faq-item fade-up fade-up-delay-4">
+          <button class="faq-trigger" aria-expanded="false">
+            <h3>¿Qué pasa si ya tengo un seguro con otra persona?</h3>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">Sin problema. Te hago un <strong>diagnóstico gratuito</strong> de lo que tienes para ver si cubre bien tus necesidades actuales. Si está bien, te lo digo. Si hay huecos o estás pagando de más, también.</div>
+          </div>
+        </div>
+        <div class="faq-item fade-up fade-up-delay-5">
+          <button class="faq-trigger" aria-expanded="false">
+            <h3>¿Tengo que saber de seguros para hablar contigo?</h3>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">Para nada. Mi trabajo es <strong>traducirte el mundo de los seguros a términos que tengan sentido para tu vida</strong>. No necesitas saber nada previo — solo contarme tu situación.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ CTA FINAL ════════════════════ -->
+  <section class="cta-section" id="contacto">
+    <div class="container">
+      <div class="cta-inner">
+        <div class="hero-eyebrow" style="justify-content:center;display:flex;margin-bottom:1.5rem;">
+          <span class="pill">¿Listo para empezar?</span>
+        </div>
+        <h2>El mejor momento<br />para protegerte es hoy</h2>
+        <p>
+          Una sola conversación puede cambiar tu panorama por completo. Y no te cuesta nada. Escríbeme y agendamos tu primera asesoría sin costo.
+        </p>
+        <div class="cta-actions">
+          <a href="https://wa.me/message/3D7EGH3EH4FGE1" class="btn btn-wa" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp directo
+          </a>
+          <a href="https://www.instagram.com/eronbelloleon" class="btn btn-ghost" target="_blank" rel="noopener">
+            Instagram
+          </a>
+          <a href="https://www.tiktok.com/@eronbelloleon" class="btn btn-ghost" target="_blank" rel="noopener">
+            TikTok
+          </a>
+        </div>
+        <p class="cta-note">Sin compromiso · Completamente gratis · Respuesta en menos de 24h</p>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ════════════════════ FOOTER ════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div style="display:flex;align-items:center;gap:.75rem;">
+            <img src="img/logo-icon.png" alt="" aria-hidden="true" style="height:40px;width:auto;" />
+            <div>
+              <div style="font-family:'Geist',sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:.05em;color:white;">PHINANKÉ</div>
+              <div style="font-size:.65rem;color:rgba(255,255,255,.4);letter-spacing:.08em;text-transform:uppercase;font-weight:500;">Protegiendo lo más valioso de tu vida</div>
+            </div>
+          </div>
+          <p>Asesoría honesta, personalizada y sin complicaciones. Protegiendo lo más valioso de tu vida.</p>
+          <div class="social-row">
+            <a href="https://www.facebook.com/share/1CYF6nJ7q2/?mibextid=wwXIfr" class="soc-btn" target="_blank" rel="noopener" title="Facebook">f</a>
+            <a href="https://www.instagram.com/eronbelloleon" class="soc-btn" target="_blank" rel="noopener" title="Instagram">ig</a>
+            <a href="https://www.tiktok.com/@eronbelloleon" class="soc-btn" target="_blank" rel="noopener" title="TikTok">tt</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#valor">Por qué yo</a></li>
+            <li><a href="#proceso">Cómo funciona</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Sobre mí</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/message/3D7EGH3EH4FGE1" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/eronbelloleon" target="_blank" rel="noopener">@eronbelloleon</a></li>
+            <li><a href="https://www.tiktok.com/@eronbelloleon" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="https://www.facebook.com/share/1CYF6nJ7q2/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Phinanké · Erón Bello León</span>
+        <span>Protegiendo lo más valioso de tu vida</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/message/3D7EGH3EH4FGE1" class="wa-float" target="_blank" rel="noopener" title="Escríbeme por WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Mobile bottom CTA bar -->
+  <div class="mobile-cta-bar" id="mobile-cta-bar" aria-label="Acción rápida">
+    <a href="https://wa.me/message/3D7EGH3EH4FGE1" class="btn btn-wa" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Asesoría Gratis
+    </a>
+  </div>
+
+  <script>
+    /* ── Nav scroll ── */
+    const nav = document.getElementById('nav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 20);
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    /* ── Hamburger / mobile menu ── */
+    const hamburger   = document.querySelector('.hamburger');
+    const mobileMenu  = document.getElementById('mobile-menu');
+    const closeBtn    = document.getElementById('mobile-menu-close');
+
+    function openMenu() {
+      mobileMenu.classList.add('open');
+      hamburger.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    hamburger.addEventListener('click', () =>
+      mobileMenu.classList.contains('open') ? closeMenu() : openMenu()
+    );
+    closeBtn.addEventListener('click', closeMenu);
+    mobileMenu.addEventListener('click', e => { if (e.target === mobileMenu) closeMenu(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+
+    /* ── FAQ accordion ── */
+    document.querySelectorAll('.faq-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const item   = trigger.closest('.faq-item');
+        const body   = item.querySelector('.faq-body');
+        const isOpen = item.classList.contains('open');
+
+        document.querySelectorAll('.faq-item.open').forEach(open => {
+          open.classList.remove('open');
+          open.querySelector('.faq-body').style.maxHeight = null;
+          open.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+        });
+
+        if (!isOpen) {
+          item.classList.add('open');
+          body.style.maxHeight = body.scrollHeight + 'px';
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    /* ── Scroll animations (Intersection Observer) ── */
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      }),
+      { threshold: 0.12 }
+    );
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
