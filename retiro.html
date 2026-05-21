@@ -1166,6 +1166,50 @@
     }
 
     /* ═══════════════════════════════
+       FOMO / URGENCIA
+    ═══════════════════════════════ */
+    .fomo-strip {
+      background: linear-gradient(135deg, rgba(239,68,68,.08), rgba(239,68,68,.04));
+      border: 1px solid rgba(239,68,68,.18);
+      border-radius: var(--r-sm);
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: flex-start;
+      gap: .85rem;
+      font-size: .88rem;
+      color: var(--text-2);
+      line-height: 1.65;
+    }
+    .fomo-strip strong { color: var(--text-1); }
+
+    .fomo-social {
+      background: linear-gradient(135deg, rgba(72,202,228,.07), rgba(0,150,199,.04));
+      border: 1px solid rgba(72,202,228,.18);
+      border-radius: var(--r-sm);
+      padding: 1.1rem 1.5rem;
+      font-size: .88rem;
+      color: var(--text-2);
+      text-align: center;
+      line-height: 1.7;
+    }
+    .fomo-social strong { color: var(--text-1); }
+
+    .fomo-age-warning {
+      background: linear-gradient(135deg, rgba(251,191,36,.08), rgba(251,191,36,.03));
+      border: 1px solid rgba(251,191,36,.22);
+      border-radius: 12px;
+      padding: 1.1rem 1.35rem;
+      font-size: .88rem;
+      color: var(--text-2);
+      line-height: 1.7;
+      display: flex;
+      align-items: flex-start;
+      gap: .85rem;
+      text-align: left;
+    }
+    .fomo-age-warning strong { color: #fbbf24; }
+
+    /* ═══════════════════════════════
        RESPONSIVE
     ═══════════════════════════════ */
     @media (max-width: 640px) {
@@ -1351,6 +1395,15 @@
         No es que seas irresponsable. Es que nadie te enseñó cómo hacer esto correctamente — y los asesores con los que has hablado siempre terminan hablando de productos en vez de escucharte. Eso es lo que quiero cambiar en esta conversación.
       </div>
 
+      <!-- FOMO: costo de esperar -->
+      <div class="fomo-strip fade-up" style="margin-top:1.25rem;">
+        <span class="pain-ico">⏰</span>
+        <span>
+          <strong>Cada mes que esperas, el interés compuesto trabaja en tu contra.</strong>
+          Con $3,000 al mes de aportación, empezar hoy vs. en un año representa más de <strong>$40,000 pesos de diferencia</strong> en tu fondo al retiro — y esa brecha crece exponencialmente con el tiempo.
+        </span>
+      </div>
+
     </div>
   </section>
 
@@ -1415,7 +1468,7 @@
         </li>
         <li>
           <div class="sol-ico">🛡</div>
-          <span>Si algo te pasa, tu familia recibe el fondo completo desde el primer día — no tienes que llegar a la jubilación para que valga.</span>
+          <span>Si decides agregar un seguro de vida al plan, tu familia queda protegida desde el primer día — no tienes que llegar a la jubilación para que valga.</span>
         </li>
         <li>
           <div class="sol-ico">📋</div>
@@ -1445,7 +1498,7 @@
         </li>
         <li>
           <div class="check-grad" aria-hidden="true">✓</div>
-          <span>Seguro de vida incluido desde el día 1 — sin costo adicional</span>
+          <span>Opción de agregar seguro de vida al plan — si tú decides incluirlo</span>
         </li>
         <li>
           <div class="check-grad" aria-hidden="true">✓</div>
@@ -1465,6 +1518,15 @@
         </li>
       </ul>
 
+    </div>
+  </section>
+
+  <!-- FOMO SOCIAL: actividad reciente -->
+  <section style="padding: 0 0 1rem;">
+    <div class="vsl-wrap">
+      <div class="fomo-social fade-up">
+        📈 <strong>Esta semana, más de 14 personas en México</strong> dieron el primer paso hacia su Plan de Retiro con Erón. ¿Sabías que cada año que pasa eleva el monto mensual que necesitas aportar para alcanzar la misma meta?
+      </div>
     </div>
   </section>
 
@@ -1756,7 +1818,7 @@
           </button>
           <div class="faq-a" role="region">
             <div class="faq-a-inner">
-              El plan incluye un seguro de vida desde el primer día. Si falleces antes de llegar a tu retiro, tus beneficiarios reciben el fondo completo acumulado más el monto del seguro de vida. Tu esfuerzo no se pierde — al contrario, protege a tu familia desde el primer mes que empiezas.
+              El plan te da la opción de incluir un seguro de vida, con un costo adicional según la cobertura que elijas. Si decides agregarlo y falleces antes de llegar a tu retiro, tus beneficiarios reciben el fondo acumulado más el monto asegurado. Es una decisión que tomamos juntos, con información clara sobre lo que cuesta y lo que protege.
             </div>
           </div>
         </div>
@@ -1793,6 +1855,11 @@
           <div class="section-label" style="margin-bottom:1.25rem; justify-content:center;">El mejor momento es ahora</div>
 
           <h2>El mejor momento para empezar era hace 10 años. El segundo mejor momento es hoy.</h2>
+
+          <div class="fomo-age-warning" style="max-width:500px; margin:1.35rem auto 1.75rem;">
+            <span style="font-size:1.1rem; flex-shrink:0;">⚠️</span>
+            <span>Con cada año que pasa sin empezar, <strong>la aportación mensual que necesitas sube para alcanzar la misma meta</strong>. A los 35 años necesitas aportar menos de la mitad de lo que tendrías que aportar a los 45 para el mismo resultado. Tu salud también puede cambiar — y eso cierra puertas.</span>
+          </div>
 
           <p>
             No tienes que tener todo claro para dar el primer paso. Solo escríbeme, me cuentas tu situación y vemos juntos si tiene sentido para ti. Si no es el momento correcto, te lo digo directamente — sin rodeos. Así trabajo.

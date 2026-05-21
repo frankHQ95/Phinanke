@@ -1195,6 +1195,107 @@
     .wa-float svg { color: #fff; }
 
     /* ═══════════════════════════════
+       EMPATÍA / HISTORIA
+    ═══════════════════════════════ */
+    .empathy-story {
+      background: linear-gradient(160deg, rgba(8,6,20,.85) 0%, rgba(5,18,35,.9) 100%);
+      border: 1px solid rgba(255,255,255,.09);
+      border-left: 3px solid rgba(251,191,36,.45);
+      border-radius: 18px;
+      padding: 2rem 1.75rem;
+    }
+    .empathy-story-label {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(251,191,36,.65);
+      margin-bottom: 1.4rem;
+    }
+    .empathy-story-text {
+      font-size: 1rem;
+      color: var(--text-2);
+      line-height: 1.85;
+      margin-bottom: .9rem;
+    }
+    .empathy-story-text em {
+      font-style: italic;
+      color: rgba(255,255,255,.82);
+      background: rgba(255,255,255,.04);
+      padding: .1em .3em;
+      border-radius: 4px;
+    }
+    .empathy-story-text strong { color: var(--text-1); }
+    .empathy-story-divider {
+      height: 1px;
+      background: rgba(255,255,255,.07);
+      margin: 1.35rem 0;
+    }
+    .empathy-story-conclusion {
+      font-size: .95rem;
+      color: rgba(255,255,255,.72);
+      line-height: 1.8;
+    }
+    .empathy-story-conclusion strong { color: var(--text-1); }
+    .empathy-story-signature {
+      margin-top: 1.25rem;
+      font-size: .8rem;
+      color: rgba(255,255,255,.35);
+      font-style: italic;
+    }
+
+    /* ═══════════════════════════════
+       FOMO / URGENCIA
+    ═══════════════════════════════ */
+    .fomo-age-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      background: linear-gradient(135deg, rgba(251,191,36,.08), rgba(251,191,36,.03));
+      border: 1px solid rgba(251,191,36,.22);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .fomo-age-box-icon { font-size: 1.35rem; flex-shrink: 0; margin-top: .05rem; }
+    .fomo-age-box-title {
+      font-family: 'Geist', sans-serif;
+      font-weight: 700;
+      font-size: .95rem;
+      color: var(--text-1);
+      margin-bottom: .5rem;
+    }
+    .fomo-age-box-text {
+      font-size: .87rem;
+      color: var(--text-2);
+      line-height: 1.65;
+    }
+    .fomo-age-box-text strong { color: #fbbf24; }
+
+    .fomo-activity {
+      display: flex;
+      align-items: center;
+      gap: .9rem;
+      background: rgba(34,197,94,.06);
+      border: 1px solid rgba(34,197,94,.15);
+      border-radius: 12px;
+      padding: 1rem 1.4rem;
+      font-size: .87rem;
+      color: var(--text-2);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .fomo-activity strong { color: var(--text-1); }
+    .fomo-activity .fomo-warn { color: #f87171; }
+    .fomo-activity-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      flex-shrink: 0;
+      animation: pulse 2s infinite;
+    }
+
+    /* ═══════════════════════════════
        SECTION DIVIDER
     ═══════════════════════════════ */
     .divider {
@@ -1271,33 +1372,49 @@
         </div>
 
         <div class="scroll-arrow fade-up">
-          <span>Mira el video</span>
+          <span>Sigue leyendo</span>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
         </div>
       </div>
     </section>
 
     <!-- ══════════════════════════════
-         3. VIDEO PLACEHOLDER
+         3. HISTORIA EMPÁTICA
     ══════════════════════════════ -->
-    <section class="video-section">
+    <section style="padding: 0 0 3.5rem;">
       <div class="vsl-wrap">
-        <div class="video-placeholder fade-up">
-          <div class="video-bg-gradient"></div>
-          <div class="video-play-btn">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-          </div>
-          <div class="video-meta">
-            <div class="video-meta-name">Erón Bello León — Asesor de Seguros</div>
-            <div class="video-meta-sub">Phinanké</div>
+
+        <div class="empathy-story fade-up">
+          <div class="empathy-story-label">Una historia que escucho con demasiada frecuencia</div>
+
+          <p class="empathy-story-text">
+            Un martes normal. Tu teléfono suena a las 11 de la noche.
+          </p>
+          <p class="empathy-story-text">
+            <em>"Estoy en urgencias. Me duele mucho el pecho. Dicen que necesito cirugía."</em>
+          </p>
+          <p class="empathy-story-text">
+            Antes de que puedas procesar lo que está pasando, la persona en la recepción del hospital te pregunta:
+            <em>"¿Tiene seguro médico, o va a ser pago directo?"</em>
+          </p>
+          <p class="empathy-story-text">
+            Y en ese momento — el peor momento posible — tienes que contestar que no.
+          </p>
+
+          <div class="empathy-story-divider"></div>
+
+          <p class="empathy-story-conclusion">
+            Eso le pasó a una familia con la que hablé hace unos meses.
+            <strong>Cuatro años después, todavía están pagando esa deuda.</strong>
+            No son irresponsables. Simplemente nadie les dijo cuánto cuesta realmente
+            una emergencia médica — ni lo fácil que es protegerse <em>antes</em> de que ocurra.
+          </p>
+
+          <div class="empathy-story-signature">
+            — Erón Bello León, asesor de seguros
           </div>
         </div>
-        <div style="text-align:center;" class="fade-up">
-          <p class="video-caption">Mira este video antes de continuar — dura menos de 3 minutos</p>
-          <div class="video-badge">
-            <span>🔒</span> Información confidencial
-          </div>
-        </div>
+
       </div>
     </section>
 
@@ -1353,6 +1470,21 @@
           <div class="pain-body fade-up">
             Ninguno de estos números es exagerado. Son los costos reales en hospitales privados de México hoy. <strong>La pregunta no es si podrías necesitarlo — es cuándo.</strong>
           </div>
+
+          <!-- FOMO: precio sube con edad -->
+          <div class="fomo-age-box fade-up">
+            <div class="fomo-age-box-icon">📅</div>
+            <div>
+              <div class="fomo-age-box-title">Tu seguro médico se encarece cada año que esperas</div>
+              <p class="fomo-age-box-text">
+                Las primas de gastos médicos mayores aumentan con la edad. Si tienes 35 años hoy,
+                esperar 5 años puede <strong>incrementar tu prima anual entre un 30% y un 60%</strong> —
+                pagando más por la misma cobertura, para siempre. Y si algo cambia en tu salud,
+                puede haber exclusiones que ya no se pueden evitar.
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -1821,6 +1953,17 @@
     ══════════════════════════════ -->
     <section>
       <div class="vsl-wrap">
+
+        <!-- FOMO: actividad reciente -->
+        <div class="fomo-activity fade-up">
+          <div class="fomo-activity-dot"></div>
+          <span>
+            <strong>Esta semana, 9 personas en México</strong> cotizaron su seguro médico con Erón.
+            El costo de protegerte <span class="fomo-warn">sube con cada año que pasa</span> —
+            la decisión de hacerlo sigue siendo tuya, pero la ventana más accesible es hoy.
+          </span>
+        </div>
+
         <div class="final-close fade-up">
           <div class="section-label" style="margin-bottom:1.25rem;">La decisión más importante que puedes tomar hoy</div>
           <h2>Tu salud no es el problema. Pagar por ella sí puede serlo — si no estás preparado.</h2>
