@@ -979,6 +979,19 @@
       color: var(--b6);
     }
 
+    a.service-card { text-decoration: none; color: inherit; cursor: pointer; }
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--b4);
+      margin-top: .75rem;
+      transition: gap var(--t);
+      gap: .35rem;
+    }
+    .service-card:hover .service-link { gap: .6rem; }
+
     .service-cta-card {
       background: linear-gradient(135deg, var(--navy), var(--b1));
       border-color: rgba(0,119,182,.5);
@@ -1911,7 +1924,7 @@
 
       <div class="services-grid">
 
-        <div class="service-card">
+        <a class="service-card" href="retiro.html">
           <div class="service-top">
             <div class="s-icon">🌱</div>
             <span class="s-badge">Retiro</span>
@@ -1924,9 +1937,10 @@
             <span class="chip">Protección de vida</span>
             <span class="chip">Beneficios fiscales</span>
           </div>
-        </div>
+          <span class="service-link">Ver más →</span>
+        </a>
 
-        <div class="service-card">
+        <a class="service-card" href="gastos-medicos.html">
           <div class="service-top">
             <div class="s-icon">🏥</div>
             <span class="s-badge">Salud</span>
@@ -1939,9 +1953,10 @@
             <span class="chip">Especialistas</span>
             <span class="chip">Sin sorpresas</span>
           </div>
-        </div>
+          <span class="service-link">Ver más →</span>
+        </a>
 
-        <div class="service-card">
+        <a class="service-card" href="educativo.html">
           <div class="service-top">
             <div class="s-icon">🎓</div>
             <span class="s-badge">Educación</span>
@@ -1954,9 +1969,10 @@
             <span class="chip">Protección familiar</span>
             <span class="chip">Rendimiento garantizado</span>
           </div>
-        </div>
+          <span class="service-link">Ver más →</span>
+        </a>
 
-        <div class="service-card">
+        <a class="service-card" href="elite.html">
           <div class="service-top">
             <div class="s-icon">⭐</div>
             <span class="s-badge">Premium</span>
@@ -1969,9 +1985,10 @@
             <span class="chip">Hospitales privados</span>
             <span class="chip">Internacional</span>
           </div>
-        </div>
+          <span class="service-link">Ver más →</span>
+        </a>
 
-        <div class="service-card">
+        <a class="service-card" href="vida-mujer.html">
           <div class="service-top">
             <div class="s-icon">💜</div>
             <span class="s-badge">Mujer</span>
@@ -1984,7 +2001,8 @@
             <span class="chip">Ahorro integrado</span>
             <span class="chip">Maternidad</span>
           </div>
-        </div>
+          <span class="service-link">Ver más →</span>
+        </a>
 
         <div class="service-card service-cta-card">
           <div>
