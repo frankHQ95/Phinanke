@@ -1210,6 +1210,291 @@
     .fomo-age-warning strong { color: #fbbf24; }
 
     /* ═══════════════════════════════
+       HERO STAT BADGE
+    ═══════════════════════════════ */
+    .hero-stat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .65rem;
+      background: linear-gradient(135deg, rgba(239,68,68,.1), rgba(239,68,68,.06));
+      border: 1px solid rgba(239,68,68,.22);
+      border-radius: var(--r-sm);
+      padding: .8rem 1.15rem;
+      font-size: .88rem;
+      color: var(--text-2);
+      line-height: 1.5;
+      margin-bottom: 1.35rem;
+      text-align: left;
+      max-width: 540px;
+    }
+    .hero-stat-badge strong { color: var(--text-1); }
+    .hero-stat-ico { font-size: 1.15rem; flex-shrink: 0; }
+
+    /* ═══════════════════════════════
+       COSTO DE ESPERA
+    ═══════════════════════════════ */
+    .costo-espera-section { padding: 2rem 0; }
+    .costo-espera-section h2 {
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-weight: 800;
+      letter-spacing: -.025em;
+      margin-bottom: .85rem;
+      color: var(--text-1);
+    }
+    .costo-espera-intro {
+      font-size: .95rem;
+      color: var(--text-2);
+      line-height: 1.75;
+      margin-bottom: 1.75rem;
+    }
+    .personas-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: .85rem;
+    }
+    @media (max-width: 600px) {
+      .personas-grid { grid-template-columns: 1fr; }
+    }
+    .persona-card {
+      border-radius: var(--r-md);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.025);
+      transition: border-color var(--t);
+    }
+    .persona-card:hover { border-color: var(--border-hi); }
+    .persona-card.winner {
+      border-color: rgba(72,202,228,.35);
+      background: rgba(72,202,228,.04);
+    }
+    .persona-card.loser {
+      border-color: rgba(239,68,68,.18);
+      background: rgba(239,68,68,.025);
+    }
+    .persona-card-header {
+      padding: .85rem 1.1rem .7rem;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .persona-name {
+      font-family: 'Geist', sans-serif;
+      font-weight: 700;
+      font-size: .9rem;
+      color: var(--text-1);
+    }
+    .persona-age {
+      font-size: .75rem;
+      color: var(--text-3);
+      margin-top: .15rem;
+    }
+    .persona-card-body { padding: 1rem 1.1rem 1.1rem; }
+    .persona-fund {
+      font-family: 'Geist', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: .25rem;
+    }
+    .persona-card.winner .persona-fund { color: var(--b5); }
+    .persona-card.loser  .persona-fund { color: rgba(255,255,255,.7); }
+    .persona-fund-label {
+      font-size: .72rem;
+      color: var(--text-3);
+      margin-bottom: .85rem;
+    }
+    .persona-delta {
+      font-size: .78rem;
+      padding: .25em .75em;
+      border-radius: 999px;
+      display: inline-block;
+    }
+    .persona-card.winner .persona-delta {
+      background: rgba(72,202,228,.1);
+      color: var(--b5);
+      border: 1px solid rgba(72,202,228,.2);
+    }
+    .persona-card.loser .persona-delta {
+      background: rgba(239,68,68,.1);
+      color: #f87171;
+      border: 1px solid rgba(239,68,68,.2);
+    }
+    .costo-espera-footnote {
+      font-size: .73rem;
+      color: var(--text-3);
+      text-align: center;
+      line-height: 1.55;
+      padding: .25rem;
+    }
+
+    /* ═══════════════════════════════
+       ¿PARA QUIÉN APLICA?
+    ═══════════════════════════════ */
+    .aplica-section { padding: 2rem 0; }
+    .aplica-section h2 {
+      font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+      font-weight: 800;
+      letter-spacing: -.02em;
+      margin-bottom: 1.5rem;
+      color: var(--text-1);
+    }
+    .aplica-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 560px) {
+      .aplica-grid { grid-template-columns: 1fr; }
+    }
+    .aplica-col { border-radius: var(--r-md); overflow: hidden; }
+    .aplica-col-header {
+      padding: .75rem 1.25rem;
+      font-family: 'Geist', sans-serif;
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-align: center;
+    }
+    .aplica-col.si .aplica-col-header {
+      background: rgba(34,197,94,.12);
+      border: 1px solid rgba(34,197,94,.25);
+      border-bottom: none;
+      color: #4ade80;
+      border-radius: var(--r-md) var(--r-md) 0 0;
+    }
+    .aplica-col.no .aplica-col-header {
+      background: rgba(239,68,68,.1);
+      border: 1px solid rgba(239,68,68,.2);
+      border-bottom: none;
+      color: #f87171;
+      border-radius: var(--r-md) var(--r-md) 0 0;
+    }
+    .aplica-col.si .aplica-col-body {
+      background: rgba(34,197,94,.04);
+      border: 1px solid rgba(34,197,94,.2);
+      border-top: none;
+      border-radius: 0 0 var(--r-md) var(--r-md);
+    }
+    .aplica-col.no .aplica-col-body {
+      background: rgba(239,68,68,.04);
+      border: 1px solid rgba(239,68,68,.18);
+      border-top: none;
+      border-radius: 0 0 var(--r-md) var(--r-md);
+    }
+    .aplica-item {
+      padding: .75rem 1.1rem;
+      font-size: .84rem;
+      color: var(--text-2);
+      border-bottom: 1px solid rgba(255,255,255,.05);
+      display: flex;
+      align-items: flex-start;
+      gap: .5rem;
+      line-height: 1.5;
+    }
+    .aplica-item:last-child { border-bottom: none; }
+    .aplica-ico { flex-shrink: 0; font-size: .9rem; margin-top: .05rem; }
+
+    /* ═══════════════════════════════
+       EXIT INTENT MODAL
+    ═══════════════════════════════ */
+    .exit-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.75);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .exit-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .exit-modal {
+      background: var(--surface-1);
+      border: 1px solid var(--border-hi);
+      border-radius: var(--r-lg);
+      padding: 2.25rem 2rem 2rem;
+      max-width: 450px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      transform: scale(.94) translateY(12px);
+      transition: transform .3s ease;
+    }
+    .exit-overlay.active .exit-modal {
+      transform: scale(1) translateY(0);
+    }
+    .exit-modal-close {
+      position: absolute;
+      top: .85rem; right: .85rem;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.07);
+      border: none;
+      color: var(--text-3);
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background var(--t), color var(--t);
+      line-height: 1;
+    }
+    .exit-modal-close:hover { background: rgba(255,255,255,.14); color: var(--text-1); }
+    .exit-modal-icon { font-size: 2.2rem; margin-bottom: .9rem; }
+    .exit-modal-title {
+      font-family: 'Geist', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin-bottom: .75rem;
+      color: var(--text-1);
+      line-height: 1.3;
+    }
+    .exit-modal-body {
+      font-size: .9rem;
+      color: var(--text-2);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+    .exit-modal-body strong { color: var(--text-1); }
+    .exit-modal-stat {
+      background: rgba(72,202,228,.08);
+      border: 1px solid rgba(72,202,228,.2);
+      border-radius: var(--r-sm);
+      padding: .85rem 1rem;
+      margin-bottom: 1.5rem;
+      font-size: .88rem;
+      color: var(--text-2);
+      line-height: 1.6;
+    }
+    .exit-modal-stat strong { color: var(--b5); }
+    .exit-modal-dismiss {
+      display: block;
+      margin-top: .85rem;
+      font-size: .76rem;
+      color: var(--text-3);
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-family: inherit;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: color var(--t), text-decoration-color var(--t);
+      width: 100%;
+      text-align: center;
+    }
+    .exit-modal-dismiss:hover {
+      color: var(--text-2);
+      text-decoration-color: var(--text-2);
+    }
+
+    /* ═══════════════════════════════
        RESPONSIVE
     ═══════════════════════════════ */
     @media (max-width: 640px) {
@@ -1261,6 +1546,11 @@
     <div class="vsl-wrap">
 
       <p class="hero-breadcrumb fade-up">Inicio &rsaquo; <span>Plan de Retiro</span></p>
+
+      <div class="hero-stat-badge fade-up">
+        <span class="hero-stat-ico">📉</span>
+        <span>Tu AFORE solo te dará entre el <strong>26% y 30% de tu sueldo actual</strong> cuando te jubiles. El 70% restante es tu problema — a menos que tengas un plan real.</span>
+      </div>
 
       <h1 class="fade-up">
         La mayoría llega a los 65 años dependiendo de sus hijos o del gobierno.
@@ -1444,6 +1734,67 @@
   <div class="vsl-wrap"><div class="section-spacer"></div></div>
 
   <!-- ══════════════════════════════
+       COSTO DE ESPERA
+  ══════════════════════════════ -->
+  <section class="costo-espera-section">
+    <div class="vsl-wrap">
+
+      <div class="section-label fade-up">El precio de esperar</div>
+
+      <h2 class="fade-up">Esperar 10 años puede costarte más de $5 millones de pesos</h2>
+
+      <p class="costo-espera-intro fade-up">
+        Esta es la diferencia real entre tres personas que aportan <strong>$4,500 al mes</strong> — la misma cantidad — pero en momentos distintos de su vida. La única variable es <em>cuándo empezaron</em>.
+      </p>
+
+      <div class="personas-grid fade-up">
+
+        <div class="persona-card winner">
+          <div class="persona-card-header">
+            <div class="persona-name">María R.</div>
+            <div class="persona-age">35 años · empieza hoy</div>
+          </div>
+          <div class="persona-card-body">
+            <div class="persona-fund">~$8.1 M</div>
+            <div class="persona-fund-label">fondo estimado al retiro</div>
+            <span class="persona-delta">✓ Base de comparación</span>
+          </div>
+        </div>
+
+        <div class="persona-card loser">
+          <div class="persona-card-header">
+            <div class="persona-name">Carlos M.</div>
+            <div class="persona-age">45 años · empezó a los 45</div>
+          </div>
+          <div class="persona-card-body">
+            <div class="persona-fund">~$3.0 M</div>
+            <div class="persona-fund-label">fondo estimado al retiro</div>
+            <span class="persona-delta">↓ $5.1M menos que María</span>
+          </div>
+        </div>
+
+        <div class="persona-card loser">
+          <div class="persona-card-header">
+            <div class="persona-name">Roberto G.</div>
+            <div class="persona-age">55 años · empezó a los 55</div>
+          </div>
+          <div class="persona-card-body">
+            <div class="persona-fund">~$870 K</div>
+            <div class="persona-fund-label">fondo estimado al retiro</div>
+            <span class="persona-delta">↓ $7.2M menos que María</span>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="costo-espera-footnote">Proyección ilustrativa con rendimiento referencial del 9% anual compuesto. No representa rentabilidad garantizada. Los resultados reales dependen de cada plan.</p>
+
+    </div>
+  </section>
+
+  <div class="vsl-wrap"><div class="section-spacer"></div></div>
+
+  <!-- ══════════════════════════════
        SOLUCIÓN
   ══════════════════════════════ -->
   <section class="solution-reveal">
@@ -1517,6 +1868,74 @@
           <span>Asesoría continua con Erón sin costo adicional</span>
         </li>
       </ul>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       ¿PARA QUIÉN APLICA?
+  ══════════════════════════════ -->
+  <section class="aplica-section">
+    <div class="vsl-wrap">
+
+      <div class="section-label fade-up">Sé honesto contigo</div>
+      <h2 class="fade-up">¿Este plan es para ti?</h2>
+
+      <div class="aplica-grid fade-up">
+
+        <div class="aplica-col si">
+          <div class="aplica-col-header">✓ &nbsp;Sí aplica si…</div>
+          <div class="aplica-col-body">
+            <div class="aplica-item">
+              <span class="aplica-ico">✅</span>
+              <span>Tienes entre <strong>25 y 55 años</strong> y quieres dejar de depender del AFORE</span>
+            </div>
+            <div class="aplica-item">
+              <span class="aplica-ico">✅</span>
+              <span>Puedes apartar al menos <strong>$2,000 al mes</strong> de forma constante</span>
+            </div>
+            <div class="aplica-item">
+              <span class="aplica-ico">✅</span>
+              <span>Quieres <strong>pagar menos ISR</strong> cada año mientras ahorras</span>
+            </div>
+            <div class="aplica-item">
+              <span class="aplica-ico">✅</span>
+              <span>Ves el retiro como una meta real, no solo una idea para "después"</span>
+            </div>
+            <div class="aplica-item">
+              <span class="aplica-ico">✅</span>
+              <span>Trabajas por tu cuenta y no tienes respaldo de IMSS suficiente</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="aplica-col no">
+          <div class="aplica-col-header">✗ &nbsp;No aplica si…</div>
+          <div class="aplica-col-body">
+            <div class="aplica-item">
+              <span class="aplica-ico">❌</span>
+              <span>Necesitas <strong>liquidez total</strong> en menos de 3 años</span>
+            </div>
+            <div class="aplica-item">
+              <span class="aplica-ico">❌</span>
+              <span>Tienes deudas de alto costo que resolver antes de ahorrar</span>
+            </div>
+            <div class="aplica-item">
+              <span class="aplica-ico">❌</span>
+              <span>Buscas <strong>rendimientos garantizados muy altos</strong> en el corto plazo</span>
+            </div>
+            <div class="aplica-item">
+              <span class="aplica-ico">❌</span>
+              <span>Tu situación financiera actual no permite un compromiso mensual fijo</span>
+            </div>
+            <div class="aplica-item">
+              <span class="aplica-ico">❌</span>
+              <span>Tienes más de 60 años y el horizonte de ahorro es muy corto</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
 
     </div>
   </section>
@@ -1933,6 +2352,32 @@
   <!-- ══════════════════════════════
        SCRIPTS
   ══════════════════════════════ -->
+  <!-- ══════════════════════════════
+       EXIT INTENT MODAL
+  ══════════════════════════════ -->
+  <div class="exit-overlay" id="exitOverlay" role="dialog" aria-modal="true" aria-labelledby="exitTitle">
+    <div class="exit-modal">
+      <button class="exit-modal-close" id="exitClose" aria-label="Cerrar">×</button>
+      <div class="exit-modal-icon">⏳</div>
+      <h3 class="exit-modal-title" id="exitTitle">¿Te vas sin saber cuánto perderías por esperar?</h3>
+      <p class="exit-modal-body">
+        Cada mes que pasa sin un plan, el interés compuesto trabaja <strong>en tu contra</strong>. La diferencia entre empezar hoy y en un año puede ser de decenas de miles de pesos — para siempre.
+      </p>
+      <div class="exit-modal-stat">
+        Tu AFORE solo cubrirá el <strong>26–30% de tu sueldo actual</strong> al retirarte.<br>
+        El resto depende de lo que hagas <strong>hoy</strong>.
+      </div>
+      <a href="https://wa.me/message/3D7EGH3EH4FGE1" target="_blank" rel="noopener" class="btn btn-wa btn-lg" style="width:100%;justify-content:center;" onclick="document.getElementById('exitOverlay').classList.remove('active')">
+        <svg style="width:20px;height:20px;flex-shrink:0;" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.104.545 4.082 1.5 5.808L0 24l6.345-1.485A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.368l-.36-.214-3.724.871.903-3.625-.235-.373A9.818 9.818 0 1112 21.818z"/>
+        </svg>
+        Quiero mi asesoría gratuita ahora
+      </a>
+      <button class="exit-modal-dismiss" id="exitDismiss">No me interesa — salir sin mi plan</button>
+    </div>
+  </div>
+
   <script>
     /* ── Header scroll ── */
     (function () {
@@ -1966,6 +2411,48 @@
             btn.setAttribute('aria-expanded', 'true');
           }
         });
+      });
+    })();
+
+    /* ── Exit intent modal ── */
+    (function () {
+      var overlay = document.getElementById('exitOverlay');
+      var closeBtn = document.getElementById('exitClose');
+      var dismissBtn = document.getElementById('exitDismiss');
+      if (!overlay) return;
+
+      var shown = false;
+      var dismissed = false;
+
+      function showModal() {
+        if (shown || dismissed) return;
+        shown = true;
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+      function hideModal() {
+        dismissed = true;
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      /* Trigger on mouse leaving viewport toward top */
+      document.addEventListener('mouseleave', function (e) {
+        if (e.clientY <= 20) showModal();
+      });
+
+      /* Trigger on mobile: after 40s of inactivity */
+      var mobileTimer = setTimeout(function () {
+        if (window.innerWidth < 768) showModal();
+      }, 40000);
+
+      closeBtn.addEventListener('click', hideModal);
+      dismissBtn.addEventListener('click', hideModal);
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) hideModal();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') hideModal();
       });
     })();
 
