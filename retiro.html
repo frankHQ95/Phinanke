@@ -1513,6 +1513,82 @@
     @media (min-width: 641px) {
       .wa-float { bottom: 24px; }
     }
+
+    /* ─── FORMULARIO CAPTURA ─────────────────────────────────── */
+    .lf-section { padding: 2.5rem 0; }
+    .lf-card {
+      background: var(--surface-1);
+      border: 1px solid var(--border-hi);
+      border-top: 3px solid var(--b3);
+      border-radius: var(--r-md, 20px);
+      padding: 2rem 1.75rem;
+      margin-top: 1.5rem;
+    }
+    .lf-header { text-align: center; margin-bottom: 1.5rem; }
+    .lf-title { font-family:'Geist',sans-serif; font-weight:900; font-size:1.25rem; color:var(--text-1); margin-bottom:.4rem; }
+    .lf-subtitle { font-size:.88rem; color:var(--text-2); line-height:1.55; }
+    .lf-fields { display:flex; flex-direction:column; gap:1.2rem; margin-bottom:1.5rem; }
+    .lf-field { display:flex; flex-direction:column; gap:.5rem; }
+    .lf-label-row { display:flex; justify-content:space-between; align-items:baseline; }
+    .lf-label { font-size:.82rem; font-weight:600; color:var(--text-2); }
+    .lf-val { font-family:'Geist',sans-serif; font-weight:800; font-size:.88rem; color:var(--b4); }
+    .lf-input {
+      width:100%; background:var(--surface-0); border:1.5px solid var(--border);
+      border-radius:10px; color:var(--text-1); font-size:.95rem;
+      padding:.75rem 1rem; outline:none; font-family:'Inter',sans-serif;
+      transition:border-color .2s;
+    }
+    .lf-input:focus { border-color:rgba(72,202,228,.4); }
+    .lf-input::placeholder { color:var(--text-3); }
+    .lf-range {
+      -webkit-appearance:none; appearance:none; width:100%; height:4px;
+      border-radius:4px; outline:none; cursor:pointer; display:block;
+      background:linear-gradient(to right, var(--b3) var(--pct,30%), rgba(255,255,255,.1) var(--pct,30%));
+    }
+    .lf-range::-webkit-slider-thumb {
+      -webkit-appearance:none; appearance:none; width:18px; height:18px;
+      border-radius:50%; background:var(--b4); cursor:pointer;
+      box-shadow:0 0 0 3px rgba(0,180,216,.25); transition:box-shadow .2s;
+    }
+    .lf-range::-webkit-slider-thumb:hover { box-shadow:0 0 0 5px rgba(0,180,216,.35); }
+    .lf-range::-moz-range-thumb { width:18px; height:18px; border-radius:50%; background:var(--b4); border:none; }
+    .lf-range-labels { display:flex; justify-content:space-between; margin-top:.35rem; font-size:.7rem; color:var(--text-3); }
+    .lf-toggle-group { display:flex; gap:.6rem; }
+    .lf-toggle-btn {
+      flex:1; padding:.65rem; background:var(--surface-0); border:1.5px solid var(--border);
+      border-radius:10px; color:var(--text-2); font-size:.88rem; font-weight:600;
+      cursor:pointer; transition:border-color .2s, background .2s, color .2s; font-family:'Inter',sans-serif;
+    }
+    .lf-toggle-btn.active { background:rgba(0,180,216,.12); border-color:rgba(0,180,216,.4); color:var(--b4); }
+    .lf-submit {
+      width:100%; background:linear-gradient(135deg, var(--b2), var(--b3));
+      color:#fff; border:none; font-family:'Geist',sans-serif; font-weight:800;
+      font-size:1rem; padding:1rem; border-radius:50px; cursor:pointer;
+      transition:opacity .2s, transform .15s, box-shadow .2s;
+    }
+    .lf-submit:hover { opacity:.9; transform:translateY(-2px); box-shadow:0 8px 28px rgba(0,150,199,.35); }
+    .lf-success { display:none; text-align:center; }
+    .lf-success-icon { font-size:2.5rem; margin-bottom:.75rem; }
+    .lf-success-title { font-family:'Geist',sans-serif; font-weight:900; font-size:1.2rem; color:var(--text-1); margin-bottom:.5rem; }
+    .lf-success-body { font-size:.9rem; color:var(--text-2); line-height:1.65; margin-bottom:1.25rem; }
+    .lf-success-body strong { color:var(--b4); }
+    .lf-result-box {
+      background:linear-gradient(135deg, rgba(0,150,199,.1), rgba(0,180,216,.06));
+      border:1px solid rgba(72,202,228,.25); border-radius:14px;
+      padding:1.25rem; margin-bottom:1.5rem;
+    }
+    .lf-result-label { font-size:.7rem; font-weight:600; color:var(--text-3); text-transform:uppercase; letter-spacing:.07em; margin-bottom:.3rem; }
+    .lf-result-value { font-family:'Geist',sans-serif; font-weight:900; font-size:1.75rem; color:var(--b4); }
+    .lf-result-note { font-size:.72rem; color:var(--text-3); margin-top:.25rem; }
+    .lf-wa-btn {
+      display:flex; align-items:center; justify-content:center; gap:.6rem; width:100%;
+      background:linear-gradient(135deg, var(--b2), var(--b3)); color:#fff;
+      font-family:'Geist',sans-serif; font-weight:800; font-size:1rem;
+      padding:.9rem; border-radius:50px; text-decoration:none; transition:opacity .2s, transform .15s;
+    }
+    .lf-wa-btn:hover { opacity:.9; transform:translateY(-2px); }
+    .lf-reset { background:none; border:none; color:var(--text-3); font-size:.78rem; cursor:pointer; margin-top:.65rem; text-decoration:underline; transition:color .2s; display:block; margin-left:auto; margin-right:auto; }
+    .lf-reset:hover { color:var(--text-2); }
   </style>
 </head>
 <body>
@@ -2264,6 +2340,52 @@
   <div class="vsl-wrap"><div class="section-spacer"></div></div>
 
   <!-- ══════════════════════════════
+       SIMULADOR DE RETIRO
+  ══════════════════════════════ -->
+  <section style="padding:2rem 0 0;">
+    <div class="vsl-wrap">
+      <div class="lf-card fade-up" id="ret-form-card">
+        <div class="section-label" style="margin-bottom:.5rem; justify-content:center;">Simulador de Retiro</div>
+        <h3 class="lf-title" style="text-align:center;">Descubre cuánto tendrás cuando dejes de trabajar</h3>
+        <p class="lf-subtitle" style="text-align:center; margin-bottom:1.5rem;">Proyectamos tu fondo con base en tu aportación mensual y los años que te quedan hasta los 65.</p>
+
+        <!-- PASO 1: Formulario -->
+        <div id="ret-step1">
+          <div class="lf-field">
+            <label class="lf-label" for="ret-nombre">Tu nombre</label>
+            <input class="lf-input" id="ret-nombre" type="text" placeholder="¿Cómo te llamas?" autocomplete="given-name" />
+          </div>
+          <div class="lf-field" style="margin-top:1.2rem;">
+            <label class="lf-label" for="ret-edad">Tu edad actual: <strong id="ret-edad-val" style="color:var(--b4);">35</strong> años</label>
+            <input class="lf-range" id="ret-edad" type="range" min="25" max="60" value="35" step="1" style="--pct:40%;" />
+            <div class="lf-range-labels"><span>25 años</span><span>60 años</span></div>
+          </div>
+          <div class="lf-field" style="margin-top:1.2rem;">
+            <label class="lf-label" for="ret-aporte">Aportación mensual: <strong id="ret-aporte-val" style="color:var(--b4);">$3,000</strong></label>
+            <input class="lf-range" id="ret-aporte" type="range" min="2000" max="10000" value="3000" step="500" style="--pct:12.5%;" />
+            <div class="lf-range-labels"><span>$2,000</span><span>$10,000</span></div>
+          </div>
+          <p style="font-size:.78rem; color:var(--text-3); text-align:center; margin:1rem 0 1.25rem;">Plan a los 65 años · Rendimiento estimado 5% anual</p>
+          <button class="lf-submit" id="ret-submit">Ver mi proyección de retiro →</button>
+        </div>
+
+        <!-- PASO 2: Resultados -->
+        <div id="ret-step2" style="display:none;">
+          <div class="lf-result-box" id="ret-result-box"></div>
+          <a href="https://wa.me/message/3D7EGH3EH4FGE1" target="_blank" rel="noopener" class="lf-wa-btn" id="ret-wa-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.852L.057 23.743a.5.5 0 0 0 .615.607l6.105-1.603A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.847 0-3.576-.476-5.081-1.313l-.364-.21-3.766.988 1.006-3.671-.229-.376A9.963 9.963 0 0 1 2 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+            Quiero hablar con Erón sobre mi retiro
+          </a>
+          <button class="lf-reset" id="ret-reset">← Recalcular</button>
+          <p style="font-size:.72rem; color:var(--text-3); text-align:center; margin-top:1rem;">Proyección ilustrativa con fines educativos. Los resultados reales dependen del plan contratado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="vsl-wrap"><div class="section-spacer"></div></div>
+
+  <!-- ══════════════════════════════
        CIERRE FINAL
   ══════════════════════════════ -->
   <section style="padding: 0 0 4rem;">
@@ -2476,6 +2598,101 @@
         observer.observe(el);
       });
     })();
+  </script>
+
+  <!-- ── Supabase + Simulador de Retiro ── -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script>
+  (function() {
+    var SUPA_URL = 'https://cojalxemhqvcxacccopa.supabase.co';
+    var SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNvamFseGVtaHF2Y3hhY2Njb3BhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkzOTM1MjYsImV4cCI6MjA5NDk2OTUyNn0.3JVJCi8yujyEvs67AxkFYeQzn-9IoPYDkfW4xRgWQy4';
+    var db = supabase.createClient(SUPA_URL, SUPA_KEY);
+    var retLeadId = null;
+
+    function fmtMXN(n) { return '$' + Math.round(n).toLocaleString('es-MX'); }
+    function fvMonthly(pmt, months) {
+      var r = Math.pow(1.05, 1/12) - 1;
+      return pmt * ((Math.pow(1 + r, months) - 1) / r);
+    }
+    function updatePct(el, min, max) {
+      var pct = ((el.value - min) / (max - min) * 100).toFixed(1) + '%';
+      el.style.setProperty('--pct', pct);
+    }
+
+    var edadEl   = document.getElementById('ret-edad');
+    var edadVal  = document.getElementById('ret-edad-val');
+    var aporteEl = document.getElementById('ret-aporte');
+    var aporteVal= document.getElementById('ret-aporte-val');
+    var submitBtn= document.getElementById('ret-submit');
+    var resetBtn = document.getElementById('ret-reset');
+    var waBtn    = document.getElementById('ret-wa-btn');
+    var step1    = document.getElementById('ret-step1');
+    var step2    = document.getElementById('ret-step2');
+    var resultBox= document.getElementById('ret-result-box');
+    if (!edadEl) return;
+
+    edadEl.addEventListener('input', function() {
+      edadVal.textContent = edadEl.value;
+      updatePct(edadEl, 25, 60);
+    });
+    aporteEl.addEventListener('input', function() {
+      aporteVal.textContent = '$' + parseInt(aporteEl.value).toLocaleString('es-MX');
+      updatePct(aporteEl, 2000, 10000);
+    });
+
+    submitBtn.addEventListener('click', async function() {
+      var nombre    = (document.getElementById('ret-nombre').value.trim()) || 'Amigo';
+      var edad      = parseInt(edadEl.value);
+      var aporte    = parseInt(aporteEl.value);
+      var yearsLeft = 65 - edad;
+      if (yearsLeft <= 0) { alert('Ingresa una edad menor a 65 años.'); return; }
+      var months    = yearsLeft * 12;
+      var fondo     = fvMonthly(aporte, months);
+      var renMensual= fondo * 0.004;
+      var totalAport= aporte * months;
+
+      resultBox.innerHTML =
+        '<div style="text-align:center;margin-bottom:1.25rem;">' +
+          '<p style="font-size:.92rem;margin:0 0 .3rem;">Hola, <strong>' + nombre + '</strong> — aportando <strong>$' + aporte.toLocaleString('es-MX') + '/mes</strong></p>' +
+          '<p style="font-size:.8rem;color:var(--text-3);margin:0;">en <strong>' + yearsLeft + ' años</strong>, al cumplir 65, habrías acumulado:</p>' +
+        '</div>' +
+        '<div style="font-size:2.4rem;font-weight:800;color:var(--b3);text-align:center;line-height:1.1;margin-bottom:.4rem;">' + fmtMXN(fondo) + '</div>' +
+        '<p style="text-align:center;font-size:.82rem;color:var(--text-3);margin:0 0 1.1rem;">equivalente a una renta de <strong style="color:var(--b3);">' + fmtMXN(renMensual) + '/mes</strong> por 20 años</p>' +
+        '<div style="display:grid;grid-template-columns:1fr 1fr;gap:.65rem;">' +
+          '<div style="background:rgba(255,255,255,.05);border-radius:.55rem;padding:.8rem;text-align:center;">' +
+            '<div style="font-size:.68rem;color:var(--text-3);margin-bottom:.3rem;">Total aportado</div>' +
+            '<div style="font-weight:700;">' + fmtMXN(totalAport) + '</div>' +
+          '</div>' +
+          '<div style="background:rgba(255,255,255,.05);border-radius:.55rem;padding:.8rem;text-align:center;">' +
+            '<div style="font-size:.68rem;color:var(--text-3);margin-bottom:.3rem;">Genera el interés</div>' +
+            '<div style="font-weight:700;color:var(--b3);">' + fmtMXN(fondo - totalAport) + '</div>' +
+          '</div>' +
+        '</div>';
+
+      step1.style.display = 'none';
+      step2.style.display = 'block';
+
+      try {
+        var res = await db.from('leads').insert([{
+          source: 'retiro', nombre: nombre, edad: edad,
+          aportacion_mensual: aporte,
+          total_proyectado: parseFloat(fondo.toFixed(2)),
+          referrer: document.referrer || null,
+          datos_extra: { years_to_retirement: yearsLeft, renta_mensual_est: parseFloat(renMensual.toFixed(2)) }
+        }]).select('id').single();
+        if (!res.error && res.data) retLeadId = res.data.id;
+      } catch(e) {}
+    });
+
+    waBtn && waBtn.addEventListener('click', async function() {
+      if (retLeadId) try { await db.from('leads').update({ clic_whatsapp: true }).eq('id', retLeadId); } catch(e) {}
+    });
+
+    resetBtn && resetBtn.addEventListener('click', function() {
+      step2.style.display = 'none';
+      step1.style.display = 'block';
+    });
+  })();
   </script>
 
 </body>

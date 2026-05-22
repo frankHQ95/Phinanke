@@ -1052,6 +1052,75 @@
       .proof-bar { grid-template-columns: 1fr 1fr; }
       .stat-grid { grid-template-columns: 1fr 1fr; }
     }
+
+    /* ─── FORMULARIO CAPTURA ─────────────────────────────────── */
+    .lf-section { padding: 2.5rem 0; }
+    .lf-card {
+      background: var(--surface-1);
+      border: 1px solid var(--border-hi);
+      border-top: 3px solid var(--b3);
+      border-radius: var(--radius-lg, 20px);
+      padding: 2rem 1.75rem;
+      margin-top: 1.5rem;
+    }
+    .lf-header { text-align: center; margin-bottom: 1.5rem; }
+    .lf-title { font-family:'Geist',sans-serif; font-weight:900; font-size:1.25rem; color:var(--text-1); margin-bottom:.4rem; }
+    .lf-subtitle { font-size:.88rem; color:var(--text-2); line-height:1.55; }
+    .lf-fields { display:flex; flex-direction:column; gap:1.2rem; margin-bottom:1.5rem; }
+    .lf-field { display:flex; flex-direction:column; gap:.5rem; }
+    .lf-label-row { display:flex; justify-content:space-between; align-items:baseline; }
+    .lf-label { font-size:.82rem; font-weight:600; color:var(--text-2); }
+    .lf-val { font-family:'Geist',sans-serif; font-weight:800; font-size:.88rem; color:var(--b4); }
+    .lf-input {
+      width:100%; background:var(--surface-0); border:1.5px solid var(--border);
+      border-radius:10px; color:var(--text-1); font-size:.95rem;
+      padding:.75rem 1rem; outline:none; font-family:'Inter',sans-serif;
+      transition:border-color .2s;
+    }
+    .lf-input:focus { border-color:rgba(72,202,228,.4); }
+    .lf-input::placeholder { color:var(--text-3); }
+    .lf-range {
+      -webkit-appearance:none; appearance:none; width:100%; height:4px;
+      border-radius:4px; outline:none; cursor:pointer; display:block;
+      background:linear-gradient(to right, var(--b3) var(--pct,30%), rgba(255,255,255,.1) var(--pct,30%));
+    }
+    .lf-range::-webkit-slider-thumb {
+      -webkit-appearance:none; appearance:none; width:18px; height:18px;
+      border-radius:50%; background:var(--b4); cursor:pointer;
+      box-shadow:0 0 0 3px rgba(0,180,216,.25); transition:box-shadow .2s;
+    }
+    .lf-range::-webkit-slider-thumb:hover { box-shadow:0 0 0 5px rgba(0,180,216,.35); }
+    .lf-range::-moz-range-thumb { width:18px; height:18px; border-radius:50%; background:var(--b4); border:none; }
+    .lf-range-labels { display:flex; justify-content:space-between; margin-top:.35rem; font-size:.7rem; color:var(--text-3); }
+    .lf-submit {
+      width:100%; background:linear-gradient(135deg, var(--b2), var(--b3));
+      color:#fff; border:none; font-family:'Geist',sans-serif; font-weight:800;
+      font-size:1rem; padding:1rem; border-radius:50px; cursor:pointer;
+      transition:opacity .2s, transform .15s, box-shadow .2s;
+    }
+    .lf-submit:hover { opacity:.9; transform:translateY(-2px); box-shadow:0 8px 28px rgba(0,150,199,.35); }
+    .lf-success { display:none; text-align:center; }
+    .lf-success-icon { font-size:2.5rem; margin-bottom:.75rem; }
+    .lf-success-title { font-family:'Geist',sans-serif; font-weight:900; font-size:1.2rem; color:var(--text-1); margin-bottom:.5rem; }
+    .lf-success-body { font-size:.9rem; color:var(--text-2); line-height:1.65; margin-bottom:1.25rem; }
+    .lf-success-body strong { color:var(--b4); }
+    .lf-result-box {
+      background:linear-gradient(135deg, rgba(0,150,199,.1), rgba(0,180,216,.06));
+      border:1px solid rgba(72,202,228,.25); border-radius:14px;
+      padding:1.25rem; margin-bottom:1.5rem;
+    }
+    .lf-result-label { font-size:.7rem; font-weight:600; color:var(--text-3); text-transform:uppercase; letter-spacing:.07em; margin-bottom:.3rem; }
+    .lf-result-value { font-family:'Geist',sans-serif; font-weight:900; font-size:1.75rem; color:var(--b4); }
+    .lf-result-note { font-size:.72rem; color:var(--text-3); margin-top:.25rem; }
+    .lf-wa-btn {
+      display:flex; align-items:center; justify-content:center; gap:.6rem; width:100%;
+      background:linear-gradient(135deg, var(--b2), var(--b3)); color:#fff;
+      font-family:'Geist',sans-serif; font-weight:800; font-size:1rem;
+      padding:.9rem; border-radius:50px; text-decoration:none; transition:opacity .2s, transform .15s;
+    }
+    .lf-wa-btn:hover { opacity:.9; transform:translateY(-2px); }
+    .lf-reset { background:none; border:none; color:var(--text-3); font-size:.78rem; cursor:pointer; margin-top:.65rem; text-decoration:underline; transition:color .2s; display:block; margin-left:auto; margin-right:auto; }
+    .lf-reset:hover { color:var(--text-2); }
   </style>
 </head>
 <body>
@@ -1497,6 +1566,50 @@
 </section>
 
 <!-- ─────────────────────────────────────────────── -->
+<!--  SIMULADOR DE FONDO EDUCATIVO                   -->
+<!-- ─────────────────────────────────────────────── -->
+<section style="padding:2rem 0 0;">
+  <div class="vsl-wrap">
+    <div class="lf-card fade-up" id="edu-form-card">
+      <div class="section-label" style="margin-bottom:.5rem; justify-content:center;">Simulador Educativo</div>
+      <h3 class="lf-title" style="text-align:center;">¿Cuánto podrías acumular para la universidad de tu hijo?</h3>
+      <p class="lf-subtitle" style="text-align:center; margin-bottom:1.5rem;">Con base en su edad y tu aportación, proyectamos el fondo disponible al llegar a los 18 años.</p>
+
+      <!-- PASO 1: Formulario -->
+      <div id="edu-step1">
+        <div class="lf-field">
+          <label class="lf-label" for="edu-nombre">Tu nombre</label>
+          <input class="lf-input" id="edu-nombre" type="text" placeholder="¿Cómo te llamas?" autocomplete="given-name" />
+        </div>
+        <div class="lf-field" style="margin-top:1.2rem;">
+          <label class="lf-label" for="edu-edad">Edad actual de tu hijo: <strong id="edu-edad-val" style="color:var(--b4);">5</strong> años</label>
+          <input class="lf-range" id="edu-edad" type="range" min="0" max="15" value="5" step="1" style="--pct:33.3%;" />
+          <div class="lf-range-labels"><span>Recién nacido</span><span>15 años</span></div>
+        </div>
+        <div class="lf-field" style="margin-top:1.2rem;">
+          <label class="lf-label" for="edu-aporte">Aportación mensual: <strong id="edu-aporte-val" style="color:var(--b4);">$1,500</strong></label>
+          <input class="lf-range" id="edu-aporte" type="range" min="500" max="5000" value="1500" step="250" style="--pct:22.2%;" />
+          <div class="lf-range-labels"><span>$500</span><span>$5,000</span></div>
+        </div>
+        <p style="font-size:.78rem; color:var(--text-3); text-align:center; margin:1rem 0 1.25rem;">Fondo disponible al cumplir 18 años · Rendimiento estimado 5% anual</p>
+        <button class="lf-submit" id="edu-submit">Ver la proyección del fondo →</button>
+      </div>
+
+      <!-- PASO 2: Resultados -->
+      <div id="edu-step2" style="display:none;">
+        <div class="lf-result-box" id="edu-result-box"></div>
+        <a href="https://wa.me/message/3D7EGH3EH4FGE1" target="_blank" rel="noopener" class="lf-wa-btn" id="edu-wa-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.852L.057 23.743a.5.5 0 0 0 .615.607l6.105-1.603A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.847 0-3.576-.476-5.081-1.313l-.364-.21-3.766.988 1.006-3.671-.229-.376A9.963 9.963 0 0 1 2 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+          Quiero hablar con Erón sobre el plan educativo
+        </a>
+        <button class="lf-reset" id="edu-reset">← Recalcular</button>
+        <p style="font-size:.72rem; color:var(--text-3); text-align:center; margin-top:1rem;">Proyección ilustrativa con fines educativos. Los resultados reales dependen del plan contratado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────── -->
 <!--  17. CIERRE FINAL                               -->
 <!-- ─────────────────────────────────────────────── -->
 <section class="fade-up">
@@ -1616,6 +1729,113 @@
     // init hidden via CSS display:none override for JS control
     stickyBar.style.display = 'none';
   })();
+</script>
+
+<!-- ── Supabase + Simulador Educativo ── -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script>
+(function() {
+  var SUPA_URL = 'https://cojalxemhqvcxacccopa.supabase.co';
+  var SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNvamFseGVtaHF2Y3hhY2Njb3BhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkzOTM1MjYsImV4cCI6MjA5NDk2OTUyNn0.3JVJCi8yujyEvs67AxkFYeQzn-9IoPYDkfW4xRgWQy4';
+  var db = supabase.createClient(SUPA_URL, SUPA_KEY);
+  var eduLeadId = null;
+
+  function fmtMXN(n) { return '$' + Math.round(n).toLocaleString('es-MX'); }
+  function fvMonthly(pmt, months) {
+    var r = Math.pow(1.05, 1/12) - 1;
+    return pmt * ((Math.pow(1 + r, months) - 1) / r);
+  }
+  function updatePct(el, min, max) {
+    var pct = ((el.value - min) / (max - min) * 100).toFixed(1) + '%';
+    el.style.setProperty('--pct', pct);
+  }
+
+  var edadEl    = document.getElementById('edu-edad');
+  var edadVal   = document.getElementById('edu-edad-val');
+  var aporteEl  = document.getElementById('edu-aporte');
+  var aporteVal = document.getElementById('edu-aporte-val');
+  var submitBtn = document.getElementById('edu-submit');
+  var resetBtn  = document.getElementById('edu-reset');
+  var waBtn     = document.getElementById('edu-wa-btn');
+  var step1     = document.getElementById('edu-step1');
+  var step2     = document.getElementById('edu-step2');
+  var resultBox = document.getElementById('edu-result-box');
+  if (!edadEl) return;
+
+  edadEl.addEventListener('input', function() {
+    edadVal.textContent = edadEl.value;
+    updatePct(edadEl, 0, 15);
+  });
+  aporteEl.addEventListener('input', function() {
+    aporteVal.textContent = '$' + parseInt(aporteEl.value).toLocaleString('es-MX');
+    updatePct(aporteEl, 500, 5000);
+  });
+
+  submitBtn.addEventListener('click', async function() {
+    var nombre    = (document.getElementById('edu-nombre').value.trim()) || 'Amigo';
+    var edadHijo  = parseInt(edadEl.value);
+    var aporte    = parseInt(aporteEl.value);
+    var yearsLeft = 18 - edadHijo;
+    if (yearsLeft <= 0) { alert('Tu hijo ya tiene 18 años — ¡es momento de actuar ahora!'); return; }
+    var months    = yearsLeft * 12;
+    var fondo     = fvMonthly(aporte, months);
+    var totalAport= aporte * months;
+    var costoProyectado = 150000 * Math.pow(1.08, yearsLeft) * 4;
+    var cubre     = fondo >= costoProyectado;
+
+    resultBox.innerHTML =
+      '<div style="text-align:center;margin-bottom:1.25rem;">' +
+        '<p style="font-size:.92rem;margin:0 0 .3rem;">Hola, <strong>' + nombre + '</strong> — aportando <strong>$' + aporte.toLocaleString('es-MX') + '/mes</strong></p>' +
+        '<p style="font-size:.8rem;color:var(--text-3);margin:0;">en <strong>' + yearsLeft + ' año' + (yearsLeft !== 1 ? 's' : '') + '</strong>, cuando tu hijo cumpla 18, tendrías:</p>' +
+      '</div>' +
+      '<div style="font-size:2.4rem;font-weight:800;color:var(--b3);text-align:center;line-height:1.1;margin-bottom:.4rem;">' + fmtMXN(fondo) + '</div>' +
+      '<p style="text-align:center;font-size:.8rem;color:var(--text-3);margin:0 0 1rem;">disponibles para la universidad</p>' +
+      '<div style="background:rgba(255,255,255,.05);border-radius:.6rem;padding:.85rem;margin-bottom:.75rem;">' +
+        '<div style="font-size:.72rem;color:var(--text-3);margin-bottom:.4rem;">¿Alcanza para 4 años en universidad privada?</div>' +
+        '<div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem;">' +
+          '<span style="font-size:.82rem;">Costo proyectado (inflación 8% anual)</span>' +
+          '<span style="font-weight:700;color:' + (cubre ? 'var(--b3)' : '#f87171') + ';">' + fmtMXN(costoProyectado) + '</span>' +
+        '</div>' +
+        '<div style="margin-top:.5rem;font-size:.78rem;font-weight:600;color:' + (cubre ? 'var(--b3)' : '#f87171') + ';">' +
+          (cubre ? '✓ Tu fondo cubre la universidad completa' : '⚡ Ajustando el plan podemos cubrirla — hablemos') +
+        '</div>' +
+      '</div>' +
+      '<div style="display:grid;grid-template-columns:1fr 1fr;gap:.65rem;">' +
+        '<div style="background:rgba(255,255,255,.05);border-radius:.55rem;padding:.8rem;text-align:center;">' +
+          '<div style="font-size:.68rem;color:var(--text-3);margin-bottom:.3rem;">Total aportado</div>' +
+          '<div style="font-weight:700;">' + fmtMXN(totalAport) + '</div>' +
+        '</div>' +
+        '<div style="background:rgba(255,255,255,.05);border-radius:.55rem;padding:.8rem;text-align:center;">' +
+          '<div style="font-size:.68rem;color:var(--text-3);margin-bottom:.3rem;">Genera el interés</div>' +
+          '<div style="font-weight:700;color:var(--b3);">' + fmtMXN(fondo - totalAport) + '</div>' +
+        '</div>' +
+      '</div>';
+
+    step1.style.display = 'none';
+    step2.style.display = 'block';
+
+    try {
+      var res = await db.from('leads').insert([{
+        source: 'educativo', nombre: nombre,
+        edad: edadHijo,
+        aportacion_mensual: aporte,
+        total_proyectado: parseFloat(fondo.toFixed(2)),
+        referrer: document.referrer || null,
+        datos_extra: { edad_hijo: edadHijo, years_to_18: yearsLeft, costo_proyectado: parseFloat(costoProyectado.toFixed(2)) }
+      }]).select('id').single();
+      if (!res.error && res.data) eduLeadId = res.data.id;
+    } catch(e) {}
+  });
+
+  waBtn && waBtn.addEventListener('click', async function() {
+    if (eduLeadId) try { await db.from('leads').update({ clic_whatsapp: true }).eq('id', eduLeadId); } catch(e) {}
+  });
+
+  resetBtn && resetBtn.addEventListener('click', function() {
+    step2.style.display = 'none';
+    step1.style.display = 'block';
+  });
+})();
 </script>
 
 </body>

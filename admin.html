@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin · Leads — Phinanké</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <style>
+    :root {
+      --bg:      #060818;
+      --bg1:     #0b1023;
+      --bg2:     #131929;
+      --border:  rgba(255,255,255,.08);
+      --text-1:  #f0f4ff;
+      --text-2:  #a8b4d0;
+      --text-3:  #6b7a99;
+      --accent:  #8b5cf6;
+      --rose:    #db2777;
+      --green:   #22c55e;
+      --yellow:  #f59e0b;
+      --red:     #ef4444;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text-1); font-family: 'Inter', sans-serif; font-size: .9rem; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    /* ── AUTH GATE ──────────────────────────────────── */
+    #auth-gate {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .auth-card {
+      background: var(--bg1);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--accent);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      width: 100%;
+      max-width: 380px;
+      text-align: center;
+    }
+    .auth-logo {
+      font-family: 'Geist', sans-serif;
+      font-weight: 900;
+      font-size: 1.4rem;
+      letter-spacing: .06em;
+      color: var(--text-1);
+      margin-bottom: .35rem;
+    }
+    .auth-sub { font-size: .8rem; color: var(--text-3); margin-bottom: 2rem; }
+    .auth-input {
+      width: 100%;
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      color: var(--text-1);
+      font-size: 1rem;
+      padding: .8rem 1rem;
+      outline: none;
+      font-family: 'Inter', sans-serif;
+      transition: border-color .2s;
+      margin-bottom: .85rem;
+      text-align: center;
+      letter-spacing: .15em;
+    }
+    .auth-input:focus { border-color: rgba(139,92,246,.5); }
+    .auth-btn {
+      width: 100%;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      font-family: 'Geist', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: .85rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: opacity .2s;
+    }
+    .auth-btn:hover { opacity: .85; }
+    .auth-error { font-size: .8rem; color: var(--red); margin-top: .65rem; min-height: 1.2em; }
+
+    /* ── ADMIN LAYOUT ───────────────────────────────── */
+    #admin-panel { display: none; min-height: 100vh; }
+    .admin-header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(6,8,24,.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: .9rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .admin-logo {
+      font-family: 'Geist', sans-serif; font-weight: 900;
+      font-size: 1rem; letter-spacing: .06em;
+      color: var(--text-1); margin-right: auto;
+    }
+    .admin-logo span { color: var(--accent); }
+    .admin-badge {
+      background: rgba(139,92,246,.15);
+      border: 1px solid rgba(139,92,246,.3);
+      border-radius: 50px; padding: .2rem .7rem;
+      font-size: .7rem; font-weight: 600; color: var(--accent);
+    }
+    .logout-btn {
+      background: none; border: 1px solid var(--border);
+      color: var(--text-3); font-size: .78rem;
+      padding: .35rem .85rem; border-radius: 8px;
+      cursor: pointer; transition: color .2s, border-color .2s;
+    }
+    .logout-btn:hover { color: var(--text-1); border-color: rgba(255,255,255,.2); }
+
+    .admin-body { max-width: 1280px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+
+    /* Stats */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: .85rem;
+      margin-bottom: 2rem;
+    }
+    .stat-card {
+      background: var(--bg1);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.1rem;
+    }
+    .stat-label { font-size: .72rem; color: var(--text-3); font-weight: 600; text-transform: uppercase; letter-spacing: .07em; margin-bottom: .4rem; }
+    .stat-value { font-family: 'Geist', sans-serif; font-weight: 900; font-size: 1.75rem; color: var(--text-1); }
+    .stat-card.accent  { border-top: 2px solid var(--accent); }
+    .stat-card.rose    { border-top: 2px solid var(--rose); }
+    .stat-card.green   { border-top: 2px solid var(--green); }
+    .stat-card.yellow  { border-top: 2px solid var(--yellow); }
+
+    /* Toolbar */
+    .toolbar {
+      display: flex; gap: .75rem; flex-wrap: wrap;
+      align-items: center; margin-bottom: 1.25rem;
+    }
+    .filter-select, .search-input {
+      background: var(--bg1);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text-1);
+      font-size: .82rem;
+      padding: .5rem .85rem;
+      outline: none;
+      transition: border-color .2s;
+      font-family: 'Inter', sans-serif;
+    }
+    .filter-select:focus, .search-input:focus { border-color: rgba(139,92,246,.4); }
+    .filter-select option { background: var(--bg1); }
+    .search-input { min-width: 200px; }
+    .refresh-btn, .export-btn {
+      background: var(--bg1);
+      border: 1px solid var(--border);
+      color: var(--text-2);
+      font-size: .82rem; font-family: 'Inter', sans-serif;
+      padding: .5rem .9rem;
+      border-radius: 8px; cursor: pointer;
+      transition: background .2s, color .2s, border-color .2s;
+      display: flex; align-items: center; gap: .4rem;
+    }
+    .refresh-btn:hover { color: var(--text-1); border-color: rgba(255,255,255,.2); }
+    .export-btn { border-color: rgba(34,197,94,.3); color: var(--green); margin-left: auto; }
+    .export-btn:hover { background: rgba(34,197,94,.08); }
+
+    .results-count { font-size: .78rem; color: var(--text-3); }
+
+    /* Table */
+    .table-wrap {
+      background: var(--bg1);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .table-scroll { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; min-width: 700px; }
+    thead th {
+      background: var(--bg2);
+      padding: .85rem 1rem;
+      text-align: left;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      white-space: nowrap;
+      cursor: pointer;
+      user-select: none;
+      transition: color .2s;
+    }
+    thead th:hover { color: var(--text-2); }
+    thead th.sorted { color: var(--accent); }
+    tbody tr {
+      border-top: 1px solid var(--border);
+      transition: background .15s;
+    }
+    tbody tr:hover { background: rgba(255,255,255,.03); }
+    tbody td {
+      padding: .85rem 1rem;
+      font-size: .82rem;
+      color: var(--text-2);
+      white-space: nowrap;
+    }
+    tbody td:first-child { color: var(--text-1); font-weight: 600; }
+
+    .badge-source {
+      display: inline-block;
+      padding: .2rem .65rem;
+      border-radius: 50px;
+      font-size: .68rem; font-weight: 700;
+      letter-spacing: .04em; text-transform: uppercase;
+    }
+    .badge-vida-mujer    { background: rgba(219,39,119,.15); color: #f472b6; border: 1px solid rgba(219,39,119,.3); }
+    .badge-retiro        { background: rgba(0,180,216,.12);  color: #38bdf8; border: 1px solid rgba(0,180,216,.25); }
+    .badge-gastos-medicos{ background: rgba(34,197,94,.1);   color: #4ade80; border: 1px solid rgba(34,197,94,.2); }
+    .badge-educativo     { background: rgba(245,158,11,.12); color: #fbbf24; border: 1px solid rgba(245,158,11,.25); }
+    .badge-otro          { background: rgba(255,255,255,.06); color: var(--text-3); border: 1px solid var(--border); }
+
+    .wa-yes { color: var(--green); font-weight: 700; }
+    .wa-no  { color: var(--text-3); }
+
+    .empty-row td {
+      text-align: center;
+      padding: 3rem;
+      color: var(--text-3);
+      font-size: .9rem;
+    }
+
+    /* Pagination */
+    .pagination {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: .9rem 1.1rem;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap; gap: .5rem;
+    }
+    .page-info { font-size: .78rem; color: var(--text-3); }
+    .page-btns { display: flex; gap: .4rem; }
+    .page-btn {
+      background: var(--bg2); border: 1px solid var(--border);
+      color: var(--text-2); font-size: .78rem;
+      padding: .3rem .7rem; border-radius: 6px;
+      cursor: pointer; transition: background .2s, color .2s;
+    }
+    .page-btn:hover:not(:disabled) { background: rgba(139,92,246,.15); color: var(--accent); }
+    .page-btn:disabled { opacity: .35; cursor: not-allowed; }
+    .page-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+    /* Loading */
+    .loading-row td { text-align: center; padding: 2.5rem; color: var(--text-3); }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spinner {
+      display: inline-block; width: 20px; height: 20px;
+      border: 2px solid var(--border); border-top-color: var(--accent);
+      border-radius: 50%; animation: spin .8s linear infinite;
+      vertical-align: middle; margin-right: .5rem;
+    }
+
+    /* Detail modal */
+    .detail-overlay {
+      display: none; position: fixed; inset: 0; z-index: 200;
+      background: rgba(0,0,0,.7); backdrop-filter: blur(4px);
+      align-items: center; justify-content: center; padding: 1.25rem;
+    }
+    .detail-overlay.active { display: flex; }
+    .detail-modal {
+      background: var(--bg1); border: 1px solid var(--border);
+      border-radius: 18px; padding: 2rem 1.75rem;
+      max-width: 480px; width: 100%;
+      max-height: 90vh; overflow-y: auto;
+      position: relative;
+    }
+    .detail-close {
+      position: absolute; top: 1rem; right: 1rem;
+      background: none; border: none; color: var(--text-3);
+      font-size: 1.2rem; cursor: pointer; transition: color .2s;
+    }
+    .detail-close:hover { color: var(--text-1); }
+    .detail-title { font-family: 'Geist', sans-serif; font-weight: 800; font-size: 1.1rem; margin-bottom: 1.25rem; }
+    .detail-row { display: flex; justify-content: space-between; align-items: flex-start; padding: .6rem 0; border-bottom: 1px solid var(--border); gap: 1rem; }
+    .detail-row:last-child { border-bottom: none; }
+    .detail-key { font-size: .78rem; color: var(--text-3); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; flex-shrink: 0; }
+    .detail-val { font-size: .85rem; color: var(--text-1); text-align: right; word-break: break-all; }
+    .detail-json { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: .65rem .85rem; font-size: .75rem; color: var(--text-2); font-family: monospace; white-space: pre-wrap; word-break: break-all; }
+  </style>
+</head>
+<body>
+
+<!-- ░░ AUTH GATE ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<div id="auth-gate">
+  <div class="auth-card">
+    <div class="auth-logo">PHINANKÉ</div>
+    <div class="auth-sub">Panel de administración · Leads</div>
+    <form id="auth-form" autocomplete="off">
+      <input class="auth-input" type="password" id="auth-pass" placeholder="••••••••" autocomplete="new-password" />
+      <button class="auth-btn" type="submit">Entrar</button>
+      <div class="auth-error" id="auth-error"></div>
+    </form>
+  </div>
+</div>
+
+<!-- ░░ ADMIN PANEL ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<div id="admin-panel">
+
+  <header class="admin-header">
+    <div class="admin-logo">PHINANKÉ <span>·</span> Admin</div>
+    <span class="admin-badge">Leads CRM</span>
+    <button class="logout-btn" id="logout-btn">Cerrar sesión</button>
+  </header>
+
+  <div class="admin-body">
+
+    <!-- Stats -->
+    <div class="stats-grid" id="stats-grid">
+      <div class="stat-card accent">
+        <div class="stat-label">Total de leads</div>
+        <div class="stat-value" id="stat-total">—</div>
+      </div>
+      <div class="stat-card rose">
+        <div class="stat-label">Esta semana</div>
+        <div class="stat-value" id="stat-week">—</div>
+      </div>
+      <div class="stat-card green">
+        <div class="stat-label">Hicieron clic WA</div>
+        <div class="stat-value" id="stat-wa">—</div>
+      </div>
+      <div class="stat-card yellow">
+        <div class="stat-label">Hoy</div>
+        <div class="stat-value" id="stat-today">—</div>
+      </div>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+      <input class="search-input" type="search" id="search-input" placeholder="Buscar por nombre…" />
+
+      <select class="filter-select" id="filter-source">
+        <option value="">Todas las landing</option>
+        <option value="vida-mujer">Vida Mujer</option>
+        <option value="retiro">Retiro</option>
+        <option value="gastos-medicos">Gastos Médicos</option>
+        <option value="educativo">Educativo</option>
+      </select>
+
+      <select class="filter-select" id="filter-wa">
+        <option value="">Todos los contactos</option>
+        <option value="true">Hicieron clic WA</option>
+        <option value="false">Sin clic WA</option>
+      </select>
+
+      <button class="refresh-btn" id="refresh-btn">
+        <span>↺</span> Actualizar
+      </button>
+
+      <span class="results-count" id="results-count"></span>
+
+      <button class="export-btn" id="export-btn">
+        ↓ Exportar CSV
+      </button>
+    </div>
+
+    <!-- Tabla -->
+    <div class="table-wrap">
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th data-col="nombre">Nombre</th>
+              <th data-col="source">Landing</th>
+              <th data-col="edad">Edad</th>
+              <th data-col="aportacion_mensual">Aportación/mes</th>
+              <th data-col="total_proyectado">Total proyectado</th>
+              <th data-col="clic_whatsapp">Clic WA</th>
+              <th data-col="created_at" class="sorted">Fecha</th>
+              <th>Detalle</th>
+            </tr>
+          </thead>
+          <tbody id="leads-tbody">
+            <tr class="loading-row"><td colspan="8"><span class="spinner"></span>Cargando leads…</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="pagination" id="pagination"></div>
+    </div>
+
+  </div><!-- /admin-body -->
+</div><!-- /admin-panel -->
+
+<!-- ░░ DETAIL MODAL ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<div class="detail-overlay" id="detail-overlay">
+  <div class="detail-modal">
+    <button class="detail-close" id="detail-close">✕</button>
+    <div class="detail-title" id="detail-title">Detalle del lead</div>
+    <div id="detail-body"></div>
+  </div>
+</div>
+
+<script>
+  // ─── CONFIG ────────────────────────────────────────────────────
+  const SUPA_URL  = 'https://cojalxemhqvcxacccopa.supabase.co';
+  const SUPA_KEY  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNvamFseGVtaHF2Y3hhY2Njb3BhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkzOTM1MjYsImV4cCI6MjA5NDk2OTUyNn0.3JVJCi8yujyEvs67AxkFYeQzn-9IoPYDkfW4xRgWQy4';
+  const ADMIN_PASS = 'phinanke2026';   // ← cambia esta contraseña
+  const PAGE_SIZE  = 25;
+
+  const db = supabase.createClient(SUPA_URL, SUPA_KEY);
+
+  // ─── AUTH ──────────────────────────────────────────────────────
+  const SESSION_KEY = 'phk_admin_auth';
+  function isAuthed() { return sessionStorage.getItem(SESSION_KEY) === '1'; }
+  function login()    { sessionStorage.setItem(SESSION_KEY, '1'); showAdmin(); }
+  function logout()   { sessionStorage.removeItem(SESSION_KEY); location.reload(); }
+
+  function showAdmin() {
+    document.getElementById('auth-gate').style.display  = 'none';
+    document.getElementById('admin-panel').style.display = 'block';
+    loadLeads();
+    loadStats();
+  }
+
+  if (isAuthed()) { showAdmin(); }
+
+  document.getElementById('auth-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const val = document.getElementById('auth-pass').value;
+    if (val === ADMIN_PASS) {
+      login();
+    } else {
+      document.getElementById('auth-error').textContent = 'Contraseña incorrecta.';
+      document.getElementById('auth-pass').value = '';
+    }
+  });
+
+  document.getElementById('logout-btn').addEventListener('click', logout);
+
+  // ─── STATE ─────────────────────────────────────────────────────
+  let allLeads    = [];
+  let filtered    = [];
+  let currentPage = 1;
+  let sortCol     = 'created_at';
+  let sortAsc     = false;
+
+  // ─── LOAD LEADS ────────────────────────────────────────────────
+  async function loadLeads() {
+    const tbody = document.getElementById('leads-tbody');
+    tbody.innerHTML = '<tr class="loading-row"><td colspan="8"><span class="spinner"></span>Cargando…</td></tr>';
+
+    const { data, error } = await db
+      .from('leads')
+      .select('*')
+      .order('created_at', { ascending: false });
+
+    if (error) {
+      tbody.innerHTML = `<tr class="empty-row"><td colspan="8">Error al cargar leads: ${error.message}</td></tr>`;
+      return;
+    }
+    allLeads = data || [];
+    applyFilters();
+  }
+
+  // ─── LOAD STATS ────────────────────────────────────────────────
+  async function loadStats() {
+    const { data } = await db.from('leads').select('created_at, clic_whatsapp');
+    if (!data) return;
+
+    const now   = new Date();
+    const today = now.toISOString().slice(0, 10);
+    const weekAgo = new Date(now - 7 * 86400000).toISOString();
+
+    document.getElementById('stat-total').textContent = data.length;
+    document.getElementById('stat-today').textContent = data.filter(r => r.created_at.startsWith(today)).length;
+    document.getElementById('stat-week').textContent  = data.filter(r => r.created_at >= weekAgo).length;
+    document.getElementById('stat-wa').textContent    = data.filter(r => r.clic_whatsapp).length;
+  }
+
+  // ─── FILTERS ───────────────────────────────────────────────────
+  function applyFilters() {
+    const search = document.getElementById('search-input').value.toLowerCase();
+    const source = document.getElementById('filter-source').value;
+    const wa     = document.getElementById('filter-wa').value;
+
+    filtered = allLeads.filter(r => {
+      if (search && !(r.nombre || '').toLowerCase().includes(search)) return false;
+      if (source && r.source !== source) return false;
+      if (wa === 'true'  && !r.clic_whatsapp)  return false;
+      if (wa === 'false' && r.clic_whatsapp)   return false;
+      return true;
+    });
+
+    filtered.sort((a, b) => {
+      let av = a[sortCol], bv = b[sortCol];
+      if (av == null) av = '';
+      if (bv == null) bv = '';
+      if (typeof av === 'string') return sortAsc ? av.localeCompare(bv) : bv.localeCompare(av);
+      return sortAsc ? av - bv : bv - av;
+    });
+
+    currentPage = 1;
+    document.getElementById('results-count').textContent = `${filtered.length} resultado${filtered.length !== 1 ? 's' : ''}`;
+    renderTable();
+  }
+
+  ['search-input','filter-source','filter-wa'].forEach(id =>
+    document.getElementById(id).addEventListener('input', applyFilters)
+  );
+  document.getElementById('refresh-btn').addEventListener('click', () => { loadLeads(); loadStats(); });
+
+  // ─── RENDER TABLE ──────────────────────────────────────────────
+  function fmtDate(iso) {
+    if (!iso) return '—';
+    const d = new Date(iso);
+    return d.toLocaleDateString('es-MX', { day:'2-digit', month:'short', year:'numeric' }) +
+           ' ' + d.toLocaleTimeString('es-MX', { hour:'2-digit', minute:'2-digit' });
+  }
+  function fmtMXN(n) {
+    if (n == null) return '—';
+    return '$' + Number(n).toLocaleString('es-MX', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+  }
+  function sourceBadge(s) {
+    const map = {
+      'vida-mujer':     'badge-vida-mujer',
+      'retiro':         'badge-retiro',
+      'gastos-medicos': 'badge-gastos-medicos',
+      'educativo':      'badge-educativo',
+    };
+    const cls = map[s] || 'badge-otro';
+    return `<span class="badge-source ${cls}">${s || 'otro'}</span>`;
+  }
+
+  function renderTable() {
+    const tbody = document.getElementById('leads-tbody');
+    const start = (currentPage - 1) * PAGE_SIZE;
+    const page  = filtered.slice(start, start + PAGE_SIZE);
+
+    if (page.length === 0) {
+      tbody.innerHTML = '<tr class="empty-row"><td colspan="8">No se encontraron leads con estos filtros.</td></tr>';
+      document.getElementById('pagination').innerHTML = '';
+      return;
+    }
+
+    tbody.innerHTML = page.map(r => `
+      <tr>
+        <td>${r.nombre || '—'}</td>
+        <td>${sourceBadge(r.source)}</td>
+        <td>${r.edad ?? '—'}</td>
+        <td>${r.aportacion_mensual ? fmtMXN(r.aportacion_mensual) + '/mes' : '—'}</td>
+        <td>${fmtMXN(r.total_proyectado)}</td>
+        <td>${r.clic_whatsapp ? '<span class="wa-yes">✓ Sí</span>' : '<span class="wa-no">—</span>'}</td>
+        <td>${fmtDate(r.created_at)}</td>
+        <td><button class="refresh-btn" style="font-size:.72rem;padding:.25rem .6rem;" onclick="showDetail('${r.id}')">Ver</button></td>
+      </tr>
+    `).join('');
+
+    renderPagination();
+  }
+
+  // ─── PAGINATION ────────────────────────────────────────────────
+  function renderPagination() {
+    const total = filtered.length;
+    const pages = Math.ceil(total / PAGE_SIZE);
+    const el    = document.getElementById('pagination');
+
+    if (pages <= 1) { el.innerHTML = ''; return; }
+
+    let btns = '';
+    for (let i = 1; i <= pages; i++) {
+      btns += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="goPage(${i})">${i}</button>`;
+    }
+    const start = (currentPage - 1) * PAGE_SIZE + 1;
+    const end   = Math.min(currentPage * PAGE_SIZE, total);
+    el.innerHTML = `
+      <span class="page-info">Mostrando ${start}–${end} de ${total}</span>
+      <div class="page-btns">
+        <button class="page-btn" onclick="goPage(${currentPage-1})" ${currentPage===1?'disabled':''}>‹</button>
+        ${btns}
+        <button class="page-btn" onclick="goPage(${currentPage+1})" ${currentPage===pages?'disabled':''}>›</button>
+      </div>`;
+  }
+
+  function goPage(p) {
+    const pages = Math.ceil(filtered.length / PAGE_SIZE);
+    if (p < 1 || p > pages) return;
+    currentPage = p;
+    renderTable();
+    document.querySelector('.admin-body').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // ─── SORT ─────────────────────────────────────────────────────
+  document.querySelectorAll('thead th[data-col]').forEach(th => {
+    th.addEventListener('click', function() {
+      document.querySelectorAll('thead th').forEach(t => t.classList.remove('sorted'));
+      if (sortCol === this.dataset.col) { sortAsc = !sortAsc; }
+      else { sortCol = this.dataset.col; sortAsc = false; }
+      this.classList.add('sorted');
+      applyFilters();
+    });
+  });
+
+  // ─── DETAIL MODAL ──────────────────────────────────────────────
+  function showDetail(id) {
+    const r = allLeads.find(l => l.id === id);
+    if (!r) return;
+
+    document.getElementById('detail-title').textContent = r.nombre || 'Sin nombre';
+
+    const fields = [
+      ['ID',             r.id],
+      ['Landing',        r.source],
+      ['Nombre',         r.nombre || '—'],
+      ['Email',          r.email || '—'],
+      ['Teléfono',       r.telefono || '—'],
+      ['Edad',           r.edad ? r.edad + ' años' : '—'],
+      ['Aportación',     r.aportacion_mensual ? fmtMXN(r.aportacion_mensual) + '/mes' : '—'],
+      ['Total proyectado', fmtMXN(r.total_proyectado)],
+      ['Clic WA',        r.clic_whatsapp ? '✓ Sí' : 'No'],
+      ['Referrer',       r.referrer || '—'],
+      ['Fecha',          fmtDate(r.created_at)],
+    ];
+
+    let html = fields.map(([k, v]) =>
+      `<div class="detail-row"><span class="detail-key">${k}</span><span class="detail-val">${v}</span></div>`
+    ).join('');
+
+    if (r.datos_extra) {
+      html += `<div class="detail-row" style="flex-direction:column;gap:.5rem">
+        <span class="detail-key">Datos extra</span>
+        <div class="detail-json">${JSON.stringify(r.datos_extra, null, 2)}</div>
+      </div>`;
+    }
+
+    document.getElementById('detail-body').innerHTML = html;
+    document.getElementById('detail-overlay').classList.add('active');
+  }
+
+  document.getElementById('detail-close').addEventListener('click', () =>
+    document.getElementById('detail-overlay').classList.remove('active')
+  );
+  document.getElementById('detail-overlay').addEventListener('click', e => {
+    if (e.target === document.getElementById('detail-overlay'))
+      document.getElementById('detail-overlay').classList.remove('active');
+  });
+
+  // ─── EXPORT CSV ────────────────────────────────────────────────
+  document.getElementById('export-btn').addEventListener('click', function() {
+    if (!filtered.length) return;
+    const headers = ['id','created_at','source','nombre','email','telefono','edad','aportacion_mensual','total_proyectado','clic_whatsapp','referrer'];
+    const rows    = filtered.map(r =>
+      headers.map(h => {
+        const v = r[h];
+        if (v == null) return '';
+        const s = String(v).replace(/"/g, '""');
+        return s.includes(',') || s.includes('"') || s.includes('\n') ? `"${s}"` : s;
+      }).join(',')
+    );
+    const csv  = [headers.join(','), ...rows].join('\n');
+    const blob = new Blob(['﻿' + csv], { type: 'text/csv;charset=utf-8;' });
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement('a');
+    a.href     = url;
+    a.download = `leads_phinanke_${new Date().toISOString().slice(0,10)}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+</script>
+</body>
+</html>

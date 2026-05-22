@@ -1315,6 +1315,82 @@
       .final-close { padding: 3rem 1.25rem; }
       .about-card { gap: 1rem; }
     }
+
+    /* ─── FORMULARIO CAPTURA ─────────────────────────────────── */
+    .lf-section { padding: 2.5rem 0; }
+    .lf-card {
+      background: var(--surface-1, #0b1023);
+      border: 1px solid rgba(72,202,228,.3);
+      border-top: 3px solid var(--b3, #0096c7);
+      border-radius: 20px;
+      padding: 2rem 1.75rem;
+      margin-top: 1.5rem;
+    }
+    .lf-header { text-align: center; margin-bottom: 1.5rem; }
+    .lf-title { font-family:'Geist',sans-serif; font-weight:900; font-size:1.25rem; color:#f0f4ff; margin-bottom:.4rem; }
+    .lf-subtitle { font-size:.88rem; color:rgba(255,255,255,.65); line-height:1.55; }
+    .lf-fields { display:flex; flex-direction:column; gap:1.2rem; margin-bottom:1.5rem; }
+    .lf-field { display:flex; flex-direction:column; gap:.5rem; }
+    .lf-label-row { display:flex; justify-content:space-between; align-items:baseline; }
+    .lf-label { font-size:.82rem; font-weight:600; color:rgba(255,255,255,.65); }
+    .lf-val { font-family:'Geist',sans-serif; font-weight:800; font-size:.88rem; color:#00b4d8; }
+    .lf-input {
+      width:100%; background:#060818; border:1.5px solid rgba(255,255,255,.08);
+      border-radius:10px; color:#f0f4ff; font-size:.95rem;
+      padding:.75rem 1rem; outline:none; font-family:'Inter',sans-serif;
+      transition:border-color .2s;
+    }
+    .lf-input:focus { border-color:rgba(72,202,228,.4); }
+    .lf-input::placeholder { color:rgba(255,255,255,.3); }
+    .lf-range {
+      -webkit-appearance:none; appearance:none; width:100%; height:4px;
+      border-radius:4px; outline:none; cursor:pointer; display:block;
+      background:linear-gradient(to right, #0096c7 var(--pct,30%), rgba(255,255,255,.1) var(--pct,30%));
+    }
+    .lf-range::-webkit-slider-thumb {
+      -webkit-appearance:none; appearance:none; width:18px; height:18px;
+      border-radius:50%; background:#00b4d8; cursor:pointer;
+      box-shadow:0 0 0 3px rgba(0,180,216,.25); transition:box-shadow .2s;
+    }
+    .lf-range::-webkit-slider-thumb:hover { box-shadow:0 0 0 5px rgba(0,180,216,.35); }
+    .lf-range::-moz-range-thumb { width:18px; height:18px; border-radius:50%; background:#00b4d8; border:none; }
+    .lf-range-labels { display:flex; justify-content:space-between; margin-top:.35rem; font-size:.7rem; color:rgba(255,255,255,.3); }
+    .lf-toggle-group { display:flex; gap:.6rem; }
+    .lf-toggle-btn {
+      flex:1; padding:.65rem; background:#060818; border:1.5px solid rgba(255,255,255,.08);
+      border-radius:10px; color:rgba(255,255,255,.65); font-size:.88rem; font-weight:600;
+      cursor:pointer; transition:border-color .2s, background .2s, color .2s; font-family:'Inter',sans-serif;
+    }
+    .lf-toggle-btn.active { background:rgba(0,180,216,.12); border-color:rgba(0,180,216,.4); color:#00b4d8; }
+    .lf-submit {
+      width:100%; background:linear-gradient(135deg, #0077b6, #0096c7);
+      color:#fff; border:none; font-family:'Geist',sans-serif; font-weight:800;
+      font-size:1rem; padding:1rem; border-radius:50px; cursor:pointer;
+      transition:opacity .2s, transform .15s, box-shadow .2s;
+    }
+    .lf-submit:hover { opacity:.9; transform:translateY(-2px); box-shadow:0 8px 28px rgba(0,150,199,.35); }
+    .lf-success { display:none; text-align:center; }
+    .lf-success-icon { font-size:2.5rem; margin-bottom:.75rem; }
+    .lf-success-title { font-family:'Geist',sans-serif; font-weight:900; font-size:1.2rem; color:#f0f4ff; margin-bottom:.5rem; }
+    .lf-success-body { font-size:.9rem; color:rgba(255,255,255,.65); line-height:1.65; margin-bottom:1.25rem; }
+    .lf-success-body strong { color:#00b4d8; }
+    .lf-result-box {
+      background:linear-gradient(135deg, rgba(0,150,199,.1), rgba(0,180,216,.06));
+      border:1px solid rgba(72,202,228,.25); border-radius:14px;
+      padding:1.25rem; margin-bottom:1.5rem;
+    }
+    .lf-result-label { font-size:.7rem; font-weight:600; color:rgba(255,255,255,.3); text-transform:uppercase; letter-spacing:.07em; margin-bottom:.3rem; }
+    .lf-result-value { font-family:'Geist',sans-serif; font-weight:900; font-size:1.75rem; color:#00b4d8; }
+    .lf-result-note { font-size:.72rem; color:rgba(255,255,255,.3); margin-top:.25rem; }
+    .lf-wa-btn {
+      display:flex; align-items:center; justify-content:center; gap:.6rem; width:100%;
+      background:linear-gradient(135deg, #0077b6, #0096c7); color:#fff;
+      font-family:'Geist',sans-serif; font-weight:800; font-size:1rem;
+      padding:.9rem; border-radius:50px; text-decoration:none; transition:opacity .2s, transform .15s;
+    }
+    .lf-wa-btn:hover { opacity:.9; transform:translateY(-2px); }
+    .lf-reset { background:none; border:none; color:rgba(255,255,255,.3); font-size:.78rem; cursor:pointer; margin-top:.65rem; text-decoration:underline; transition:color .2s; display:block; margin-left:auto; margin-right:auto; }
+    .lf-reset:hover { color:rgba(255,255,255,.6); }
   </style>
 </head>
 <body>
@@ -1964,6 +2040,47 @@
           </span>
         </div>
 
+        <!-- FORMULARIO: LEAD GASTOS MÉDICOS -->
+        <div class="lf-card fade-up" id="gm-form-card" style="margin-bottom:2rem;">
+          <div class="section-label" style="margin-bottom:.5rem; justify-content:center;">Cotización en 30 segundos</div>
+          <h3 class="lf-title" style="text-align:center;">¿Cuánto cuesta protegerte a ti y a tu familia?</h3>
+          <p class="lf-subtitle" style="text-align:center; margin-bottom:1.5rem;">Cuéntame un poco sobre ti y te digo qué opciones existen para tu situación exacta.</p>
+
+          <!-- PASO 1: Formulario -->
+          <div id="gm-step1">
+            <div class="lf-field">
+              <label class="lf-label" for="gm-nombre">Tu nombre</label>
+              <input class="lf-input" id="gm-nombre" type="text" placeholder="¿Cómo te llamas?" autocomplete="given-name" />
+            </div>
+            <div class="lf-field" style="margin-top:1.2rem;">
+              <label class="lf-label" for="gm-edad">Tu edad: <strong id="gm-edad-val" style="color:#00b4d8;">35</strong> años</label>
+              <input class="lf-range" id="gm-edad" type="range" min="18" max="65" value="35" step="1" style="--pct:36.2%;" />
+              <div class="lf-range-labels"><span>18 años</span><span>65 años</span></div>
+            </div>
+            <div class="lf-field" style="margin-top:1.2rem;">
+              <label class="lf-label">¿Actualmente tienes seguro médico?</label>
+              <div class="lf-toggle-group" style="margin-top:.35rem;">
+                <button class="lf-toggle-btn active" id="gm-no-seguro" type="button">No tengo seguro</button>
+                <button class="lf-toggle-btn" id="gm-si-seguro" type="button">Ya tengo uno</button>
+              </div>
+            </div>
+            <button class="lf-submit" id="gm-submit" style="margin-top:1.5rem;">Quiero mi cotización personalizada →</button>
+          </div>
+
+          <!-- PASO 2: Mensaje de éxito -->
+          <div id="gm-step2" style="display:none;">
+            <div style="text-align:center; padding:1rem 0 .5rem;">
+              <div style="font-size:2.8rem; margin-bottom:.75rem;">✓</div>
+              <p id="gm-success-msg" style="font-size:.95rem; line-height:1.7; color:rgba(240,244,255,.85); margin-bottom:1.25rem;"></p>
+            </div>
+            <a href="https://wa.me/message/3D7EGH3EH4FGE1" target="_blank" rel="noopener" class="lf-wa-btn" id="gm-wa-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.852L.057 23.743a.5.5 0 0 0 .615.607l6.105-1.603A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.847 0-3.576-.476-5.081-1.313l-.364-.21-3.766.988 1.006-3.671-.229-.376A9.963 9.963 0 0 1 2 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+              Hablar con Erón por WhatsApp
+            </a>
+            <button class="lf-reset" id="gm-reset">← Volver</button>
+          </div>
+        </div>
+
         <div class="final-close fade-up">
           <div class="section-label" style="margin-bottom:1.25rem;">La decisión más importante que puedes tomar hoy</div>
           <h2>Tu salud no es el problema. Pagar por ella sí puede serlo — si no estás preparado.</h2>
@@ -2070,6 +2187,88 @@
         }
       });
     });
+  </script>
+
+  <!-- ── Supabase + Formulario Gastos Médicos ── -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script>
+  (function() {
+    var SUPA_URL = 'https://cojalxemhqvcxacccopa.supabase.co';
+    var SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNvamFseGVtaHF2Y3hhY2Njb3BhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkzOTM1MjYsImV4cCI6MjA5NDk2OTUyNn0.3JVJCi8yujyEvs67AxkFYeQzn-9IoPYDkfW4xRgWQy4';
+    var db = supabase.createClient(SUPA_URL, SUPA_KEY);
+    var gmLeadId = null;
+    var tieneSeguro = false;
+
+    function updatePct(el, min, max) {
+      var pct = ((el.value - min) / (max - min) * 100).toFixed(1) + '%';
+      el.style.setProperty('--pct', pct);
+    }
+
+    var edadEl    = document.getElementById('gm-edad');
+    var edadVal   = document.getElementById('gm-edad-val');
+    var submitBtn = document.getElementById('gm-submit');
+    var resetBtn  = document.getElementById('gm-reset');
+    var waBtn     = document.getElementById('gm-wa-btn');
+    var step1     = document.getElementById('gm-step1');
+    var step2     = document.getElementById('gm-step2');
+    var successMsg= document.getElementById('gm-success-msg');
+    var btnNo     = document.getElementById('gm-no-seguro');
+    var btnSi     = document.getElementById('gm-si-seguro');
+    if (!edadEl) return;
+
+    edadEl.addEventListener('input', function() {
+      edadVal.textContent = edadEl.value;
+      updatePct(edadEl, 18, 65);
+    });
+
+    btnNo.addEventListener('click', function() {
+      tieneSeguro = false;
+      btnNo.classList.add('active'); btnSi.classList.remove('active');
+    });
+    btnSi.addEventListener('click', function() {
+      tieneSeguro = true;
+      btnSi.classList.add('active'); btnNo.classList.remove('active');
+    });
+
+    submitBtn.addEventListener('click', async function() {
+      var nombre = (document.getElementById('gm-nombre').value.trim()) || 'Amigo';
+      var edad   = parseInt(edadEl.value);
+      var msg;
+
+      if (tieneSeguro) {
+        msg = '<strong>' + nombre + '</strong>, muchas personas con seguro tienen coberturas insuficientes o están pagando de más. En una revisión rápida te digo si lo que tienes realmente te protege — sin costo y sin compromiso.';
+      } else {
+        var urgencia = edad < 35
+          ? 'Este es el mejor momento para contratar — hoy tienes la prima más baja de toda tu vida.'
+          : edad < 50
+            ? 'A los ' + edad + ' años todavía puedes conseguir un plan con excelentes coberturas y primas accesibles.'
+            : 'Aún hay opciones disponibles para ti. Lo importante es actuar antes de que cambien las condiciones.';
+        msg = '<strong>' + nombre + '</strong>, a los <strong>' + edad + ' años</strong> puedes acceder a un Seguro de Gastos Médicos Mayores con coberturas de hasta <strong>$10 millones de pesos</strong>. ' + urgencia;
+      }
+      successMsg.innerHTML = msg;
+
+      step1.style.display = 'none';
+      step2.style.display = 'block';
+
+      try {
+        var res = await db.from('leads').insert([{
+          source: 'gastos-medicos', nombre: nombre, edad: edad,
+          referrer: document.referrer || null,
+          datos_extra: { tiene_seguro: tieneSeguro }
+        }]).select('id').single();
+        if (!res.error && res.data) gmLeadId = res.data.id;
+      } catch(e) {}
+    });
+
+    waBtn && waBtn.addEventListener('click', async function() {
+      if (gmLeadId) try { await db.from('leads').update({ clic_whatsapp: true }).eq('id', gmLeadId); } catch(e) {}
+    });
+
+    resetBtn && resetBtn.addEventListener('click', function() {
+      step2.style.display = 'none';
+      step1.style.display = 'block';
+    });
+  })();
   </script>
 
 </body>

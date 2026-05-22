@@ -103,11 +103,15 @@
       --text-1:   #f0f4ff;
       --text-2:   #a8b4d0;
       --text-3:   #6b7a99;
-      /* Acento violeta — exclusivo Vida Mujer */
-      --vm:       #7c3aed;
-      --vm-hi:    #9b5de5;
-      --vm-lo:    rgba(124,58,237,.15);
-      --vm-border:rgba(124,58,237,.35);
+      /* Vida Mujer — violeta cálido + rosa */
+      --vm:             #8b5cf6;
+      --vm-hi:          #a78bfa;
+      --vm-lo:          rgba(139,92,246,.15);
+      --vm-border:      rgba(139,92,246,.35);
+      --vm-rose:        #db2777;
+      --vm-rose-lo:     rgba(219,39,119,.12);
+      --vm-rose-border: rgba(219,39,119,.3);
+      --vm-pink:        #f472b6;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -190,7 +194,7 @@
       animation: orbFloat 10s ease-in-out infinite;
     }
     .hero-orb-1 { width: 380px; height: 380px; background: var(--vm-lo); top: -120px; left: 50%; transform: translateX(-55%); opacity: .6; }
-    .hero-orb-2 { width: 260px; height: 260px; background: rgba(0,180,216,.1); bottom: -60px; right: -80px; animation-delay: -4s; opacity: .5; }
+    .hero-orb-2 { width: 260px; height: 260px; background: var(--vm-rose-lo); bottom: -60px; right: -80px; animation-delay: -4s; opacity: .5; }
     @keyframes orbFloat {
       0%,100% { transform: translateX(-55%) translateY(0); }
       50%      { transform: translateX(-55%) translateY(-18px); }
@@ -285,80 +289,6 @@
     @keyframes bounce {
       0%,100% { transform: translateY(0); }
       50%      { transform: translateY(6px); }
-    }
-
-    /* ─── VIDEO PLACEHOLDER ──────────────────────────────────── */
-    .video-section { padding: 1.5rem 0 2.5rem; }
-    .video-placeholder {
-      position: relative;
-      background: var(--surface-1);
-      border: 1px solid var(--border-hi);
-      border-radius: 16px;
-      aspect-ratio: 16/9;
-      overflow: hidden;
-      cursor: pointer;
-      transition: border-color .3s;
-    }
-    .video-placeholder:hover { border-color: var(--vm-border); }
-    .video-bg-pattern {
-      position: absolute;
-      inset: 0;
-      background:
-        repeating-linear-gradient(
-          45deg,
-          transparent,
-          transparent 30px,
-          rgba(124,58,237,.04) 30px,
-          rgba(124,58,237,.04) 31px
-        );
-    }
-    .video-gradient-overlay {
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at center, rgba(124,58,237,.12) 0%, transparent 70%);
-    }
-    .play-btn {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 72px;
-      height: 72px;
-      background: var(--vm);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 0 0 12px rgba(124,58,237,.2), 0 0 0 24px rgba(124,58,237,.08);
-      transition: transform .2s, box-shadow .2s;
-    }
-    .video-placeholder:hover .play-btn {
-      transform: translate(-50%, -50%) scale(1.08);
-      box-shadow: 0 0 0 16px rgba(124,58,237,.25), 0 0 0 32px rgba(124,58,237,.1);
-    }
-    .play-btn svg { margin-left: 4px; }
-    .video-caption {
-      position: absolute;
-      bottom: 16px;
-      left: 0;
-      right: 0;
-      text-align: center;
-      font-size: .78rem;
-      color: var(--text-2);
-    }
-    .video-caption strong { color: var(--text-1); }
-    .video-badge {
-      position: absolute;
-      top: 14px;
-      right: 14px;
-      background: rgba(124,58,237,.25);
-      border: 1px solid var(--vm-border);
-      border-radius: 50px;
-      padding: .25rem .7rem;
-      font-size: .68rem;
-      font-weight: 600;
-      color: var(--vm-hi);
-      letter-spacing: .05em;
     }
 
     /* ─── CTA BLOCK ──────────────────────────────────────────── */
@@ -810,6 +740,530 @@
 
     /* ─── UTILITY ────────────────────────────────────────────── */
     section { padding: 2rem 0; }
+
+    /* ─── HERO STAT BADGE ────────────────────────────────────── */
+    .hero-stat-badge {
+      background: var(--vm-rose-lo);
+      border: 1px solid var(--vm-rose-border);
+      border-radius: 12px;
+      padding: .85rem 1.1rem;
+      font-size: .88rem;
+      color: var(--text-2);
+      line-height: 1.65;
+      text-align: center;
+      margin-bottom: 2rem;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-stat-badge strong { color: var(--vm-pink); }
+
+    /* ─── EMPATHY STORY ──────────────────────────────────────── */
+    .empathy-story {
+      background: var(--surface-1);
+      border: 1px solid var(--border);
+      border-left: 3px solid rgba(219,39,119,.5);
+      border-radius: 0 14px 14px 0;
+      padding: 1.75rem 1.5rem;
+      margin: 1.5rem 0 2.5rem;
+    }
+    .empathy-story-label {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--vm-pink);
+      margin-bottom: .85rem;
+    }
+    .empathy-story-text {
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+      font-size: .93rem;
+      color: var(--text-2);
+      line-height: 1.75;
+      margin-bottom: 1.1rem;
+    }
+    .empathy-story-text em { color: var(--text-1); font-style: normal; }
+    .empathy-story-divider { height: 1px; background: var(--border); margin: 1rem 0; }
+    .empathy-story-conclusion {
+      font-size: .93rem;
+      color: var(--text-2);
+      line-height: 1.75;
+      margin-bottom: .75rem;
+    }
+    .empathy-story-conclusion em { color: var(--vm-pink); font-style: italic; }
+    .empathy-story-signature { font-size: .75rem; color: var(--text-3); font-style: italic; }
+
+    /* ─── FOMO AGE BOX ───────────────────────────────────────── */
+    .fomo-age-vm {
+      background: linear-gradient(135deg, rgba(219,39,119,.09), rgba(139,92,246,.08));
+      border: 1px solid rgba(219,39,119,.22);
+      border-radius: 12px;
+      padding: 1.1rem 1.35rem;
+      margin: 1.5rem 0;
+      display: flex;
+      gap: .85rem;
+      align-items: flex-start;
+    }
+    .fomo-age-vm-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.4; }
+    .fomo-age-vm-text { font-size: .87rem; color: var(--text-2); line-height: 1.65; }
+    .fomo-age-vm-text strong { color: var(--vm-pink); }
+
+    /* ─── CALCULADORA ────────────────────────────────────────── */
+    .calc-section { padding: 2.5rem 0; }
+    .calc-card {
+      background: var(--surface-1);
+      border: 1px solid var(--vm-border);
+      border-radius: 20px;
+      padding: 2rem 1.75rem;
+      margin-top: 1.5rem;
+    }
+
+    /* Inputs step */
+    .calc-inputs-step { display: flex; flex-direction: column; gap: 1.35rem; }
+    .calc-field { display: flex; flex-direction: column; gap: .55rem; }
+    .calc-field label { font-size: .82rem; font-weight: 600; color: var(--text-2); }
+    .calc-field-header { display: flex; justify-content: space-between; align-items: baseline; }
+    .calc-val-disp { font-family: 'Geist',sans-serif; font-weight: 800; font-size: .95rem; color: var(--vm-hi); }
+    .calc-text-input {
+      width: 100%;
+      background: var(--surface-0);
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      color: var(--text-1);
+      font-size: .95rem;
+      padding: .75rem 1rem;
+      outline: none;
+      font-family: 'Inter', sans-serif;
+      transition: border-color .2s;
+    }
+    .calc-text-input:focus { border-color: var(--vm-rose-border); }
+    .calc-text-input::placeholder { color: var(--text-3); }
+    input[type="range"] {
+      -webkit-appearance: none; appearance: none;
+      width: 100%; height: 4px; border-radius: 4px;
+      background: linear-gradient(to right, var(--vm-rose) var(--pct,30%), rgba(255,255,255,.1) var(--pct,30%));
+      outline: none; cursor: pointer; display: block;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none; appearance: none;
+      width: 18px; height: 18px; border-radius: 50%;
+      background: var(--vm-pink);
+      box-shadow: 0 0 0 3px rgba(219,39,119,.25);
+      cursor: pointer; transition: box-shadow .2s;
+    }
+    input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 5px rgba(219,39,119,.35); }
+    input[type="range"]::-moz-range-thumb {
+      width: 18px; height: 18px; border-radius: 50%;
+      background: var(--vm-pink); border: none;
+      box-shadow: 0 0 0 3px rgba(219,39,119,.25);
+    }
+    .calc-range-labels { display: flex; justify-content: space-between; margin-top: .35rem; font-size: .7rem; color: var(--text-3); }
+    .calc-plan-note {
+      background: rgba(219,39,119,.07);
+      border: 1px solid var(--vm-rose-border);
+      border-radius: 10px;
+      padding: .75rem 1rem;
+      font-size: .82rem;
+      color: var(--text-2);
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+    }
+    .calc-plan-note strong { color: var(--vm-pink); }
+    .calc-submit-btn {
+      width: 100%;
+      background: linear-gradient(135deg, var(--vm-rose), var(--vm));
+      color: #fff;
+      border: none;
+      font-family: 'Geist', sans-serif;
+      font-weight: 800;
+      font-size: 1.05rem;
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-top: .5rem;
+      transition: opacity .2s, transform .15s, box-shadow .2s;
+    }
+    .calc-submit-btn:hover { opacity: .9; transform: translateY(-2px); box-shadow: 0 10px 32px rgba(219,39,119,.35); }
+
+    /* Results step */
+    .calc-results { display: none; }
+    .calc-result-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .calc-result-title {
+      font-family: 'Geist', sans-serif;
+      font-weight: 900;
+      font-size: clamp(1.3rem, 4vw, 1.75rem);
+      background: linear-gradient(135deg, var(--vm-pink), var(--vm-hi));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: .4rem;
+    }
+    .calc-result-sub { font-size: .9rem; color: var(--text-2); }
+    .calc-result-sub strong { color: var(--vm-pink); }
+    .calc-summary-box {
+      background: linear-gradient(135deg, rgba(219,39,119,.08), rgba(139,92,246,.06));
+      border: 1px solid var(--vm-rose-border);
+      border-radius: 14px;
+      padding: 1.1rem 1.35rem;
+      text-align: center;
+      font-size: .92rem;
+      color: var(--text-2);
+      line-height: 1.65;
+      margin-bottom: 1.75rem;
+    }
+    .calc-summary-box strong { color: var(--vm-pink); font-family: 'Geist', sans-serif; font-weight: 900; }
+
+    /* Dote timeline */
+    .dote-section-title {
+      font-family: 'Geist', sans-serif;
+      font-weight: 800;
+      font-size: .95rem;
+      color: var(--text-1);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: .55rem;
+    }
+    .dote-timeline {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    .dote-timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 20px; bottom: 20px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--vm-rose-border), var(--vm-border));
+    }
+    @media(max-width: 560px) {
+      .dote-timeline::before { left: 19px; top: 10px; bottom: 10px; }
+    }
+    .dote-row {
+      display: grid;
+      grid-template-columns: 1fr 42px 1fr;
+      gap: .6rem;
+      align-items: center;
+      margin-bottom: 1.1rem;
+    }
+    @media(max-width: 560px) {
+      .dote-row { grid-template-columns: 42px 1fr; }
+      .dote-empty { display: none; }
+    }
+    .dote-empty { /* spacer for opposite side */ }
+    .dote-node {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--vm-rose), var(--vm));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Geist', sans-serif; font-weight: 900;
+      font-size: .8rem; color: #fff; flex-shrink: 0;
+      position: relative; z-index: 1;
+      box-shadow: 0 0 0 4px rgba(219,39,119,.18);
+    }
+    .dote-node.node-maturity {
+      width: 42px; height: 42px;
+      background: linear-gradient(135deg, var(--vm-hi), var(--vm-rose));
+      font-size: 1.1rem;
+    }
+    .dote-card {
+      background: var(--surface-0);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: .9rem 1rem;
+      transition: border-color .2s;
+    }
+    .dote-card:hover { border-color: var(--vm-rose-border); }
+    .dote-card.maturity {
+      background: linear-gradient(135deg, rgba(219,39,119,.09), rgba(139,92,246,.07));
+      border-color: var(--vm-rose-border);
+    }
+    .dote-card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: .3rem;
+    }
+    .dote-year-label {
+      font-size: .68rem; font-weight: 700;
+      letter-spacing: .08em; text-transform: uppercase;
+      color: var(--vm-rose);
+    }
+    .dote-card.maturity .dote-year-label { color: var(--vm-pink); }
+    .dote-pct {
+      background: var(--vm-rose-lo);
+      border: 1px solid var(--vm-rose-border);
+      border-radius: 50px;
+      padding: .1rem .5rem;
+      font-size: .65rem; font-weight: 700;
+      color: var(--vm-rose);
+    }
+    .dote-card.maturity .dote-pct {
+      background: var(--vm-lo); border-color: var(--vm-border); color: var(--vm-hi);
+    }
+    .dote-amount {
+      font-family: 'Geist', sans-serif; font-weight: 900;
+      font-size: 1rem; color: var(--text-1);
+      margin-bottom: .25rem;
+    }
+    .dote-card.maturity .dote-amount { font-size: 1.15rem; }
+    .dote-context { font-size: .75rem; color: var(--text-2); line-height: 1.45; }
+    .dote-context strong { color: var(--text-1); }
+
+    /* Mision cumplida */
+    .mision-card {
+      background: linear-gradient(135deg, var(--vm-rose), #9b1d63, var(--vm));
+      border-radius: 16px;
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+      margin-bottom: 1.25rem;
+    }
+    .mision-title {
+      font-family: 'Geist', sans-serif; font-weight: 900;
+      font-size: 1.25rem; color: #fff;
+      margin-bottom: .65rem;
+      display: flex; align-items: center; justify-content: center; gap: .5rem;
+    }
+    .mision-body { font-size: .85rem; color: rgba(255,255,255,.85); line-height: 1.6; margin-bottom: 1.1rem; }
+    .mision-body strong { color: #fff; }
+    .mision-total-box {
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 10px;
+      padding: 1rem;
+    }
+    .mision-total-label { font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.7); margin-bottom: .3rem; }
+    .mision-total-value {
+      font-family: 'Geist', sans-serif; font-weight: 900;
+      font-size: clamp(1.6rem, 5vw, 2.1rem);
+      color: #fde68a;
+      line-height: 1;
+    }
+    .mision-total-note { font-size: .68rem; color: rgba(255,255,255,.6); margin-top: .25rem; letter-spacing: .06em; text-transform: uppercase; }
+
+    /* Comparison */
+    .comp-section { margin-bottom: 1.25rem; }
+    .comp-title {
+      font-family: 'Geist', sans-serif; font-weight: 800;
+      font-size: .92rem; color: var(--text-1);
+      text-align: center; margin-bottom: .85rem;
+    }
+    .comp-cards { display: flex; flex-direction: column; gap: .6rem; }
+    .comp-card {
+      background: var(--surface-0);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+      display: flex; align-items: center; gap: .85rem;
+    }
+    .comp-card.winner {
+      background: linear-gradient(135deg, rgba(219,39,119,.1), rgba(139,92,246,.07));
+      border-color: var(--vm-rose-border);
+    }
+    .comp-icon {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: rgba(255,255,255,.07);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0;
+    }
+    .comp-card.winner .comp-icon {
+      background: rgba(219,39,119,.2);
+    }
+    .comp-label { font-size: .72rem; font-weight: 600; color: var(--text-3); text-transform: uppercase; letter-spacing: .06em; margin-bottom: .2rem; }
+    .comp-value { font-family: 'Geist', sans-serif; font-weight: 900; font-size: 1.05rem; color: var(--text-1); }
+    .comp-card.loser .comp-value { text-decoration: line-through; color: var(--text-3); }
+    .comp-note { font-size: .75rem; color: var(--text-2); margin-top: .2rem; line-height: 1.4; }
+    .comp-note.win { color: var(--vm-pink); }
+
+    /* Protection features */
+    .prot-section { margin-bottom: 1.25rem; }
+    .prot-title {
+      font-family: 'Geist', sans-serif; font-weight: 800;
+      font-size: .92rem; color: var(--text-1);
+      margin-bottom: .85rem;
+      display: flex; align-items: center; gap: .5rem;
+    }
+    .prot-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .6rem;
+    }
+    @media(max-width: 480px) { .prot-grid { grid-template-columns: 1fr; } }
+    .prot-item {
+      background: var(--surface-0);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: .85rem .9rem;
+      display: flex; gap: .65rem; align-items: flex-start;
+    }
+    .prot-item-icon { font-size: 1rem; flex-shrink: 0; }
+    .prot-item-name { font-size: .82rem; font-weight: 700; color: var(--text-1); margin-bottom: .2rem; }
+    .prot-item-desc { font-size: .75rem; color: var(--text-2); line-height: 1.45; }
+
+    /* Calc disclaimer & action buttons */
+    .calc-disclaimer {
+      font-size: .7rem; color: var(--text-3); line-height: 1.55;
+      padding: .7rem 1rem;
+      background: rgba(255,255,255,.025);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      margin-bottom: 1.1rem;
+      display: flex; gap: .5rem; align-items: flex-start;
+    }
+    .calc-actions { display: flex; flex-direction: column; gap: .75rem; }
+    @media(min-width: 480px) { .calc-actions { flex-direction: row; } }
+    .calc-reset-btn {
+      flex: 1;
+      background: none;
+      border: 1.5px solid var(--vm-rose-border);
+      color: var(--vm-pink);
+      font-family: 'Geist', sans-serif; font-weight: 700;
+      font-size: .92rem;
+      padding: .85rem 1rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background .2s, color .2s;
+    }
+    .calc-reset-btn:hover { background: var(--vm-rose-lo); }
+    .calc-cta-btn {
+      flex: 2;
+      display: flex; align-items: center; justify-content: center; gap: .6rem;
+      background: linear-gradient(135deg, var(--vm-rose), var(--vm));
+      color: #fff;
+      font-family: 'Geist', sans-serif; font-weight: 800;
+      font-size: .95rem;
+      padding: .85rem 1rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: opacity .2s, transform .15s, box-shadow .2s;
+    }
+    .calc-cta-btn:hover { opacity: .9; transform: translateY(-2px); box-shadow: 0 10px 32px rgba(219,39,119,.35); }
+
+    /* ─── APLICA VM ──────────────────────────────────────────── */
+    .aplica-vm-section { padding: 2rem 0; }
+    .aplica-vm-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    @media(max-width:520px) { .aplica-vm-grid { grid-template-columns: 1fr; } }
+    .aplica-vm-col {
+      background: var(--surface-1);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem;
+    }
+    .aplica-vm-col.si { border-top: 3px solid #22c55e; }
+    .aplica-vm-col.no { border-top: 3px solid #ef4444; }
+    .aplica-vm-col-title {
+      font-family: 'Geist', sans-serif;
+      font-weight: 800;
+      font-size: .88rem;
+      margin-bottom: .85rem;
+    }
+    .aplica-vm-col.si .aplica-vm-col-title { color: #22c55e; }
+    .aplica-vm-col.no .aplica-vm-col-title { color: #ef4444; }
+    .aplica-vm-items { display: flex; flex-direction: column; gap: .65rem; }
+    .aplica-vm-item {
+      display: flex;
+      align-items: flex-start;
+      gap: .6rem;
+      font-size: .82rem;
+      color: var(--text-2);
+      line-height: 1.5;
+    }
+    .aplica-vm-icon { flex-shrink: 0; font-size: .9rem; }
+
+    /* ─── FOMO ACTIVIDAD VM ──────────────────────────────────── */
+    .fomo-act-vm {
+      background: linear-gradient(135deg, rgba(219,39,119,.09), rgba(139,92,246,.07));
+      border: 1px solid rgba(219,39,119,.2);
+      border-radius: 12px;
+      padding: 1rem 1.35rem;
+      margin: 1.5rem 0;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+    }
+    .fomo-dot-vm {
+      width: 9px; height: 9px; border-radius: 50%;
+      background: var(--vm-rose);
+      flex-shrink: 0;
+      animation: dotPulseVm 2s ease-in-out infinite;
+    }
+    @keyframes dotPulseVm {
+      0%,100% { opacity: 1; transform: scale(1); }
+      50%      { opacity: .4; transform: scale(.75); }
+    }
+    .fomo-act-vm-text { font-size: .85rem; color: var(--text-2); line-height: 1.55; }
+    .fomo-act-vm-text strong { color: var(--vm-pink); }
+
+    /* ─── EXIT MODAL VM ──────────────────────────────────────── */
+    .exit-overlay-vm {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0,0,0,.75);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+    }
+    .exit-overlay-vm.active { display: flex; }
+    .exit-modal-vm {
+      background: var(--surface-1);
+      border: 1px solid var(--vm-border);
+      border-top: 3px solid var(--vm-rose);
+      border-radius: 20px;
+      padding: 2rem 1.75rem;
+      max-width: 440px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+    }
+    .exit-modal-vm-close {
+      position: absolute;
+      top: .85rem; right: .85rem;
+      background: none; border: none;
+      color: var(--text-3); cursor: pointer;
+      font-size: 1.2rem; line-height: 1; padding: .25rem;
+      transition: color .2s;
+    }
+    .exit-modal-vm-close:hover { color: var(--text-1); }
+    .exit-modal-vm h3 {
+      font-family: 'Geist', sans-serif;
+      font-weight: 900;
+      font-size: 1.25rem;
+      line-height: 1.3;
+      margin-bottom: .75rem;
+      color: var(--text-1);
+    }
+    .exit-modal-vm h3 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--vm-hi), var(--vm-pink));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .exit-modal-vm p { font-size: .88rem; color: var(--text-2); line-height: 1.65; margin-bottom: 1.25rem; }
+    .exit-modal-vm .btn-wa-lg { width: 100%; justify-content: center; margin-bottom: .75rem; background: linear-gradient(135deg, var(--vm), var(--vm-rose)); }
+    .exit-modal-vm .btn-wa-lg:hover { background: linear-gradient(135deg, var(--vm-hi), #e11d72); transform: translateY(-1px); }
+    .exit-modal-vm-dismiss {
+      background: none; border: none;
+      color: var(--text-3); cursor: pointer;
+      font-size: .78rem; text-decoration: underline;
+      padding: .25rem; transition: color .2s;
+    }
+    .exit-modal-vm-dismiss:hover { color: var(--text-2); }
   </style>
 </head>
 <body>
@@ -844,6 +1298,10 @@
       Plan de Protección · Vida Mujer
     </div>
 
+    <div class="hero-stat-badge fade-up">
+      <strong>1 de cada 8 mujeres en México desarrollará cáncer de mama.</strong> El seguro de tu empresa desaparece cuando más lo necesitas. Tu plan personal, no.
+    </div>
+
     <h1 class="fade-up">
       Tú ya cuidas de todos.<br />
       <em>¿Quién cuida de ti?</em>
@@ -867,19 +1325,20 @@
     </div>
   </section>
 
-  <!-- ░░ VIDEO ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
-  <section class="video-section fade-up" aria-label="Video explicativo">
-    <div class="video-placeholder" role="img" aria-label="Video: Erón Bello explica el plan Vida Mujer">
-      <div class="video-bg-pattern" aria-hidden="true"></div>
-      <div class="video-gradient-overlay" aria-hidden="true"></div>
-      <div class="play-btn" aria-hidden="true">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-      </div>
-      <div class="video-badge">Sin costo · Confidencial</div>
-      <div class="video-caption">
-        <strong>Erón Bello León</strong> · Asesor certificado · Phinanké
-      </div>
+  <!-- ░░ HISTORIA DE EMPATÍA ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section class="empathy-story fade-up" aria-label="Historia real">
+    <div class="empathy-story-label">Una historia que muchas reconocerán</div>
+    <div class="empathy-story-text">
+      <p>Valeria tenía 37 años, dos hijos y un buen trabajo. Seguro del IMSS. "Con eso es suficiente", se decía.</p>
+      <p>Un miércoles a las 3 de la tarde, el médico la llamó para decirle que necesitaban repetir la biopsia. "Probablemente no es nada, pero hay que estar seguros."</p>
+      <p>En ese momento, mientras esperaba en el pasillo, lo primero que pensó no fue en su salud. Fue en el dinero. <em>¿Podría pagar esto? ¿Tendría que pedirle a su mamá? ¿Tendría que decírselo a su esposo primero que nada?</em></p>
     </div>
+    <div class="empathy-story-divider"></div>
+    <div class="empathy-story-conclusion">
+      Resultó que no era nada. Pero el miedo de esa espera —el miedo de no saber si podría afrontarlo económicamente— no la abandonó. Tres semanas después contrató su plan.<br /><br />
+      <em>"No quiero volver a sentir eso otra vez."</em>
+    </div>
+    <div class="empathy-story-signature">— Historia compartida con permiso · Identidad modificada para proteger la privacidad</div>
   </section>
 
   <!-- ░░ CTA #1 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
@@ -923,6 +1382,14 @@
       </div>
     </div>
   </section>
+
+  <!-- ░░ FOMO EDAD ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <div class="fomo-age-vm fade-up">
+    <span class="fomo-age-vm-icon" aria-hidden="true">⏳</span>
+    <div class="fomo-age-vm-text">
+      <strong>El plan se encarece con cada año que esperas.</strong> Los seguros de vida con ahorro se colocan antes de que aparezcan condiciones de salud —no después. A los 35 años el costo mensual puede ser hasta un 40% menor que a los 45. Y los diagnósticos no avisan.
+    </div>
+  </div>
 
   <!-- ░░ AGITACIÓN ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
   <section class="fade-up" aria-labelledby="pain-title">
@@ -995,6 +1462,192 @@
     </a>
     <p class="cta-microcopy">Asesoría sin costo · Sin compromisos · Solo me toma 15 minutos</p>
   </div>
+
+  <!-- ░░ SIMULADOR ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section class="calc-section fade-up" id="calc-section-anchor" aria-labelledby="calc-title">
+    <span class="section-label">Simulador de plan</span>
+    <h2 class="section-title" id="calc-title">Simula tu plan en <em>10 segundos</em></h2>
+    <p class="section-body">Ingresa tu nombre, edad y aportación mensual para ver tu proyección personalizada.</p>
+
+    <div class="calc-card">
+
+      <!-- PASO 1: FORMULARIO ───────────────────────────────────── -->
+      <div class="calc-inputs-step" id="calc-form">
+
+        <div class="calc-field">
+          <label for="calc-nombre">Tu nombre</label>
+          <input class="calc-text-input" type="text" id="calc-nombre" placeholder="¿Cómo te llamas?" autocomplete="given-name" />
+        </div>
+
+        <div class="calc-field">
+          <div class="calc-field-header">
+            <label for="calc-edad">Tu edad actual</label>
+            <span class="calc-val-disp" id="calc-edad-disp">35 años</span>
+          </div>
+          <input type="range" id="calc-edad" min="28" max="50" value="35" step="1" />
+          <div class="calc-range-labels"><span>28 años</span><span>50 años</span></div>
+        </div>
+
+        <div class="calc-field">
+          <div class="calc-field-header">
+            <label for="calc-aport">Aportación mensual</label>
+            <span class="calc-val-disp" id="calc-aport-disp">$2,000</span>
+          </div>
+          <input type="range" id="calc-aport" min="1500" max="5000" value="2000" step="100" />
+          <div class="calc-range-labels"><span>$1,500</span><span>$5,000</span></div>
+        </div>
+
+        <div class="calc-plan-note">
+          <span>📅</span>
+          <span>El plan <strong>Vida Mujer tiene plazo fijo de 20 años</strong> — diseñado para construir un fondo significativo y protección completa desde el día 1.</span>
+        </div>
+
+        <button class="calc-submit-btn" id="calc-submit">Ver mi plan de libertad financiera →</button>
+      </div>
+
+      <!-- PASO 2: RESULTADOS ───────────────────────────────────── -->
+      <div class="calc-results" id="calc-results">
+
+        <div class="calc-result-header">
+          <div class="calc-result-title">¡Tu Futuro se ve Brillante!</div>
+          <div class="calc-result-sub">Hola <strong id="res-nombre">Tú</strong>, este es tu plan de libertad financiera:</div>
+        </div>
+
+        <div class="calc-summary-box">
+          Tus aportaciones de <strong id="res-aport-txt">$2,000</strong> mensuales se van a convertir hasta en
+          <strong id="res-total-txt">$1.2 M</strong> al final de tu plan.
+        </div>
+
+        <!-- Calendario de dotes -->
+        <div class="dote-section-title">
+          <span>🎁</span> Tu Calendario de Entregas (Dotes)
+        </div>
+
+        <div class="dote-timeline" id="dote-timeline">
+          <!-- Generado por JS -->
+        </div>
+
+        <!-- Misión cumplida -->
+        <div class="mision-card">
+          <div class="mision-title">🏆 Misión Cumplida</div>
+          <div class="mision-body">
+            Estuviste protegida todo este tiempo y ahora recibes tu <strong>ahorro íntegro</strong> más el <strong>rendimiento generado por el ajuste inflacionario.</strong>
+          </div>
+          <div class="mision-total-box">
+            <div class="mision-total-label">Monto total a recibir</div>
+            <div class="mision-total-value" id="res-grand-total">$0</div>
+            <div class="mision-total-note">Estimación con 5% de ajuste anual</div>
+          </div>
+        </div>
+
+        <!-- Comparativa -->
+        <div class="comp-section">
+          <div class="comp-title">El poder de ganarle a la inflación</div>
+          <div class="comp-cards">
+            <div class="comp-card loser">
+              <div class="comp-icon">🐷</div>
+              <div>
+                <div class="comp-label">Ahorro en banco / colchón</div>
+                <div class="comp-value" id="res-simple">$0</div>
+                <div class="comp-note">Solo tus aportaciones. Tu dinero pierde valor adquisitivo con el tiempo.</div>
+              </div>
+            </div>
+            <div class="comp-card winner">
+              <div class="comp-icon">📈</div>
+              <div>
+                <div class="comp-label">Ahorro en Vida Mujer</div>
+                <div class="comp-value" id="res-vm">$0</div>
+                <div class="comp-note win">Incluye ajuste inflacionario + Seguro de Vida desde el primer día.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Protección incluida -->
+        <div class="prot-section">
+          <div class="prot-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--vm-pink)" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Protección Integral (Incluida en tu plan)
+          </div>
+          <div class="prot-grid">
+            <div class="prot-item">
+              <span class="prot-item-icon">📈</span>
+              <div>
+                <div class="prot-item-name">Cáncer Femenino</div>
+                <div class="prot-item-desc">Protección financiera ante el diagnóstico de cáncer propio de la mujer.</div>
+              </div>
+            </div>
+            <div class="prot-item">
+              <span class="prot-item-icon">💗</span>
+              <div>
+                <div class="prot-item-name">Padecimientos Femeninos</div>
+                <div class="prot-item-desc">Cobertura para enfermedades específicas de la mujer.</div>
+              </div>
+            </div>
+            <div class="prot-item">
+              <span class="prot-item-icon">🤱</span>
+              <div>
+                <div class="prot-item-name">Complicaciones del Embarazo</div>
+                <div class="prot-item-desc">Respaldo económico para ti y tu bebé en padecimientos cubiertos.</div>
+              </div>
+            </div>
+            <div class="prot-item">
+              <span class="prot-item-icon">🛡️</span>
+              <div>
+                <div class="prot-item-name">Fallecimiento e Invalidez</div>
+                <div class="prot-item-desc">Amparo de suma asegurada para beneficiarios o por invalidez total.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="calc-disclaimer">
+          <span>ⓘ</span>
+          <span>Los montos presentados son una proyección didáctica estimada con 5% de ajuste anual. Para obtener una cotización oficial, exacta y adaptada a tu perfil, agenda una asesoría.</span>
+        </div>
+
+        <!-- Acciones -->
+        <div class="calc-actions">
+          <button class="calc-reset-btn" id="calc-reset">Hacer un nuevo cálculo</button>
+          <a class="calc-cta-btn" href="https://wa.me/message/3D7EGH3EH4FGE1" target="_blank" rel="noopener noreferrer" id="calc-cta-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.113 1.524 5.842L.057 23.986l6.327-1.456A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.796 9.796 0 01-4.988-1.364l-.358-.213-3.712.854.898-3.614-.233-.372A9.788 9.788 0 012.182 12c0-5.418 4.4-9.818 9.818-9.818 5.418 0 9.818 4.4 9.818 9.818 0 5.418-4.4 9.818-9.818 9.818z"/></svg>
+            Cotización oficial — Contáctame
+          </a>
+        </div>
+
+      </div><!-- /calc-results -->
+    </div><!-- /calc-card -->
+  </section>
+
+  <!-- ░░ ¿PARA QUIÉN APLICA? ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section class="aplica-vm-section fade-up" aria-labelledby="aplica-vm-title">
+    <span class="section-label">¿Es para ti?</span>
+    <h2 class="section-title" id="aplica-vm-title">Sé honesta contigo: <em>¿aplica en tu caso?</em></h2>
+
+    <div class="aplica-vm-grid">
+      <div class="aplica-vm-col si">
+        <div class="aplica-vm-col-title">✓ Sí aplica si…</div>
+        <div class="aplica-vm-items">
+          <div class="aplica-vm-item"><span class="aplica-vm-icon">✅</span> Tienes entre 28 y 50 años</div>
+          <div class="aplica-vm-item"><span class="aplica-vm-icon">✅</span> Puedes destinar $1,500 – $5,000 al mes</div>
+          <div class="aplica-vm-item"><span class="aplica-vm-icon">✅</span> Tienes personas que dependen de ti</div>
+          <div class="aplica-vm-item"><span class="aplica-vm-icon">✅</span> Quieres protección que no dependa de tu empresa</div>
+          <div class="aplica-vm-item"><span class="aplica-vm-icon">✅</span> Buscas deducir ante el SAT y construir ahorro real</div>
+        </div>
+      </div>
+      <div class="aplica-vm-col no">
+        <div class="aplica-vm-col-title">✗ No es para ti si…</div>
+        <div class="aplica-vm-items">
+          <div class="aplica-vm-item"><span class="aplica-vm-icon">❌</span> Necesitas ese dinero disponible en menos de 3 años</div>
+          <div class="aplica-vm-item"><span class="aplica-vm-icon">❌</span> Tienes deudas con intereses mayores al 20% anual</div>
+          <div class="aplica-vm-item"><span class="aplica-vm-icon">❌</span> Solo buscas inversión sin ningún componente de protección</div>
+          <div class="aplica-vm-item"><span class="aplica-vm-icon">❌</span> No tienes ingresos estables por ahora</div>
+          <div class="aplica-vm-item"><span class="aplica-vm-icon">❌</span> Tienes más de 50 años (hay otros planes para ti)</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ░░ CÓMO FUNCIONA ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
   <section class="steps-section fade-up" aria-labelledby="steps-title">
@@ -1207,6 +1860,14 @@
     </div>
   </section>
 
+  <!-- ░░ FOMO ACTIVIDAD ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <div class="fomo-act-vm fade-up">
+    <div class="fomo-dot-vm" aria-hidden="true"></div>
+    <div class="fomo-act-vm-text">
+      <strong>Esta semana, 11 mujeres en México</strong> dieron el primer paso y cotizaron su plan Vida Mujer con Erón. Muchas llevaban meses pensándolo. La diferencia fue escribir un mensaje.
+    </div>
+  </div>
+
   <!-- ░░ CIERRE FINAL ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
   <div class="final-close fade-up" role="region" aria-label="Llamada a la acción final">
     <h2>
@@ -1231,6 +1892,24 @@
 </div><!-- /vsl-wrap -->
 </main>
 
+<!-- ░░ EXIT INTENT MODAL ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<div class="exit-overlay-vm" id="exitOverlayVm" role="dialog" aria-modal="true" aria-labelledby="exitVmTitle">
+  <div class="exit-modal-vm">
+    <button class="exit-modal-vm-close" id="exitVmClose" aria-label="Cerrar">✕</button>
+    <h3 id="exitVmTitle">Espera — <em>una pregunta rápida</em></h3>
+    <p>
+      Si hoy te llamara el médico con una noticia inesperada... ¿tendrías respaldo económico propio, o dependerías del IMSS, de tu empresa o de tu familia?<br /><br />
+      Una conversación de 15 minutos puede darte claridad. Sin compromiso, sin costo.
+    </p>
+    <a class="btn-wa-lg" href="https://wa.me/message/3D7EGH3EH4FGE1" target="_blank" rel="noopener noreferrer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.113 1.524 5.842L.057 23.986l6.327-1.456A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.796 9.796 0 01-4.988-1.364l-.358-.213-3.712.854.898-3.614-.233-.372A9.788 9.788 0 012.182 12c0-5.418 4.4-9.818 9.818-9.818 5.418 0 9.818 4.4 9.818 9.818 0 5.418-4.4 9.818-9.818 9.818z"/></svg>
+      Quiero esa conversación
+    </a>
+    <br />
+    <button class="exit-modal-vm-dismiss" id="exitVmDismiss">Ahora no, gracias</button>
+  </div>
+</div>
+
 <!-- ░░ FOOTER MÍNIMO ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
 <footer class="vsl-footer">
   <p>© 2026 Phinanké · Erón Bello León | <a href="#">Política de Privacidad</a></p>
@@ -1252,7 +1931,29 @@
   </div>
 </a>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script>
+  // ─── SUPABASE ──────────────────────────────────────────────────
+  const SUPA_URL = 'https://cojalxemhqvcxacccopa.supabase.co';
+  const SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNvamFseGVtaHF2Y3hhY2Njb3BhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkzOTM1MjYsImV4cCI6MjA5NDk2OTUyNn0.3JVJCi8yujyEvs67AxkFYeQzn-9IoPYDkfW4xRgWQy4';
+  const db = supabase.createClient(SUPA_URL, SUPA_KEY);
+  let currentLeadId = null;
+
+  async function saveLead(payload) {
+    try {
+      const { data, error } = await db.from('leads').insert([payload]).select('id').single();
+      if (error) console.warn('Supabase insert error:', error.message);
+      else currentLeadId = data?.id;
+    } catch (e) { console.warn('Supabase error:', e); }
+  }
+
+  async function trackWaClick() {
+    if (!currentLeadId) return;
+    try {
+      await db.from('leads').update({ clic_whatsapp: true }).eq('id', currentLeadId);
+    } catch (e) { console.warn('Supabase update error:', e); }
+  }
+
   // Header scroll effect
   const header = document.getElementById('vsl-header');
   window.addEventListener('scroll', () => {
@@ -1298,6 +1999,187 @@
   } else {
     document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
   }
+
+  // ─── CALCULADORA VIDA MUJER ────────────────────────────────────
+  const DOTE_YEARS = [5, 7, 9, 11, 13, 15, 17];
+  const DOTE_CONTEXTS = [
+    'Ideal para un viaje o renovar tu auto.',
+    'Puede ser el enganche de un proyecto.',
+    'Inversión en tu negocio o maestría.',
+    'Remodelación de tu hogar.',
+    'Celebración especial o ahorro extra.',
+    'Apoyo para la educación de tus hijos.',
+    'Preparación para tu retiro o negocio.'
+  ];
+  const ORDINALS = ['', '1ER', '2DO', '3ER', '4TO', '5TO', '6TO', '7MO', '8VO', '9NO',
+    '10MO','11VO','12VO','13VO','14VO','15VO','16VO','17VO','18VO','19VO','20VO'];
+
+  function fmtMXN(n) {
+    if (n >= 1000000) return '$' + (n / 1000000).toFixed(2).replace(/\.?0+$/, '') + ' M';
+    if (n >= 1000)    return '$' + Math.round(n / 1000).toLocaleString('es-MX') + 'K';
+    return '$' + Math.round(n).toLocaleString('es-MX');
+  }
+  function fmtMXNExact(n) {
+    return '$' + n.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function fv(pmt, months) {
+    const r = Math.pow(1.05, 1/12) - 1; // 5% annual, monthly
+    return pmt * ((Math.pow(1 + r, months) - 1) / r);
+  }
+
+  function updateSliderFill(el) {
+    const min = parseFloat(el.min), max = parseFloat(el.max), val = parseFloat(el.value);
+    el.style.setProperty('--pct', ((val - min) / (max - min) * 100) + '%');
+  }
+
+  // Live slider updates on form step
+  document.getElementById('calc-edad').addEventListener('input', function() {
+    document.getElementById('calc-edad-disp').textContent = this.value + ' años';
+    updateSliderFill(this);
+  });
+  document.getElementById('calc-aport').addEventListener('input', function() {
+    document.getElementById('calc-aport-disp').textContent = '$' + parseInt(this.value).toLocaleString('es-MX');
+    updateSliderFill(this);
+  });
+  // Init slider fills
+  updateSliderFill(document.getElementById('calc-edad'));
+  updateSliderFill(document.getElementById('calc-aport'));
+
+  function buildTimeline(pmt, edad) {
+    const fv5       = fv(pmt, 60);
+    const dote5Base = fv5 * 0.20;
+    const container = document.getElementById('dote-timeline');
+    container.innerHTML = '';
+
+    let grandTotal = 0;
+
+    DOTE_YEARS.forEach((yr, idx) => {
+      const doteAmt  = dote5Base * Math.pow(1.05, (yr - 5));
+      const userAge  = edad + yr;
+      const context  = DOTE_CONTEXTS[idx];
+      const ordinal  = ORDINALS[yr] || (yr + 'VO');
+      grandTotal += doteAmt;
+
+      const isLeft = idx % 2 === 1; // alternate: right, left, right…
+      const cardHTML = `
+        <div class="dote-card">
+          <div class="dote-card-head">
+            <span class="dote-year-label">${ordinal} AÑO</span>
+            <span class="dote-pct">5%</span>
+          </div>
+          <div class="dote-amount">${fmtMXNExact(doteAmt)}</div>
+          <div class="dote-context">Tendrás <strong>${userAge} años</strong>. ${context}</div>
+        </div>`;
+      const emptyHTML = '<div class="dote-empty"></div>';
+      const nodeHTML  = `<div class="dote-node">${yr}</div>`;
+
+      const row = document.createElement('div');
+      row.className = 'dote-row';
+      row.innerHTML = isLeft
+        ? cardHTML + nodeHTML + emptyHTML
+        : emptyHTML + nodeHTML + cardHTML;
+      container.appendChild(row);
+    });
+
+    // Maturity — year 20
+    const maturity  = fv(pmt, 240);
+    const userAge20 = edad + 20;
+    grandTotal += maturity;
+
+    const matRow = document.createElement('div');
+    matRow.className = 'dote-row';
+    matRow.innerHTML = `
+      <div class="dote-card maturity">
+        <div class="dote-card-head">
+          <span class="dote-year-label">AÑO 20 (MADUREZ)</span>
+          <span class="dote-pct">80%</span>
+        </div>
+        <div class="dote-amount">${fmtMXNExact(maturity)}</div>
+        <div class="dote-context">Tendrás <strong>${userAge20} años</strong>. ¡Gran entrega final para tu libertad financiera!</div>
+      </div>
+      <div class="dote-node node-maturity">📈</div>
+      <div class="dote-empty"></div>`;
+    container.appendChild(matRow);
+
+    return grandTotal;
+  }
+
+  document.getElementById('calc-submit').addEventListener('click', function() {
+    const nombre = document.getElementById('calc-nombre').value.trim() || 'Sin nombre';
+    const edad   = parseInt(document.getElementById('calc-edad').value);
+    const pmt    = parseInt(document.getElementById('calc-aport').value);
+
+    const grandTotal    = buildTimeline(pmt, edad);
+    const simpleSavings = pmt * 240;
+
+    document.getElementById('res-nombre').textContent      = nombre === 'Sin nombre' ? 'Tú' : nombre;
+    document.getElementById('res-aport-txt').textContent   = '$' + pmt.toLocaleString('es-MX');
+    document.getElementById('res-total-txt').textContent   = fmtMXN(grandTotal);
+    document.getElementById('res-grand-total').textContent = fmtMXNExact(grandTotal);
+    document.getElementById('res-simple').textContent      = fmtMXNExact(simpleSavings);
+    document.getElementById('res-vm').textContent          = fmtMXNExact(grandTotal);
+
+    document.getElementById('calc-form').style.display    = 'none';
+    document.getElementById('calc-results').style.display = 'block';
+    document.getElementById('calc-results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    // Guardar lead en Supabase
+    saveLead({
+      source:             'vida-mujer',
+      nombre:             nombre,
+      edad:               edad,
+      aportacion_mensual: pmt,
+      total_proyectado:   Math.round(grandTotal * 100) / 100,
+      clic_whatsapp:      false,
+      referrer:           document.referrer || null,
+      datos_extra:        { plazo_anos: 20, ahorro_simple: simpleSavings }
+    });
+  });
+
+  // Rastrear clic en "Cotización oficial"
+  document.getElementById('calc-cta-link').addEventListener('click', trackWaClick);
+
+  document.getElementById('calc-reset').addEventListener('click', function() {
+    document.getElementById('calc-results').style.display = 'none';
+    document.getElementById('calc-form').style.display    = 'flex';
+    document.getElementById('calc-form').style.flexDirection = 'column';
+    document.getElementById('calc-nombre').value = '';
+    document.getElementById('calc-section-anchor').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  // ─── EXIT INTENT MODAL VM ──────────────────────────────────────
+  const exitOverlayVm = document.getElementById('exitOverlayVm');
+  let exitShownVm = false;
+
+  function showExitVm() {
+    if (exitShownVm) return;
+    exitShownVm = true;
+    exitOverlayVm.classList.add('active');
+  }
+
+  document.addEventListener('mouseleave', e => {
+    if (e.clientY <= 20) showExitVm();
+  });
+
+  // Mobile fallback: 45s inactivity
+  let mobileTimerVm = setTimeout(showExitVm, 45000);
+  ['touchstart','scroll'].forEach(ev =>
+    window.addEventListener(ev, () => {
+      clearTimeout(mobileTimerVm);
+      mobileTimerVm = setTimeout(showExitVm, 45000);
+    }, { passive: true })
+  );
+
+  document.getElementById('exitVmClose').addEventListener('click', () => {
+    exitOverlayVm.classList.remove('active');
+  });
+  document.getElementById('exitVmDismiss').addEventListener('click', () => {
+    exitOverlayVm.classList.remove('active');
+  });
+  exitOverlayVm.addEventListener('click', e => {
+    if (e.target === exitOverlayVm) exitOverlayVm.classList.remove('active');
+  });
 </script>
 </body>
 </html>
