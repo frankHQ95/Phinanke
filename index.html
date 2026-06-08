@@ -176,13 +176,13 @@
       white-space: nowrap;
     }
     .btn-primary {
-      background: var(--b3);
+      background: #22c55e;
       color: #fff;
-      box-shadow: 0 0 0 0 rgba(0,150,199,0);
+      box-shadow: 0 4px 24px rgba(34,197,94,.25);
     }
     .btn-primary:hover {
-      background: var(--b2);
-      box-shadow: 0 0 40px rgba(0,150,199,.5);
+      background: #16a34a;
+      box-shadow: 0 6px 40px rgba(34,197,94,.45);
       transform: translateY(-2px);
     }
     .btn-ghost {
@@ -1108,6 +1108,279 @@
     .value-item p { font-size: .76rem; color: var(--text-2); line-height: 1.5; }
 
     /* ═══════════════════════════════
+       SERVICIO DESTACADO — Retiro
+    ═══════════════════════════════ */
+    .service-card-retiro {
+      background: linear-gradient(135deg, rgba(34,197,94,.12) 0%, rgba(22,163,74,.06) 100%);
+      border: 1.5px solid rgba(34,197,94,.35) !important;
+      position: relative;
+    }
+    .service-card-retiro::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #22c55e, #16a34a);
+      border-radius: var(--r-md) var(--r-md) 0 0;
+    }
+    .retiro-popular-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      background: #22c55e;
+      color: #fff;
+      font-size: .62rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      padding: .22rem .7rem;
+    }
+
+    /* ═══════════════════════════════
+       BADGE CERTIFICACIÓN
+    ═══════════════════════════════ */
+    .cert-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      background: rgba(34,197,94,.08);
+      border: 1px solid rgba(34,197,94,.3);
+      border-radius: 999px;
+      padding: .35rem .9rem;
+      font-size: .78rem;
+      font-weight: 600;
+      color: #16a34a;
+      cursor: pointer;
+      transition: all .2s;
+      margin-top: .5rem;
+      text-decoration: none;
+    }
+    .cert-badge:hover {
+      background: rgba(34,197,94,.15);
+      border-color: #22c55e;
+      transform: translateY(-1px);
+    }
+    .cert-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+    /* ═══════════════════════════════
+       MODAL CÉDULA
+    ═══════════════════════════════ */
+    .cedula-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.75);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 9000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s;
+    }
+    .cedula-overlay.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .cedula-modal {
+      background: var(--surface-1);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      max-width: 500px;
+      width: 100%;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0,0,0,.5);
+      transform: scale(.95);
+      transition: transform .25s;
+    }
+    .cedula-overlay.open .cedula-modal { transform: scale(1); }
+    .cedula-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.1rem 1.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .cedula-header h3 {
+      font-family: 'Geist', sans-serif;
+      font-size: .9rem;
+      font-weight: 700;
+      color: var(--text-1);
+    }
+    .cedula-close {
+      width: 28px; height: 28px;
+      background: var(--surface-2);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-2);
+      font-size: 1rem;
+      transition: background .2s;
+    }
+    .cedula-close:hover { background: var(--surface-3); }
+    .cedula-body { padding: 1.25rem; }
+    .cedula-body img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+    .cedula-sub {
+      font-size: .75rem;
+      color: var(--text-3);
+      text-align: center;
+      margin-top: .85rem;
+    }
+
+    /* ═══════════════════════════════
+       FORMULARIO DE CONTACTO
+    ═══════════════════════════════ */
+    .contact-section {
+      padding: 100px 0;
+      background: var(--surface-1);
+      border-top: 1px solid var(--border);
+    }
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 56px;
+      align-items: start;
+    }
+    .contact-copy h2 {
+      font-family: 'Geist', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.12;
+      margin-bottom: 1rem;
+    }
+    .contact-copy h2 em {
+      font-style: normal;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .contact-copy p {
+      font-size: .95rem;
+      color: var(--text-2);
+      line-height: 1.75;
+      margin-bottom: 1.75rem;
+    }
+    .contact-perks {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+    }
+    .contact-perks li {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      font-size: .85rem;
+      color: var(--text-2);
+    }
+    .contact-perks li::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: #22c55e;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .contact-form-box {
+      background: var(--surface-0);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 4px 32px rgba(0,0,0,.12);
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: .45rem;
+      margin-bottom: 1.1rem;
+    }
+    .form-group label {
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--text-2);
+      letter-spacing: .02em;
+    }
+    .form-group input,
+    .form-group select {
+      background: var(--surface-1);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: .75rem 1rem;
+      font-size: .9rem;
+      color: var(--text-1);
+      font-family: 'Inter', sans-serif;
+      transition: border-color .2s, box-shadow .2s;
+      width: 100%;
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    .form-group input::placeholder { color: var(--text-3); }
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: #22c55e;
+      box-shadow: 0 0 0 3px rgba(34,197,94,.12);
+    }
+    .select-wrap { position: relative; }
+    .select-wrap::after {
+      content: '';
+      position: absolute;
+      right: 14px; top: 50%;
+      transform: translateY(-50%);
+      width: 0; height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 6px solid var(--text-3);
+      pointer-events: none;
+    }
+    .form-submit {
+      width: 100%;
+      padding: .95rem;
+      background: #22c55e;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-family: 'Geist', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .2s, transform .15s, box-shadow .2s;
+      box-shadow: 0 4px 20px rgba(34,197,94,.3);
+      margin-top: .5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+    }
+    .form-submit:hover {
+      background: #16a34a;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(34,197,94,.4);
+    }
+    .form-note {
+      font-size: .72rem;
+      color: var(--text-3);
+      text-align: center;
+      margin-top: .75rem;
+    }
+
+    @media (max-width: 720px) {
+      .contact-layout { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    /* ═══════════════════════════════
        CTA FINAL
     ═══════════════════════════════ */
     .cta-section {
@@ -1924,10 +2197,13 @@
 
       <div class="services-grid">
 
-        <a class="service-card" href="retiro.html">
-          <div class="service-top">
-            <div class="s-icon">🌱</div>
-            <span class="s-badge">Retiro</span>
+        <a class="service-card service-card-retiro" href="retiro.html">
+          <div class="service-top" style="justify-content:space-between;align-items:center;">
+            <div style="display:flex;align-items:center;gap:.75rem;">
+              <div class="s-icon">🌱</div>
+              <span class="s-badge">Retiro</span>
+            </div>
+            <span class="retiro-popular-badge">★ Más solicitado</span>
           </div>
           <h3>Plan de Retiro con Ahorro</h3>
           <span class="service-for">Profesionistas y dueños de negocio</span>
@@ -2042,8 +2318,12 @@
           </div>
           <h2 class="section-title" style="margin-top:.75rem;">Hola,<br />soy Erón Bello León</h2>
           <p>
-            Soy asesor de seguros con más de ocho años acompañando a familias, profesionistas y empresarios a encontrar la protección que realmente necesitan.
+            Soy asesor de Seguros autorizado por la Comisión Nacional de Seguros y Fianzas (CNSF) cédula M36529, con más de ocho años de experiencia acompañando a familias, profesionistas y empresarios a encontrar la protección que realmente necesitan.
           </p>
+          <button class="cert-badge" onclick="openCedula()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Ver certificación CNSF
+          </button>
           <p>
             Me apasiona el tema porque creo que la tranquilidad no es un lujo — es algo que todos merecen tener sin complicaciones ni letra chica. Por eso trabajo diferente: primero te escucho, luego recomiendo.
           </p>
@@ -2055,7 +2335,7 @@
               <p>Por encima de cualquier comisión</p>
             </div>
             <div class="value-item">
-              <div class="vi-icon">💡</div>
+              <div class="vi-icon"><img src="img/birrete.png" alt="Educación" style="width:2rem;height:2rem;object-fit:contain;" /></div>
               <h4>Educación</h4>
               <p>Financiera como parte del servicio</p>
             </div>
@@ -2211,8 +2491,66 @@
     </div>
   </section>
 
+  <!-- ════════════════════ FORMULARIO DE CONTACTO ════════════════════ -->
+  <section class="contact-section" id="contacto">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-copy">
+          <div class="section-eyebrow" style="margin-bottom:1rem;">
+            <span class="eyebrow-line"></span>
+            <span class="pill">Contáctame</span>
+          </div>
+          <h2>Déjame tus datos y te <em>contacto hoy</em></h2>
+          <p>Sin formularios interminables ni llamadas no deseadas. Solo cuéntame qué necesitas y te respondo en menos de 24 horas por WhatsApp.</p>
+          <ul class="contact-perks">
+            <li>Primera asesoría 100% gratis</li>
+            <li>Sin compromiso de contratación</li>
+            <li>Respuesta el mismo día</li>
+            <li>Todo por WhatsApp, a tu ritmo</li>
+          </ul>
+        </div>
+
+        <div class="contact-form-box">
+          <form id="contactForm" onsubmit="enviarWA(event)">
+            <div class="form-group">
+              <label for="cf-nombre">Nombre completo</label>
+              <input type="text" id="cf-nombre" name="nombre" placeholder="Ej. Laura Martínez" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="cf-correo">Correo electrónico</label>
+              <input type="email" id="cf-correo" name="correo" placeholder="tu@correo.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="cf-wa">WhatsApp</label>
+              <input type="tel" id="cf-wa" name="whatsapp" placeholder="55 1234 5678" required autocomplete="tel" />
+            </div>
+            <div class="form-group">
+              <label for="cf-interes">¿Qué te interesa?</label>
+              <div class="select-wrap">
+                <select id="cf-interes" name="interes" required>
+                  <option value="" disabled selected>Selecciona un servicio</option>
+                  <option value="Plan de Retiro con Ahorro">Plan de Retiro con Ahorro</option>
+                  <option value="Protección de Gastos Médicos">Protección de Gastos Médicos</option>
+                  <option value="Plan Educativo para mis Hijos">Plan Educativo para mis Hijos</option>
+                  <option value="Plan Patrimonial Elite">Plan Patrimonial Elite</option>
+                  <option value="Vida Mujer">Vida Mujer</option>
+                  <option value="Aún no lo sé, quiero asesoría">Aún no lo sé, quiero asesoría</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="form-submit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Enviar por WhatsApp
+            </button>
+            <p class="form-note">Al enviar, se abrirá WhatsApp con tu información lista para Erón.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ════════════════════ CTA FINAL ════════════════════ -->
-  <section class="cta-section" id="contacto">
+  <section class="cta-section" id="cta-final">
     <div class="container">
       <div class="cta-inner">
         <div class="hero-eyebrow" style="justify-content:center;display:flex;margin-bottom:1.5rem;">
@@ -2303,7 +2641,50 @@
     </a>
   </div>
 
+  <!-- Modal cédula -->
+  <div class="cedula-overlay" id="cedulaOverlay" role="dialog" aria-modal="true" aria-label="Cédula de certificación CNSF">
+    <div class="cedula-modal">
+      <div class="cedula-header">
+        <h3>Certificación CNSF · Cédula M36529</h3>
+        <button class="cedula-close" onclick="closeCedula()" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="cedula-body">
+        <img src="img/cedula.png" alt="Cédula de asesor autorizado CNSF — Erón Bello León M36529" />
+        <p class="cedula-sub">Agente autorizado por la Comisión Nacional de Seguros y Fianzas</p>
+      </div>
+    </div>
+  </div>
+
   <script>
+    /* ── Modal cédula ── */
+    function openCedula() {
+      const overlay = document.getElementById('cedulaOverlay');
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeCedula() {
+      const overlay = document.getElementById('cedulaOverlay');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('cedulaOverlay').addEventListener('click', function(e) {
+      if (e.target === this) closeCedula();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeCedula();
+    });
+
+    /* ── Formulario → WhatsApp ── */
+    function enviarWA(e) {
+      e.preventDefault();
+      const nombre   = document.getElementById('cf-nombre').value.trim();
+      const correo   = document.getElementById('cf-correo').value.trim();
+      const wa       = document.getElementById('cf-wa').value.trim();
+      const interes  = document.getElementById('cf-interes').value;
+      const msg = `Hola Erón, me interesa recibir asesoría 👋\n\n*Nombre:* ${nombre}\n*Correo:* ${correo}\n*WhatsApp:* ${wa}\n*Interés:* ${interes}\n\n¿Podemos agendar una llamada?`;
+      window.open('https://wa.me/message/3D7EGH3EH4FGE1?text=' + encodeURIComponent(msg), '_blank');
+    }
+
     /* ── Nav scroll ── */
     const nav = document.getElementById('nav');
     const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 20);

@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plan Patrimonial Elite — Optimaxx Elite | Phinanké</title>
+  <meta name="description" content="Protege e incrementa tu patrimonio con ventajas fiscales reales. Optimaxx Elite de Allianz: invierte desde $300,000 pesos con liquidez en 72 horas y sin pagar impuestos sobre tus rendimientos." />
+  <meta name="author" content="Erón Bello León — Phinanké" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Plan Patrimonial Elite — Optimaxx Elite | Phinanké" />
+  <meta property="og:description" content="Tu patrimonio merece protección real. Invierte con Allianz, aplaza o exenta impuestos, y recupera tu dinero en 72 horas cuando lo necesites." />
+  <meta property="og:image" content="img/og-cover.jpg" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="img/logo-icon.png?v=2" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/logo-icon.png?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/logo-icon.png?v=2" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ═══════════════════════════════
+       RESET & TOKENS
+    ═══════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      /* Allianz brand */
+      --az:        #003781;
+      --az-l:      #0046a8;
+      --az-ll:     #e8eef8;
+      --az-glow:   rgba(0,55,129,.18);
+
+      /* Gold — identidad Elite */
+      --gold:      #C9A227;
+      --gold-l:    #E8C040;
+      --gold-glow: rgba(201,162,39,.2);
+      --gold-border: rgba(201,162,39,.38);
+
+      /* Superficies (tema claro) */
+      --surface-0: #ffffff;
+      --surface-1: #f7f8fb;
+      --surface-2: #eef0f7;
+
+      /* Bordes */
+      --border:    rgba(15,30,80,.09);
+      --border-hi: rgba(201,162,39,.35);
+
+      /* Texto claro */
+      --text-1: #0a1628;
+      --text-2: rgba(10,22,40,.58);
+      --text-3: rgba(10,22,40,.38);
+
+      /* Texto sobre fondo azul (hero/cta) */
+      --on-blue-1: #ffffff;
+      --on-blue-2: rgba(255,255,255,.75);
+      --on-blue-3: rgba(255,255,255,.50);
+
+      /* Sombras */
+      --sh-sm: 0 1px 4px rgba(0,0,0,.06), 0 4px 14px rgba(0,0,0,.04);
+      --sh-md: 0 4px 16px rgba(0,0,0,.07), 0 12px 40px rgba(0,0,0,.05);
+      --sh-lg: 0 8px 32px rgba(0,0,0,.09), 0 24px 64px rgba(0,0,0,.06);
+
+      --r-sm: 14px;
+      --r-md: 20px;
+      --r-lg: 28px;
+
+      --ease: cubic-bezier(.4,0,.2,1);
+      --t: .3s var(--ease);
+
+      --wa-green:      #22c55e;
+      --wa-green-dark: #16a34a;
+      --wa-glow:       rgba(34,197,94,.28);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--surface-0);
+      color: var(--text-1);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Geist', 'Inter', system-ui, sans-serif;
+      line-height: 1.15;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    .wrap {
+      width: 100%;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ═══════════════════════════════
+       HEADER
+    ═══════════════════════════════ */
+    .site-header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 999;
+      padding: 14px 20px;
+      transition: background var(--t), box-shadow var(--t), border-bottom var(--t);
+    }
+    .site-header.scrolled {
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 16px rgba(0,0,0,.06);
+    }
+    .header-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .site-logo {
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      flex-shrink: 0;
+    }
+    .site-logo img { height: 32px; width: auto; object-fit: contain; }
+    .logo-text {
+      font-family: 'Geist', sans-serif;
+      font-weight: 900;
+      font-size: .95rem;
+      letter-spacing: .06em;
+      color: var(--on-blue-1);
+      line-height: 1;
+    }
+    .site-header.scrolled .logo-text { color: var(--az); }
+    .logo-sub {
+      font-size: .55rem;
+      color: var(--on-blue-3);
+      font-weight: 500;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+    .site-header.scrolled .logo-sub { color: var(--text-3); }
+
+    /* ═══════════════════════════════
+       BUTTONS
+    ═══════════════════════════════ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      border: none;
+      border-radius: 999px;
+      font-family: 'Geist', 'Inter', sans-serif;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--t);
+      white-space: nowrap;
+      text-decoration: none;
+    }
+    .btn-sm  { font-size: .8rem;  padding: .6rem 1.25rem; }
+    .btn-md  { font-size: .92rem; padding: .85rem 1.75rem; }
+    .btn-lg  { font-size: 1.05rem; padding: 1.05rem 2.2rem; }
+    .btn-xl  { font-size: 1.15rem; padding: 1.2rem 2.75rem; }
+
+    .btn-wa {
+      background: var(--wa-green);
+      color: #fff;
+      box-shadow: 0 4px 24px var(--wa-glow);
+    }
+    .btn-wa:hover {
+      background: var(--wa-green-dark);
+      box-shadow: 0 6px 44px rgba(34,197,94,.45);
+      transform: translateY(-2px);
+    }
+
+    .btn-wa-outline {
+      background: rgba(255,255,255,.12);
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,.4);
+      backdrop-filter: blur(8px);
+    }
+    .btn-wa-outline:hover {
+      background: rgba(255,255,255,.2);
+      border-color: rgba(255,255,255,.7);
+      transform: translateY(-2px);
+    }
+
+    .wa-icon { width: 20px; height: 20px; flex-shrink: 0; }
+
+    /* ═══════════════════════════════
+       HERO  — fondo azul Allianz
+    ═══════════════════════════════ */
+    .hero {
+      position: relative;
+      background: linear-gradient(145deg, var(--az) 0%, #004ea0 55%, #0060c8 100%);
+      padding: 128px 0 80px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    /* Patrón geométrico sutil tipo Allianz */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 20% 80%, rgba(255,255,255,.06) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 80% 20%, rgba(201,162,39,.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    /* Línea dorada inferior */
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent 0%, var(--gold) 40%, var(--gold-l) 60%, transparent 100%);
+    }
+
+    .elite-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 999px;
+      padding: .4rem 1rem;
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gold-l);
+      margin-bottom: 1.5rem;
+      backdrop-filter: blur(8px);
+    }
+    .elite-badge svg { width: 14px; height: 14px; }
+
+    .allianz-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 999px;
+      padding: .35rem .9rem .35rem .55rem;
+      font-size: .72rem;
+      font-weight: 500;
+      color: var(--on-blue-2);
+      margin-bottom: 2rem;
+      margin-left: .5rem;
+      backdrop-filter: blur(8px);
+    }
+    .allianz-dot {
+      width: 7px; height: 7px;
+      background: var(--gold-l);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 6vw, 3.6rem);
+      font-weight: 900;
+      letter-spacing: -.02em;
+      line-height: 1.1;
+      color: var(--on-blue-1);
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--gold-l) 0%, #f5d060 50%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--on-blue-2);
+      max-width: 560px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.78;
+    }
+
+    .hero-ctas {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-proof {
+      margin-top: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      font-size: .78rem;
+      color: var(--on-blue-3);
+    }
+    .hero-proof::before,
+    .hero-proof::after {
+      content: '';
+      flex: 1;
+      max-width: 80px;
+      height: 1px;
+      background: rgba(255,255,255,.2);
+    }
+
+    /* ═══════════════════════════════
+       SECTIONS COMUNES
+    ═══════════════════════════════ */
+    .section {
+      padding: 80px 0;
+      position: relative;
+    }
+    .section-alt {
+      background: var(--surface-1);
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--az);
+      background: var(--az-ll);
+      border-radius: 999px;
+      padding: .2rem .85rem;
+      margin-bottom: .9rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -.02em;
+      color: var(--text-1);
+      margin-bottom: 1rem;
+    }
+    .section-title em {
+      font-style: normal;
+      color: var(--gold);
+    }
+
+    .section-desc {
+      font-size: 1rem;
+      color: var(--text-2);
+      max-width: 520px;
+      margin-bottom: 3rem;
+      line-height: 1.78;
+    }
+
+    /* ═══════════════════════════════
+       STATS BAR
+    ═══════════════════════════════ */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background: #fff;
+      border-radius: var(--r-md);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--sh-md);
+      margin-bottom: 80px;
+      position: relative;
+      z-index: 1;
+      /* Sube sobre el hero para efecto "flotante" */
+      margin-top: -32px;
+    }
+    .stat-item {
+      background: #fff;
+      padding: 1.75rem 1.25rem;
+      text-align: center;
+      transition: background var(--t);
+      border-right: 1px solid var(--border);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-item:hover { background: var(--surface-1); }
+    .stat-num {
+      font-family: 'Geist', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--az);
+      line-height: 1;
+      margin-bottom: .35rem;
+    }
+    .stat-label {
+      font-size: .78rem;
+      color: var(--text-2);
+      line-height: 1.4;
+    }
+
+    /* Stats bar en la sección blanca necesita más margen superior */
+    .stats-wrap {
+      padding-top: 0;
+      margin-bottom: 0;
+    }
+
+    /* ═══════════════════════════════
+       PERFIL CARDS
+    ═══════════════════════════════ */
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .profile-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 1.75rem;
+      transition: all var(--t);
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--sh-sm);
+    }
+    .profile-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--az) 0%, var(--gold) 100%);
+      opacity: 0;
+      transition: opacity var(--t);
+    }
+    .profile-card:hover {
+      border-color: rgba(0,55,129,.15);
+      transform: translateY(-4px);
+      box-shadow: var(--sh-md);
+    }
+    .profile-card:hover::before { opacity: 1; }
+
+    .profile-icon {
+      width: 44px; height: 44px;
+      background: var(--az-ll);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .profile-card h3 {
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--text-1);
+      margin-bottom: .4rem;
+    }
+    .profile-card p {
+      font-size: .82rem;
+      color: var(--text-2);
+      line-height: 1.6;
+    }
+
+    /* ═══════════════════════════════
+       VENTAJAS FISCALES
+    ═══════════════════════════════ */
+    .fiscal-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    @media (max-width: 520px) {
+      .fiscal-grid { grid-template-columns: 1fr; }
+    }
+
+    .fiscal-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 2rem 1.75rem;
+      transition: all var(--t);
+      box-shadow: var(--sh-sm);
+    }
+    .fiscal-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--sh-md);
+      border-color: var(--gold-border);
+    }
+    .fiscal-kw {
+      display: inline-block;
+      font-family: 'Geist', sans-serif;
+      font-size: .63rem;
+      font-weight: 800;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(201,162,39,.1);
+      border: 1px solid var(--gold-border);
+      border-radius: 999px;
+      padding: .2rem .8rem;
+      margin-bottom: .9rem;
+    }
+    .fiscal-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-1);
+      margin-bottom: .5rem;
+    }
+    .fiscal-card p {
+      font-size: .84rem;
+      color: var(--text-2);
+      line-height: 1.68;
+    }
+    .fiscal-note {
+      font-size: .73rem;
+      color: var(--az);
+      margin-top: .75rem;
+      font-weight: 600;
+    }
+
+    /* ═══════════════════════════════
+       CÓMO FUNCIONA
+    ═══════════════════════════════ */
+    .how-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 520px) {
+      .how-grid { grid-template-columns: 1fr; }
+    }
+
+    .how-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 2rem 1.75rem;
+      box-shadow: var(--sh-sm);
+    }
+    .how-header {
+      display: flex;
+      align-items: center;
+      gap: .8rem;
+      margin-bottom: 1.25rem;
+    }
+    .how-icon {
+      width: 40px; height: 40px;
+      background: var(--az-ll);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.15rem;
+    }
+    .how-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-1);
+    }
+    .how-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .65rem;
+    }
+    .how-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: .65rem;
+      font-size: .84rem;
+      color: var(--text-2);
+      line-height: 1.58;
+    }
+    .how-list li::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--az);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: .52rem;
+    }
+    .highlight-val {
+      color: var(--az);
+      font-weight: 600;
+    }
+
+    /* ═══════════════════════════════
+       ALTERNATIVAS DE INVERSIÓN
+    ═══════════════════════════════ */
+    .currency-tabs {
+      display: flex;
+      gap: .5rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .currency-tab {
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: 999px;
+      padding: .45rem 1.1rem;
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--text-2);
+      cursor: pointer;
+      transition: all var(--t);
+      font-family: 'Geist', sans-serif;
+      box-shadow: var(--sh-sm);
+    }
+    .currency-tab.active {
+      background: var(--az);
+      border-color: var(--az);
+      color: #fff;
+      box-shadow: 0 4px 14px var(--az-glow);
+    }
+    .currency-tab:hover:not(.active) {
+      border-color: var(--az);
+      color: var(--az);
+    }
+
+    .alt-panel { display: none; }
+    .alt-panel.active { display: block; }
+
+    .alt-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: .75rem;
+    }
+    .alt-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--r-sm);
+      padding: 1.25rem;
+      transition: all var(--t);
+      box-shadow: var(--sh-sm);
+    }
+    .alt-card:hover {
+      border-color: rgba(0,55,129,.2);
+      box-shadow: var(--sh-md);
+      transform: translateY(-2px);
+    }
+    .alt-type {
+      font-size: .63rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--az);
+      margin-bottom: .3rem;
+    }
+    .alt-name {
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--text-1);
+    }
+    .alt-note {
+      font-size: .72rem;
+      color: var(--text-3);
+      margin-top: .2rem;
+    }
+
+    .alt-info-bar {
+      margin-top: 1.25rem;
+      background: var(--az-ll);
+      border: 1px solid rgba(0,55,129,.15);
+      border-radius: var(--r-sm);
+      padding: 1rem 1.25rem;
+      font-size: .82rem;
+      color: var(--text-2);
+      line-height: 1.6;
+    }
+    .alt-info-bar strong { color: var(--az); }
+
+    /* ═══════════════════════════════
+       SEGURO INCLUIDO
+    ═══════════════════════════════ */
+    .seguro-box {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 2.25rem 2rem;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.5rem;
+      align-items: start;
+      box-shadow: var(--sh-sm);
+    }
+    @media (max-width: 480px) {
+      .seguro-box { grid-template-columns: 1fr; }
+    }
+    .seguro-icon {
+      width: 52px; height: 52px;
+      background: var(--az-ll);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    .seguro-body h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-1);
+      margin-bottom: .5rem;
+    }
+    .seguro-body p {
+      font-size: .875rem;
+      color: var(--text-2);
+      line-height: 1.68;
+      margin-bottom: .75rem;
+    }
+    .seguro-tag {
+      display: inline-block;
+      background: rgba(201,162,39,.08);
+      border: 1px solid var(--gold-border);
+      border-radius: 999px;
+      padding: .28rem .9rem;
+      font-size: .72rem;
+      font-weight: 600;
+      color: var(--gold);
+    }
+
+    /* ═══════════════════════════════
+       CARGOS
+    ═══════════════════════════════ */
+    .cargos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .cargo-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: all var(--t);
+      box-shadow: var(--sh-sm);
+    }
+    .cargo-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--sh-md);
+      border-color: rgba(0,55,129,.15);
+    }
+    .cargo-pct {
+      font-family: 'Geist', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--az);
+      line-height: 1;
+      margin-bottom: .25rem;
+    }
+    .cargo-label {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--text-1);
+      margin-bottom: .4rem;
+    }
+    .cargo-desc {
+      font-size: .75rem;
+      color: var(--text-2);
+      line-height: 1.5;
+    }
+
+    /* ═══════════════════════════════
+       RESPALDO / TRUST — fondo azul Allianz
+    ═══════════════════════════════ */
+    .trust-box {
+      background: linear-gradient(135deg, var(--az) 0%, #004ea0 60%, #0060c8 100%);
+      border-radius: var(--r-lg);
+      padding: 3rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .trust-box::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 50% 60% at 10% 90%, rgba(255,255,255,.06) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 90% 10%, rgba(201,162,39,.15) 0%, transparent 70%);
+    }
+    .trust-box::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), var(--gold-l), transparent);
+    }
+    .trust-box .section-tag {
+      color: var(--gold-l);
+      background: rgba(255,255,255,.12);
+    }
+    .trust-box h2 {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--on-blue-1);
+      margin-bottom: .75rem;
+    }
+    .trust-box h2 em { font-style: normal; color: var(--gold-l); }
+    .trust-box p {
+      font-size: .92rem;
+      color: var(--on-blue-2);
+      max-width: 460px;
+      margin: 0 auto 1.75rem;
+      line-height: 1.72;
+    }
+    .trust-stat-num {
+      font-family: 'Geist', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--gold-l);
+      line-height: 1;
+      margin-bottom: .2rem;
+    }
+    .trust-stat-label {
+      font-size: .75rem;
+      color: var(--on-blue-2);
+    }
+    .trust-divider {
+      width: 1px; height: 40px;
+      background: rgba(255,255,255,.2);
+    }
+
+    /* Logo Allianz en trust-box — sobre azul, sin pill */
+    .trust-box .allianz-logo {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+      margin: 0 auto 1.5rem;
+      filter: brightness(0) invert(1);
+      opacity: .9;
+    }
+
+    /* ═══════════════════════════════
+       CTA FINAL — azul Allianz
+    ═══════════════════════════════ */
+    .cta-final {
+      padding: 80px 0 100px;
+      text-align: center;
+    }
+    .cta-final-box {
+      background: linear-gradient(145deg, var(--az) 0%, #004ea0 55%, #0060c8 100%);
+      border-radius: var(--r-lg);
+      padding: 3.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-final-box::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 70% at 50% 110%, rgba(201,162,39,.15) 0%, transparent 70%);
+    }
+    .cta-final-box::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), var(--gold-l), transparent);
+    }
+    .cta-final-box h2 {
+      font-size: clamp(1.7rem, 4.5vw, 2.6rem);
+      font-weight: 900;
+      letter-spacing: -.02em;
+      color: var(--on-blue-1);
+      margin-bottom: 1rem;
+    }
+    .cta-final-box h2 em {
+      font-style: normal;
+      color: var(--gold-l);
+    }
+    .cta-final-box p {
+      font-size: .95rem;
+      color: var(--on-blue-2);
+      max-width: 460px;
+      margin: 0 auto 2.25rem;
+      line-height: 1.78;
+    }
+    .cta-btns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .cta-disclaimer {
+      font-size: .75rem;
+      color: var(--on-blue-3);
+      margin-top: .75rem;
+    }
+
+    /* ═══════════════════════════════
+       FOOTER
+    ═══════════════════════════════ */
+    .site-footer {
+      background: var(--surface-1);
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 20px;
+      text-align: center;
+    }
+    .footer-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .85rem;
+    }
+    .footer-logo { display: flex; align-items: center; gap: 1.25rem; }
+    .footer-logo img { height: 26px; width: auto; object-fit: contain; }
+    .footer-divider { width: 1px; height: 24px; background: var(--border); }
+    .footer-text { font-size: .75rem; color: var(--text-2); line-height: 1.7; }
+    .footer-legal {
+      font-size: .68rem;
+      color: var(--text-3);
+      max-width: 520px;
+      line-height: 1.65;
+    }
+
+    /* Logo Allianz en footer — visible sobre fondo claro */
+    .footer-allianz {
+      height: 26px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    /* ═══════════════════════════════
+       WA FLOAT
+    ═══════════════════════════════ */
+    .wa-float {
+      position: fixed;
+      bottom: 24px; right: 20px;
+      z-index: 900;
+      width: 52px; height: 52px;
+      background: var(--wa-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(34,197,94,.4);
+      transition: all var(--t);
+      color: #fff;
+    }
+    .wa-float:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 32px rgba(34,197,94,.55);
+    }
+    .wa-float svg { width: 26px; height: 26px; }
+
+    /* ═══════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════ */
+    @media (max-width: 600px) {
+      .stats-bar { grid-template-columns: 1fr 1fr; }
+      .stats-bar .stat-item:last-child { grid-column: 1 / -1; border-right: none; border-top: 1px solid var(--border); }
+      .profile-grid { grid-template-columns: 1fr; }
+      .hero-ctas { flex-direction: column; align-items: stretch; }
+      .hero-ctas .btn { justify-content: center; }
+      .how-grid { grid-template-columns: 1fr; }
+      .fiscal-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ════════════ HEADER ════════════ -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <img src="img/logo.png" alt="Phinanké" />
+        <div>
+          <div class="logo-text">PHINANKÉ</div>
+          <div class="logo-sub">Estrategia Patrimonial</div>
+        </div>
+      </a>
+      <a href="https://wa.me/message/3D7EGH3EH4FGE1" target="_blank" rel="noopener" class="btn btn-wa btn-sm">
+        Consulta sin costo
+      </a>
+    </div>
+  </header>
+
+  <!-- ════════════ HERO ════════════ -->
+  <section class="hero">
+    <div class="wrap">
+      <div style="display:flex;align-items:center;justify-content:center;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem;">
+        <span class="elite-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Plan Patrimonial Elite
+        </span>
+        <span class="allianz-badge"><span class="allianz-dot"></span>Respaldado por Allianz</span>
+      </div>
+
+      <h1>
+        Tu patrimonio trabajando<br />
+        <em>libre de impuestos</em>
+      </h1>
+
+      <p class="hero-sub">
+        Optimaxx Elite es la estrategia de inversión patrimonial de Allianz que te permite hacer crecer tu capital con ventajas fiscales reales — aplazando o exentando impuestos — y con liquidez disponible en 72 horas.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="https://wa.me/message/3D7EGH3EH4FGE1" target="_blank" rel="noopener" class="btn btn-wa btn-lg">
+          <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.852L.057 23.743a.5.5 0 0 0 .615.607l6.105-1.603A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.847 0-3.576-.476-5.081-1.313l-.364-.21-3.766.988 1.006-3.671-.229-.376A9.963 9.963 0 0 1 2 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/>
+          </svg>
+          Quiero más información
+        </a>
+        <a href="#como-funciona" class="btn btn-wa-outline btn-lg">
+          Ver cómo funciona
+        </a>
+      </div>
+
+      <p class="hero-proof">Primera consulta gratuita · Sin compromiso · 100% confidencial</p>
+    </div>
+  </section>
+
+  <!-- ════════════ STATS BAR ════════════ -->
+  <div class="wrap">
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-num">$300k</div>
+        <div class="stat-label">Inversión mínima<br />de apertura</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">72 hrs</div>
+        <div class="stat-label">Liquidez disponible<br />sin cargos de Allianz</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">9</div>
+        <div class="stat-label">Alternativas<br />de inversión</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════ PERFIL ════════════ -->
+  <section class="section">
+    <div class="wrap">
+      <span class="section-tag">¿Para quién es?</span>
+      <h2 class="section-title">El plan ideal si tú <em>ya tienes patrimonio</em></h2>
+      <p class="section-desc">Optimaxx Elite no es para comenzar desde cero. Está diseñado para personas con capital disponible que quieren hacerlo crecer de forma segura, protegida y fiscalmente eficiente.</p>
+
+      <div class="profile-grid">
+        <div class="profile-card">
+          <div class="profile-icon">💰</div>
+          <h3>Capital disponible</h3>
+          <p>Tienes $300,000 pesos o más sin compromisos inmediatos y buscas rendirlos mejor que en un banco.</p>
+        </div>
+        <div class="profile-card">
+          <div class="profile-icon">🛡️</div>
+          <h3>Perfil conservador</h3>
+          <p>Prefieres la seguridad sobre el riesgo. Buscas un crecimiento sólido y predecible para tu patrimonio.</p>
+        </div>
+        <div class="profile-card">
+          <div class="profile-icon">📋</div>
+          <h3>Estrategia fiscal</h3>
+          <p>Quieres reducir o aplazar el pago de impuestos mientras tu dinero trabaja para ti.</p>
+        </div>
+        <div class="profile-card">
+          <div class="profile-icon">👨‍👩‍👧</div>
+          <h3>Protección patrimonial</h3>
+          <p>Deseas que tu patrimonio llegue libre de gravamen a tus beneficiarios en caso de fallecimiento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ VENTAJAS FISCALES ════════════ -->
+  <section class="section">
+    <div class="wrap">
+      <span class="section-tag">Ventajas Fiscales</span>
+      <h2 class="section-title">Cuatro maneras de <em>ganar más</em> legalmente</h2>
+      <p class="section-desc">Optimaxx Elite está estructurado como una póliza de seguro de supervivencia bajo el Art. 93, fracción XXI de la LISR — lo que le da ventajas fiscales que ninguna inversión bancaria puede darte.</p>
+
+      <div class="fiscal-grid">
+        <div class="fiscal-card">
+          <span class="fiscal-kw">Exentar</span>
+          <h3>Cero impuestos sobre rendimientos</h3>
+          <p>Si tienes 60 años o más y tu plan tiene al menos 5 años de antigüedad, tus rendimientos están completamente exentos del ISR.</p>
+          <p class="fiscal-note">Requisitos: 60+ años · 5 años de antigüedad con el plan</p>
+        </div>
+        <div class="fiscal-card">
+          <span class="fiscal-kw">Diferir</span>
+          <h3>Aplaza el pago de impuestos</h3>
+          <p>Si aún no cumples los requisitos para exentar, no pagas impuestos mientras tu dinero permanezca invertido. Se acumula más capital para ti.</p>
+          <p class="fiscal-note">Tu base de capital crece más rápido año con año</p>
+        </div>
+        <div class="fiscal-card">
+          <span class="fiscal-kw">Herencia</span>
+          <h3>Tus beneficiarios reciben todo</h3>
+          <p>En caso de fallecimiento, tus beneficiarios reciben los recursos libres de gravamen. Sin trámites sucesorios, sin impuestos.</p>
+          <p class="fiscal-note">Transferencia directa, sin proceso legal</p>
+        </div>
+        <div class="fiscal-card">
+          <span class="fiscal-kw">Ahorro</span>
+          <h3>Todo es prima de seguro</h3>
+          <p>Al estar estructurado como seguro, el capital aportado se considera prima de seguro, lo que da protección jurídica y fiscal a tu patrimonio.</p>
+          <p class="fiscal-note">Patrimonio protegido desde el primer peso</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ CÓMO FUNCIONA ════════════ -->
+  <section class="section" id="como-funciona">
+    <div class="wrap">
+      <span class="section-tag">Cómo funciona</span>
+      <h2 class="section-title">Simple, flexible<br /><em>y a tu medida</em></h2>
+      <p class="section-desc">Sin compromisos de aportaciones mensuales. Tú decides cuándo y cuánto aportas, y cuándo recuperas tu dinero.</p>
+
+      <div class="how-grid">
+        <div class="how-card">
+          <div class="how-header">
+            <div class="how-icon">💵</div>
+            <h3>Aportaciones</h3>
+          </div>
+          <ul class="how-list">
+            <li><span><span class="highlight-val">Aportación única</span> — sin compromiso de pagos mensuales o periódicos</span></li>
+            <li><span>Apertura desde <span class="highlight-val">$300,000 pesos</span></span></li>
+            <li><span>Aportaciones adicionales opcionales desde <span class="highlight-val">$10,000 pesos</span> cuando tú quieras</span></li>
+            <li><span>Tú siempre decides cuándo y cuánto invertir de más</span></li>
+          </ul>
+        </div>
+        <div class="how-card">
+          <div class="how-header">
+            <div class="how-icon">⚡</div>
+            <h3>Liquidez</h3>
+          </div>
+          <ul class="how-list">
+            <li><span>Dinero disponible en <span class="highlight-val">72 horas</span> cuando lo necesites</span></li>
+            <li><span><span class="highlight-val">Sin cargos por retiro</span> por parte de Allianz</span></li>
+            <li><span>Saldo mínimo de <span class="highlight-val">$15,000 pesos</span> para mantener la póliza activa</span></li>
+            <li><span>Retención provisional del ISR solo si no se cumplen condiciones del Art. 93 LISR</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ ALTERNATIVAS DE INVERSIÓN ════════════ -->
+  <section class="section">
+    <div class="wrap">
+      <span class="section-tag">Alternativas de Inversión</span>
+      <h2 class="section-title">9 opciones en tres monedas.<br /><em>Tú decides dónde.</em></h2>
+      <p class="section-desc">Tienes el control total. Puedes cambiar entre alternativas una vez al mes sin costo adicional y siempre sabrás exactamente dónde está tu patrimonio.</p>
+
+      <div class="currency-tabs">
+        <button class="currency-tab active" onclick="showPanel('pesos', this)">🇲🇽 Pesos MXN</button>
+        <button class="currency-tab" onclick="showPanel('dolares', this)">🇺🇸 Dólares USD</button>
+        <button class="currency-tab" onclick="showPanel('euros', this)">🇪🇺 Euros EUR</button>
+      </div>
+
+      <div id="panel-pesos" class="alt-panel active">
+        <div class="alt-grid">
+          <div class="alt-card">
+            <div class="alt-type">Renta Fija</div>
+            <div class="alt-name">Renta Fija Especial</div>
+            <div class="alt-note">Mín. $10,000 pesos</div>
+          </div>
+          <div class="alt-card">
+            <div class="alt-type">Renta Variable</div>
+            <div class="alt-name">Renta Variable</div>
+            <div class="alt-note">Mín. $10,000 pesos</div>
+          </div>
+          <div class="alt-card">
+            <div class="alt-type">Especial</div>
+            <div class="alt-name">Pesos Revaluables</div>
+            <div class="alt-note">Mín. $10,000 pesos</div>
+          </div>
+          <div class="alt-card">
+            <div class="alt-type">Premier</div>
+            <div class="alt-name">Premier Pesos Renta Fija</div>
+            <div class="alt-note">Mín. $1,000,000 pesos</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="panel-dolares" class="alt-panel">
+        <div class="alt-grid">
+          <div class="alt-card">
+            <div class="alt-type">Renta Fija</div>
+            <div class="alt-name">Renta Fija Especial</div>
+            <div class="alt-note">En dólares americanos</div>
+          </div>
+          <div class="alt-card">
+            <div class="alt-type">Renta Variable</div>
+            <div class="alt-name">Renta Variable</div>
+            <div class="alt-note">En dólares americanos</div>
+          </div>
+          <div class="alt-card">
+            <div class="alt-type">Índice</div>
+            <div class="alt-name">AZ S&amp;P500 B20</div>
+            <div class="alt-note">Vinculado al S&amp;P 500</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="panel-euros" class="alt-panel">
+        <div class="alt-grid">
+          <div class="alt-card">
+            <div class="alt-type">Renta Fija</div>
+            <div class="alt-name">Renta Fija Especial</div>
+            <div class="alt-note">En euros</div>
+          </div>
+          <div class="alt-card">
+            <div class="alt-type">Renta Variable</div>
+            <div class="alt-name">Renta Variable</div>
+            <div class="alt-note">En euros</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alt-info-bar">
+        <strong>Regla de oro:</strong> Puedes cambiar entre alternativas <strong>una vez al mes sin costo adicional</strong>. El mínimo por movimiento (apertura, traspaso, aportación o retiro) es de $10,000 pesos.
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ SEGURO INCLUIDO ════════════ -->
+  <section class="section">
+    <div class="wrap">
+      <span class="section-tag">Protección Incluida</span>
+      <h2 class="section-title" style="margin-bottom:1.75rem;">Más que una inversión: <em>una póliza de protección</em></h2>
+
+      <div class="seguro-box">
+        <div class="seguro-icon">🛡️</div>
+        <div class="seguro-body">
+          <h3>Seguro contra Muerte Accidental</h3>
+          <p>Cada póliza Optimaxx Elite incluye un seguro contra muerte accidental con una prima única de tan solo $500 pesos, descontada directamente de tu aportación inicial. La suma asegurada se determina según tu edad y el plazo es igual a la vigencia de tu póliza.</p>
+          <p>Además, puedes <strong>asignar beneficiarios</strong> para que ellos reciban tus recursos directamente, sin proceso sucesorio y libres de gravamen.</p>
+          <span class="seguro-tag">Prima única · Solo $500 pesos · Beneficiarios designados</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ CARGOS ════════════ -->
+  <section class="section">
+    <div class="wrap">
+      <span class="section-tag">Transparencia Total</span>
+      <h2 class="section-title">Sin letra chica.<br /><em>Así se cobran los cargos.</em></h2>
+      <p class="section-desc">Allianz cobra una administración anual sobre el saldo promedio mensual. No hay cargos ocultos por retiro ni por cambio de alternativas.</p>
+
+      <div class="cargos-grid">
+        <div class="cargo-card">
+          <div class="cargo-pct">0.75%</div>
+          <div class="cargo-label">Renta Fija</div>
+          <div class="cargo-desc">Anual · Cobrado mensualmente sobre el saldo promedio (0.0625% mensual)</div>
+        </div>
+        <div class="cargo-card">
+          <div class="cargo-pct">1.25%</div>
+          <div class="cargo-label">Renta Variable</div>
+          <div class="cargo-desc">Anual · Cobrado mensualmente sobre el saldo promedio (0.1048% mensual)</div>
+        </div>
+      </div>
+
+      <div class="alt-info-bar" style="margin-top:1.25rem;">
+        Los cargos se cobran mientras la póliza esté vigente. <strong>No hay penalización por retiros.</strong> Para detalles completos, consulta las Condiciones Generales en Allianz.com.mx.
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ RESPALDO ════════════ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="trust-box">
+        <span class="section-tag">Respaldo Internacional</span>
+        <img src="img/allianz-distribuidor-autorizado.png" alt="Allianz — Distribuidor Autorizado" class="allianz-logo" />
+        <h2>Respaldado por <em>Allianz</em></h2>
+        <p>Allianz es una de las compañías de seguros y gestión de activos más grandes del mundo, con más de 130 años de experiencia y presencia en más de 70 países. Tu patrimonio está en manos de una de las instituciones más sólidas del planeta.</p>
+        <div style="display:flex;align-items:center;justify-content:center;gap:1.75rem;flex-wrap:wrap;">
+          <div style="text-align:center;">
+            <div class="trust-stat-num">130+</div>
+            <div class="trust-stat-label">Años de experiencia</div>
+          </div>
+          <div class="trust-divider"></div>
+          <div style="text-align:center;">
+            <div class="trust-stat-num">70+</div>
+            <div class="trust-stat-label">Países con presencia</div>
+          </div>
+          <div class="trust-divider"></div>
+          <div style="text-align:center;">
+            <div class="trust-stat-num">AAA</div>
+            <div class="trust-stat-label">Calificación de solidez</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ CTA FINAL ════════════ -->
+  <section class="cta-final">
+    <div class="wrap">
+      <div class="cta-final-box">
+        <h2>¿Listo para hacer crecer<br /><em>tu patrimonio sin pagar de más?</em></h2>
+        <p>Agenda tu consulta con Erón Bello León. Analizamos tu situación, te mostramos proyecciones reales y te explicamos exactamente cuánto pagarías — o dejarías de pagar — de impuestos.</p>
+        <div class="cta-btns">
+          <a href="https://wa.me/message/3D7EGH3EH4FGE1" target="_blank" rel="noopener" class="btn btn-wa btn-xl">
+            <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.852L.057 23.743a.5.5 0 0 0 .615.607l6.105-1.603A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.847 0-3.576-.476-5.081-1.313l-.364-.21-3.766.988 1.006-3.671-.229-.376A9.963 9.963 0 0 1 2 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/>
+            </svg>
+            Quiero mi consulta gratuita
+          </a>
+          <p class="cta-disclaimer">Sin compromiso · Responde en minutos · 100% confidencial</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FOOTER ════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="img/logo.png" alt="Phinanké" />
+        <div class="footer-divider"></div>
+        <img src="img/allianz-distribuidor-autorizado.png" alt="Allianz Distribuidor Autorizado" class="footer-allianz" />
+      </div>
+      <p class="footer-text">
+        <strong>Erón Bello León</strong> — Asesor de Seguros y Estrategia Patrimonial<br />
+        Optimaxx Elite es un producto de <strong>Allianz de México, S.A., Compañía de Seguros</strong>.
+      </p>
+      <p class="footer-legal">
+        Esta página es informativa y no constituye una oferta formal de seguros o inversión. Los rendimientos y beneficios fiscales están sujetos a las condiciones particulares de cada póliza y a la legislación fiscal vigente. Consulta las Condiciones Generales del producto en allianz.com.mx. La exención fiscal del Art. 93, fracc. XXI de la LISR aplica según las condiciones individuales de cada asegurado.
+      </p>
+      <p class="footer-legal" style="margin-top:.25rem;">© 2026 Phinanké · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- ════════════ WA FLOAT ════════════ -->
+  <a class="wa-float" href="https://wa.me/message/3D7EGH3EH4FGE1" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.852L.057 23.743a.5.5 0 0 0 .615.607l6.105-1.603A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.847 0-3.576-.476-5.081-1.313l-.364-.21-3.766.988 1.006-3.671-.229-.376A9.963 9.963 0 0 1 2 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/>
+    </svg>
+  </a>
+
+  <script>
+    // Header: transparente sobre hero azul, blanco al hacer scroll
+    const header = document.getElementById('siteHeader');
+    const onScroll = () => {
+      const past = window.scrollY > 60;
+      header.classList.toggle('scrolled', past);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // Currency tabs
+    function showPanel(currency, btn) {
+      document.querySelectorAll('.alt-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.currency-tab').forEach(b => b.classList.remove('active'));
+      document.getElementById('panel-' + currency).classList.add('active');
+      btn.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
