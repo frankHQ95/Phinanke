@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>¿Ya tienes un plan para cuando dejes de trabajar? | Phinanké</title>
-  <meta name="description" content="Si tienes entre 30 y 50 años y no tienes un plan de retiro real, cada mes que pasa te cuesta más de lo que imaginas. Habla hoy con Erón Bello León — primera asesoría gratis y sin compromiso." />
+  <title>Plan Personal de Retiro en México (PPR) — Ahorra, Deduce y Jubílate con Dignidad | Phinanké</title>
+  <meta name="description" content="Diseña tu Plan Personal de Retiro con rendimientos del 10% anual, seguro de vida incluido y deducción fiscal desde el primer año. Asesoría gratuita con Erón Bello León — sin compromiso." />
   <meta name="author" content="Erón Bello León — Phinanké" />
   <link rel="canonical" href="https://phinanke.com/retiro.html" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://phinanke.com/retiro.html" />
-  <meta property="og:title" content="¿Ya tienes un plan para cuando dejes de trabajar? | Phinanké" />
-  <meta property="og:description" content="La mayoría llega a los 65 años dependiendo de sus hijos o del gobierno. Tú todavía puedes no ser parte de esa estadística. Primera asesoría gratis con Erón Bello León." />
+  <meta property="og:title" content="Plan Personal de Retiro México — Deduce Impuestos y Jubílate con Dignidad | Phinanké" />
+  <meta property="og:description" content="Diseña tu Plan Personal de Retiro (PPR) con rendimientos del 10% anual, deducción fiscal inmediata y seguro de vida incluido. Primera asesoría gratis con Erón Bello León — Phinanké." />
   <meta property="og:image" content="https://phinanke.com/img/og-cover.jpg" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="¿Ya tienes un plan para cuando dejes de trabajar? | Phinanké" />
-  <meta name="twitter:description" content="Si tienes entre 30 y 50 años y no tienes un plan de retiro real, cada mes que pasa te cuesta más de lo que imaginas." />
+  <meta name="twitter:title" content="Plan Personal de Retiro México (PPR) — Ahorra, Deduce y Jubílate | Phinanké" />
+  <meta name="twitter:description" content="Diseña tu Plan Personal de Retiro con rendimientos del 10% anual, seguro de vida incluido y deducción fiscal desde el primer año. Asesoría gratuita sin compromiso." />
   <meta name="twitter:image" content="https://phinanke.com/img/og-cover.jpg" />
 
   <!-- Schema: FAQPage -->
@@ -66,6 +66,22 @@
           "@type": "Answer",
           "text": "Son reales. Las aportaciones al plan son deducibles de impuestos hasta el 10% de tu ingreso anual o 5 UMAs, lo que sea menor. Eso significa que reduces lo que pagas de ISR cada año mientras construyes tu retiro. Muchos de mis clientes se sorprenden cuando hacemos el cálculo de lo que el SAT les regresa."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tiempo lleva contratar un plan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La mayoría de mis clientes cierra su plan en 1 o 2 sesiones. La primera es para conocer tu situación y hacer la proyección personalizada — dura entre 30 y 45 minutos. Si todo te parece bien, la contratación se hace de forma digital ese mismo día o al siguiente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué pasa si dejo de aportar por unos meses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Los primeros 18 meses son el período comprometido donde se forman los beneficios más importantes. A partir del mes 19, las aportaciones son flexibles: puedes ajustar el monto o hacer pausas según tu situación. Esto lo revisamos desde el inicio para que sepas exactamente con qué te estás comprometiendo."
+        }
       }
     ]
   }
@@ -107,21 +123,40 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --navy:   #03045e;
-      --b1:     #023e8a;
-      --b2:     #0077b6;
-      --b3:     #0096c7;
-      --b4:     #00b4d8;
-      --b5:     #48cae4;
+      /* Blues */
+      --az:      #001a4e;
+      --az-l:    #002d7a;
+      --az-ll:   #e4eaf5;
+      --az-glow: rgba(0,26,78,.15);
 
-      --surface-0: #060818;
-      --surface-1: #0b1023;
-      --border:    rgba(255,255,255,.08);
-      --border-hi: rgba(72,202,228,.3);
+      /* Surfaces — light theme */
+      --surface-0: #ffffff;
+      --surface-1: #f7f8fb;
+      --surface-2: #eef0f7;
+      --surface-3: #e4e8f2;
 
-      --text-1: #ffffff;
-      --text-2: rgba(255,255,255,.65);
-      --text-3: rgba(255,255,255,.38);
+      /* Borders */
+      --border:    rgba(15,30,80,.09);
+      --border-hi: rgba(0,26,78,.22);
+
+      /* Text */
+      --text-1: #0a1628;
+      --text-2: rgba(10,22,40,.58);
+      --text-3: rgba(10,22,40,.38);
+
+      /* On-blue (for blue-bg sections) */
+      --on-blue-1: #ffffff;
+      --on-blue-2: rgba(255,255,255,.75);
+      --on-blue-3: rgba(255,255,255,.50);
+
+      /* Shadows */
+      --sh-sm: 0 1px 4px rgba(0,0,0,.06), 0 4px 14px rgba(0,0,0,.04);
+      --sh-md: 0 4px 16px rgba(0,0,0,.07), 0 12px 40px rgba(0,0,0,.05);
+
+      /* Green CTA */
+      --wa-green:      #22c55e;
+      --wa-green-dark: #16a34a;
+      --wa-glow:       rgba(34,197,94,.28);
 
       --r-sm: 12px;
       --r-md: 20px;
@@ -129,8 +164,6 @@
 
       --ease: cubic-bezier(.4,0,.2,1);
       --t: .3s var(--ease);
-
-      --wa-green: #22c55e;
     }
 
     html { scroll-behavior: smooth; }
@@ -156,7 +189,7 @@
     ═══════════════════════════════ */
     .vsl-wrap {
       width: 100%;
-      max-width: 720px;
+      max-width: 740px;
       margin: 0 auto;
       padding: 0 20px;
     }
@@ -169,16 +202,17 @@
       top: 0; left: 0; right: 0;
       z-index: 999;
       padding: 14px 20px;
-      transition: background var(--t), border-bottom var(--t);
+      transition: background var(--t), border-bottom var(--t), box-shadow var(--t);
     }
     .vsl-header.scrolled {
-      background: rgba(6,8,24,.92);
+      background: rgba(255,255,255,.96);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 16px rgba(0,0,0,.07);
     }
     .vsl-header-inner {
-      max-width: 720px;
+      max-width: 740px;
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -201,17 +235,21 @@
       font-weight: 900;
       font-size: .95rem;
       letter-spacing: .06em;
-      color: var(--text-1);
+      color: var(--on-blue-1);
       line-height: 1;
+      transition: color var(--t);
     }
+    .vsl-header.scrolled .vsl-logo-text { color: var(--az); }
     .vsl-logo-sub {
       font-size: .55rem;
-      color: var(--text-3);
+      color: var(--on-blue-3);
       font-weight: 500;
       letter-spacing: .08em;
       text-transform: uppercase;
       margin-top: 2px;
+      transition: color var(--t);
     }
+    .vsl-header.scrolled .vsl-logo-sub { color: var(--text-3); }
 
     /* Buttons */
     .btn {
@@ -246,20 +284,20 @@
     .btn-wa {
       background: var(--wa-green);
       color: #fff;
-      box-shadow: 0 4px 24px rgba(34,197,94,.25);
+      box-shadow: 0 4px 24px var(--wa-glow);
     }
     .btn-wa:hover {
-      background: #16a34a;
-      box-shadow: 0 4px 40px rgba(34,197,94,.45);
+      background: var(--wa-green-dark);
+      box-shadow: 0 6px 40px var(--wa-glow);
       transform: translateY(-2px);
     }
     .btn-wa-outline {
-      background: transparent;
-      color: var(--wa-green);
-      border: 1.5px solid var(--wa-green);
+      background: rgba(255,255,255,.12);
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,.35);
     }
     .btn-wa-outline:hover {
-      background: rgba(34,197,94,.08);
+      background: rgba(255,255,255,.2);
       transform: translateY(-2px);
     }
 
@@ -273,69 +311,57 @@
     ═══════════════════════════════ */
     .vsl-hero {
       position: relative;
-      padding: 120px 0 60px;
+      padding: 130px 0 70px;
+      background: linear-gradient(145deg, var(--az) 0%, #002d7a 55%, #003fa0 100%);
       overflow: hidden;
     }
-    .vsl-hero::before,
-    .vsl-hero::after {
+    .vsl-hero::before {
       content: '';
       position: absolute;
-      border-radius: 50%;
-      filter: blur(120px);
-      pointer-events: none;
-      z-index: 0;
-    }
-    .vsl-hero::before {
       width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(0,119,182,.3) 0%, transparent 70%);
-      top: -200px; left: -200px;
-      animation: orb1 14s ease-in-out infinite alternate;
-    }
-    .vsl-hero::after {
-      width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(72,202,228,.18) 0%, transparent 70%);
-      bottom: -80px; right: -120px;
-      animation: orb2 11s ease-in-out infinite alternate;
-    }
-    @keyframes orb1 {
-      from { transform: translate(0,0) scale(1); }
-      to   { transform: translate(50px,30px) scale(1.12); }
-    }
-    @keyframes orb2 {
-      from { transform: translate(0,0) scale(1); }
-      to   { transform: translate(-30px,20px) scale(1.08); }
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,.06) 0%, transparent 70%);
+      top: -200px; right: -150px;
+      pointer-events: none;
     }
     .vsl-hero .vsl-wrap { position: relative; z-index: 1; }
 
     .hero-breadcrumb {
       font-size: .72rem;
-      color: var(--text-3);
+      color: var(--on-blue-3);
       font-weight: 500;
       letter-spacing: .04em;
       margin-bottom: 1.5rem;
     }
-    .hero-breadcrumb span { color: var(--b5); }
+    .hero-breadcrumb span { color: rgba(255,255,255,.7); }
 
     .vsl-hero h1 {
-      font-size: clamp(2rem, 5.5vw, 3.2rem);
+      font-size: clamp(2rem, 5.5vw, 3.1rem);
       font-weight: 900;
       letter-spacing: -.03em;
       margin-bottom: 1.25rem;
-      background: linear-gradient(170deg, #fff 40%, rgba(255,255,255,.5) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--on-blue-1);
+      line-height: 1.12;
     }
     .vsl-hero h1 em {
       font-style: normal;
-      background: linear-gradient(90deg, var(--b4), var(--b5));
+      background: linear-gradient(100deg, #7dd3fc 0%, #38bdf8 30%, #22d3ee 60%, #34d399 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      display: inline;
+    }
+    /* Degradado de apoyo para subtítulo */
+    .hero-accent-grad {
+      background: linear-gradient(100deg, #7dd3fc 0%, #34d399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 700;
     }
     .hero-sub {
       font-size: 1.05rem;
-      color: var(--text-2);
+      color: var(--on-blue-2);
       line-height: 1.75;
       margin-bottom: 2rem;
     }
@@ -345,14 +371,12 @@
       gap: 1rem;
       margin-bottom: 2.5rem;
     }
-    .trust-avatars {
-      display: flex;
-    }
+    .trust-avatars { display: flex; }
     .trust-avatars span {
       width: 34px; height: 34px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--b2), var(--b5));
-      border: 2px solid var(--surface-0);
+      background: rgba(255,255,255,.2);
+      border: 2px solid rgba(255,255,255,.35);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -362,23 +386,21 @@
       color: #fff;
     }
     .trust-avatars span:first-child { margin-left: 0; }
-    .trust-text { font-size: .8rem; color: var(--text-3); line-height: 1.4; }
-    .trust-text strong { color: var(--text-2); display: block; }
+    .trust-text { font-size: .8rem; color: var(--on-blue-3); line-height: 1.4; }
+    .trust-text strong { color: var(--on-blue-1); display: block; }
 
     .hero-scroll-arrow {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: .4rem;
-      color: var(--text-3);
+      color: var(--on-blue-3);
       font-size: .72rem;
       letter-spacing: .06em;
       text-transform: uppercase;
       margin-top: 1rem;
     }
-    .hero-scroll-arrow svg {
-      animation: bounce 2s ease-in-out infinite;
-    }
+    .hero-scroll-arrow svg { animation: bounce 2s ease-in-out infinite; }
     @keyframes bounce {
       0%,100% { transform: translateY(0); }
       50%      { transform: translateY(6px); }
@@ -393,9 +415,9 @@
       aspect-ratio: 16/9;
       border-radius: var(--r-lg);
       overflow: hidden;
-      background: var(--surface-1);
+      background: var(--az);
       border: 1px solid var(--border-hi);
-      box-shadow: 0 0 60px rgba(0,150,199,.2), 0 0 0 1px rgba(72,202,228,.1);
+      box-shadow: var(--sh-md);
       cursor: pointer;
       margin: 0 0 .75rem;
     }
@@ -403,15 +425,15 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(160deg, rgba(2,62,138,.55) 0%, rgba(0,20,60,.7) 50%, rgba(0,180,216,.15) 100%);
+      background: linear-gradient(160deg, rgba(0,26,78,.85) 0%, rgba(0,70,168,.7) 50%, rgba(0,96,200,.4) 100%);
       z-index: 1;
     }
     .video-bg-pattern {
       position: absolute;
       inset: 0;
       background-image:
-        repeating-linear-gradient(0deg, rgba(255,255,255,.02) 0px, rgba(255,255,255,.02) 1px, transparent 1px, transparent 60px),
-        repeating-linear-gradient(90deg, rgba(255,255,255,.02) 0px, rgba(255,255,255,.02) 1px, transparent 1px, transparent 60px);
+        repeating-linear-gradient(0deg, rgba(255,255,255,.03) 0px, rgba(255,255,255,.03) 1px, transparent 1px, transparent 60px),
+        repeating-linear-gradient(90deg, rgba(255,255,255,.03) 0px, rgba(255,255,255,.03) 1px, transparent 1px, transparent 60px);
       z-index: 0;
     }
     .video-content {
@@ -472,10 +494,11 @@
        CTA BLOCK (repetible)
     ═══════════════════════════════ */
     .cta-block {
-      background: rgba(255,255,255,.03);
-      border: 1px solid var(--border);
+      background: linear-gradient(145deg, var(--az) 0%, #002d7a 55%, #003fa0 100%);
+      border: none;
+      border-top: 3px solid rgba(255,255,255,.15);
       border-radius: var(--r-lg);
-      padding: 2rem 1.75rem;
+      padding: 2.25rem 1.75rem;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -483,29 +506,28 @@
       gap: 1rem;
     }
     .cta-block.cta-accent {
-      background: linear-gradient(135deg, rgba(0,119,182,.12), rgba(72,202,228,.08));
-      border-color: var(--border-hi);
+      background: linear-gradient(145deg, var(--az) 0%, #002d7a 55%, #003fa0 100%);
     }
     .cta-block-title {
       font-family: 'Geist', sans-serif;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       font-weight: 700;
-      color: var(--text-1);
+      color: var(--on-blue-1);
     }
     .cta-block-sub {
       font-size: .85rem;
-      color: var(--text-3);
+      color: var(--on-blue-3);
     }
     .cta-block-micro {
       font-size: .78rem;
-      color: var(--text-3);
+      color: var(--on-blue-3);
       display: flex;
       align-items: center;
       gap: .4rem;
       justify-content: center;
       flex-wrap: wrap;
     }
-    .cta-sep { color: var(--border-hi); }
+    .cta-sep { color: rgba(255,255,255,.25); }
 
     /* ═══════════════════════════════
        SECTION LABELS / DIVIDERS
@@ -518,22 +540,21 @@
       font-weight: 700;
       letter-spacing: .1em;
       text-transform: uppercase;
-      color: var(--b5);
+      color: var(--az);
       margin-bottom: 1rem;
     }
     .section-label::before {
       content: '';
       display: block;
       width: 20px; height: 1.5px;
-      background: var(--b5);
+      background: var(--az);
       border-radius: 2px;
     }
 
     .section-spacer {
       height: 1px;
-      background: linear-gradient(90deg, transparent, var(--border-hi), transparent);
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
       margin: 3.5rem 0;
-      opacity: .5;
     }
 
     /* ═══════════════════════════════
@@ -558,24 +579,25 @@
       display: flex;
       align-items: flex-start;
       gap: .9rem;
-      background: rgba(255,255,255,.025);
+      background: #fff;
       border: 1px solid var(--border);
       border-radius: var(--r-sm);
       padding: 1rem 1.15rem;
       font-size: .92rem;
       color: var(--text-2);
       line-height: 1.55;
+      box-shadow: var(--sh-sm);
       transition: border-color var(--t);
     }
-    .pain-list li:hover { border-color: rgba(255,100,100,.2); }
+    .pain-list li:hover { border-color: rgba(220,60,60,.2); }
     .pain-ico {
       font-size: 1.1rem;
       flex-shrink: 0;
       margin-top: .05rem;
     }
     .pain-agitator {
-      background: linear-gradient(135deg, rgba(120,50,50,.15), rgba(100,30,30,.08));
-      border: 1px solid rgba(255,100,100,.12);
+      background: var(--az-ll);
+      border: 1px solid var(--border-hi);
       border-radius: var(--r-sm);
       padding: 1.25rem 1.4rem;
       font-size: .95rem;
@@ -588,7 +610,7 @@
        PROOF BAR
     ═══════════════════════════════ */
     .proof-bar {
-      background: linear-gradient(135deg, rgba(0,119,182,.1), rgba(72,202,228,.06));
+      background: var(--az-ll);
       border: 1px solid var(--border-hi);
       border-radius: var(--r-md);
       padding: 1.5rem 1.75rem;
@@ -601,15 +623,8 @@
       align-items: center;
       gap: 1rem;
     }
-    .proof-stars {
-      display: flex;
-      gap: .2rem;
-      font-size: 1rem;
-    }
-    .proof-label {
-      font-size: .8rem;
-      color: var(--text-3);
-    }
+    .proof-stars { display: flex; gap: .2rem; font-size: 1rem; }
+    .proof-label { font-size: .8rem; color: var(--text-3); }
     .proof-label strong { color: var(--text-2); }
     .proof-mini-testimonials {
       display: flex;
@@ -627,7 +642,7 @@
     .proof-mini-avatar {
       width: 30px; height: 30px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--b2), var(--b5));
+      background: linear-gradient(135deg, var(--az), var(--az-l));
       display: flex;
       align-items: center;
       justify-content: center;
@@ -636,10 +651,7 @@
       flex-shrink: 0;
       color: #fff;
     }
-    .proof-mini-name {
-      font-weight: 600;
-      color: var(--text-1);
-    }
+    .proof-mini-name { font-weight: 600; color: var(--text-1); }
 
     /* ═══════════════════════════════
        SOLUTION REVEAL
@@ -650,10 +662,7 @@
       font-weight: 800;
       letter-spacing: -.025em;
       margin-bottom: 1.25rem;
-      background: linear-gradient(135deg, #fff 30%, var(--b5) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--text-1);
     }
     .solution-body {
       font-size: .98rem;
@@ -678,7 +687,7 @@
     .sol-ico {
       width: 26px; height: 26px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--b2), var(--b4));
+      background: linear-gradient(135deg, var(--az), var(--az-l));
       display: flex;
       align-items: center;
       justify-content: center;
@@ -710,9 +719,10 @@
       font-size: .93rem;
       color: var(--text-2);
       padding: .75rem 1rem;
-      background: rgba(255,255,255,.025);
+      background: #fff;
       border-radius: var(--r-sm);
       border: 1px solid var(--border);
+      box-shadow: var(--sh-sm);
     }
     .check-grad {
       width: 22px; height: 22px;
@@ -756,12 +766,12 @@
       top: 44px;
       bottom: 0;
       width: 2px;
-      background: linear-gradient(180deg, var(--b3), transparent);
+      background: linear-gradient(180deg, var(--az-ll), transparent);
     }
     .step-num {
       width: 42px; height: 42px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--b1), var(--b3));
+      background: linear-gradient(135deg, var(--az), var(--az-l));
       border: 1px solid var(--border-hi);
       display: flex;
       align-items: center;
@@ -771,7 +781,7 @@
       font-size: 1rem;
       flex-shrink: 0;
       color: #fff;
-      box-shadow: 0 0 20px rgba(0,150,199,.3);
+      box-shadow: 0 4px 16px var(--az-glow);
     }
     .step-body { padding-top: .5rem; }
     .step-title {
@@ -804,19 +814,15 @@
       gap: 1.1rem;
     }
     .testi-card {
-      background: rgba(255,255,255,.03);
+      background: #fff;
       border: 1px solid var(--border);
       border-radius: var(--r-md);
       padding: 1.5rem 1.5rem 1.25rem;
-      transition: border-color var(--t);
+      box-shadow: var(--sh-sm);
+      transition: box-shadow var(--t), border-color var(--t);
     }
-    .testi-card:hover { border-color: var(--border-hi); }
-    .testi-stars {
-      display: flex;
-      gap: .2rem;
-      font-size: .85rem;
-      margin-bottom: .85rem;
-    }
+    .testi-card:hover { box-shadow: var(--sh-md); border-color: var(--border-hi); }
+    .testi-stars { display: flex; gap: .2rem; font-size: .85rem; margin-bottom: .85rem; }
     .testi-quote {
       font-size: .93rem;
       color: var(--text-2);
@@ -824,8 +830,8 @@
       font-style: italic;
       margin-bottom: 1.1rem;
     }
-    .testi-quote::before { content: '"'; color: var(--b5); font-size: 1.2rem; font-style: normal; }
-    .testi-quote::after  { content: '"'; color: var(--b5); font-size: 1.2rem; font-style: normal; }
+    .testi-quote::before { content: '"'; color: var(--az); font-size: 1.2rem; font-style: normal; }
+    .testi-quote::after  { content: '"'; color: var(--az); font-size: 1.2rem; font-style: normal; }
     .testi-author {
       display: flex;
       align-items: center;
@@ -834,7 +840,7 @@
     .testi-avatar {
       width: 36px; height: 36px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--b1), var(--b4));
+      background: linear-gradient(135deg, var(--az), var(--az-l));
       display: flex;
       align-items: center;
       justify-content: center;
@@ -858,9 +864,9 @@
     .testi-result {
       margin-left: auto;
       font-size: .72rem;
-      color: var(--b5);
-      background: rgba(72,202,228,.08);
-      border: 1px solid rgba(72,202,228,.2);
+      color: var(--az);
+      background: var(--az-ll);
+      border: 1px solid var(--border-hi);
       border-radius: 999px;
       padding: .2em .7em;
       white-space: nowrap;
@@ -870,13 +876,14 @@
        SOBRE ERÓN
     ═══════════════════════════════ */
     .advisor-section {
-      background: rgba(255,255,255,.025);
+      background: #fff;
       border: 1px solid var(--border);
       border-radius: var(--r-lg);
       padding: 2rem 1.75rem;
       display: flex;
       gap: 1.5rem;
       align-items: flex-start;
+      box-shadow: var(--sh-sm);
     }
     .advisor-photo-wrap {
       flex-shrink: 0;
@@ -887,7 +894,7 @@
       object-fit: cover;
       object-position: top center;
       border: 2px solid var(--border-hi);
-      box-shadow: 0 0 30px rgba(0,150,199,.25);
+      box-shadow: 0 4px 20px var(--az-glow);
     }
     .advisor-body { flex: 1; }
     .advisor-title {
@@ -935,7 +942,7 @@
       font-family: 'Geist', sans-serif;
       font-weight: 800;
       font-size: 1rem;
-      color: var(--b5);
+      color: var(--az);
     }
     .advisor-bio {
       font-size: .87rem;
@@ -960,11 +967,12 @@
       gap: .65rem;
     }
     .faq-item {
-      background: rgba(255,255,255,.03);
+      background: #fff;
       border: 1px solid var(--border);
       border-radius: var(--r-sm);
       overflow: hidden;
-      transition: border-color var(--t);
+      box-shadow: var(--sh-sm);
+      transition: border-color var(--t), box-shadow var(--t);
     }
     .faq-item.open,
     .faq-item:hover { border-color: var(--border-hi); }
@@ -985,7 +993,7 @@
       color: var(--text-1);
       transition: color var(--t);
     }
-    .faq-q:hover { color: var(--b5); }
+    .faq-q:hover { color: var(--az); }
     .faq-chevron {
       width: 18px; height: 18px;
       flex-shrink: 0;
@@ -994,7 +1002,7 @@
     }
     .faq-item.open .faq-chevron {
       transform: rotate(180deg);
-      color: var(--b5);
+      color: var(--az);
     }
     .faq-a {
       max-height: 0;
@@ -1014,8 +1022,7 @@
     ═══════════════════════════════ */
     .final-close {
       position: relative;
-      background: linear-gradient(135deg, rgba(2,62,138,.55) 0%, rgba(0,20,60,.8) 50%, rgba(0,150,199,.2) 100%);
-      border: 1px solid var(--border-hi);
+      background: linear-gradient(145deg, var(--az) 0%, #002d7a 55%, #003fa0 100%);
       border-radius: var(--r-lg);
       padding: 3rem 2rem;
       text-align: center;
@@ -1024,20 +1031,9 @@
     .final-close::before {
       content: '';
       position: absolute;
-      top: -2px; left: 10%; right: 10%;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--b4), transparent);
-    }
-    .final-close::after {
-      content: '';
-      position: absolute;
-      width: 400px; height: 400px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(0,150,199,.15) 0%, transparent 70%);
-      top: -150px; left: 50%;
-      transform: translateX(-50%);
-      filter: blur(40px);
-      pointer-events: none;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
     }
     .final-close-inner { position: relative; z-index: 1; }
     .final-close h2 {
@@ -1045,14 +1041,11 @@
       font-weight: 900;
       letter-spacing: -.03em;
       margin-bottom: 1.25rem;
-      background: linear-gradient(135deg, #fff 30%, var(--b5) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--on-blue-1);
     }
     .final-close p {
       font-size: .98rem;
-      color: rgba(255,255,255,.7);
+      color: var(--on-blue-2);
       line-height: 1.75;
       max-width: 520px;
       margin: 0 auto 2rem;
@@ -1060,7 +1053,7 @@
     .final-close-micro {
       margin-top: 1rem;
       font-size: .8rem;
-      color: rgba(255,255,255,.45);
+      color: var(--on-blue-3);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1070,7 +1063,7 @@
     .final-close-privacy {
       margin-top: .85rem;
       font-size: .75rem;
-      color: rgba(255,255,255,.3);
+      color: var(--on-blue-3);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1085,6 +1078,8 @@
       padding: 2rem 1rem 6rem;
       font-size: .75rem;
       color: var(--text-3);
+      background: var(--surface-1);
+      border-top: 1px solid var(--border);
     }
     .vsl-footer a {
       color: var(--text-3);
@@ -1093,8 +1088,8 @@
       transition: color var(--t), text-decoration-color var(--t);
     }
     .vsl-footer a:hover {
-      color: var(--text-2);
-      text-decoration-color: var(--text-2);
+      color: var(--az);
+      text-decoration-color: var(--az);
     }
     .footer-sep { margin: 0 .75rem; opacity: .4; }
 
@@ -1107,10 +1102,11 @@
       bottom: 0; left: 0; right: 0;
       z-index: 990;
       padding: 12px 16px;
-      background: rgba(6,8,24,.95);
+      background: rgba(255,255,255,.97);
       border-top: 1px solid var(--border);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 -4px 20px rgba(0,0,0,.08);
     }
     .sticky-bar a {
       display: flex;
@@ -1169,8 +1165,8 @@
        FOMO / URGENCIA
     ═══════════════════════════════ */
     .fomo-strip {
-      background: linear-gradient(135deg, rgba(239,68,68,.08), rgba(239,68,68,.04));
-      border: 1px solid rgba(239,68,68,.18);
+      background: #fef2f2;
+      border: 1px solid rgba(239,68,68,.2);
       border-radius: var(--r-sm);
       padding: 1rem 1.25rem;
       display: flex;
@@ -1183,8 +1179,8 @@
     .fomo-strip strong { color: var(--text-1); }
 
     .fomo-social {
-      background: linear-gradient(135deg, rgba(72,202,228,.07), rgba(0,150,199,.04));
-      border: 1px solid rgba(72,202,228,.18);
+      background: var(--az-ll);
+      border: 1px solid var(--border-hi);
       border-radius: var(--r-sm);
       padding: 1.1rem 1.5rem;
       font-size: .88rem;
@@ -1195,8 +1191,8 @@
     .fomo-social strong { color: var(--text-1); }
 
     .fomo-age-warning {
-      background: linear-gradient(135deg, rgba(251,191,36,.08), rgba(251,191,36,.03));
-      border: 1px solid rgba(251,191,36,.22);
+      background: #fffbeb;
+      border: 1px solid rgba(234,179,8,.3);
       border-radius: 12px;
       padding: 1.1rem 1.35rem;
       font-size: .88rem;
@@ -1207,7 +1203,7 @@
       gap: .85rem;
       text-align: left;
     }
-    .fomo-age-warning strong { color: #fbbf24; }
+    .fomo-age-warning strong { color: #92400e; }
 
     /* ═══════════════════════════════
        HERO STAT BADGE
@@ -1216,18 +1212,18 @@
       display: inline-flex;
       align-items: center;
       gap: .65rem;
-      background: linear-gradient(135deg, rgba(239,68,68,.1), rgba(239,68,68,.06));
-      border: 1px solid rgba(239,68,68,.22);
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.2);
       border-radius: var(--r-sm);
       padding: .8rem 1.15rem;
       font-size: .88rem;
-      color: var(--text-2);
+      color: var(--on-blue-2);
       line-height: 1.5;
       margin-bottom: 1.35rem;
       text-align: left;
       max-width: 540px;
     }
-    .hero-stat-badge strong { color: var(--text-1); }
+    .hero-stat-badge strong { color: var(--on-blue-1); }
     .hero-stat-ico { font-size: 1.15rem; flex-shrink: 0; }
 
     /* ═══════════════════════════════
@@ -1260,21 +1256,22 @@
       border-radius: var(--r-md);
       overflow: hidden;
       border: 1px solid var(--border);
-      background: rgba(255,255,255,.025);
+      background: #fff;
+      box-shadow: var(--sh-sm);
       transition: border-color var(--t);
     }
     .persona-card:hover { border-color: var(--border-hi); }
     .persona-card.winner {
-      border-color: rgba(72,202,228,.35);
-      background: rgba(72,202,228,.04);
+      border-color: rgba(0,26,78,.3);
+      background: var(--az-ll);
     }
     .persona-card.loser {
-      border-color: rgba(239,68,68,.18);
-      background: rgba(239,68,68,.025);
+      border-color: rgba(239,68,68,.2);
+      background: #fef2f2;
     }
     .persona-card-header {
       padding: .85rem 1.1rem .7rem;
-      border-bottom: 1px solid rgba(255,255,255,.06);
+      border-bottom: 1px solid var(--border);
     }
     .persona-name {
       font-family: 'Geist', sans-serif;
@@ -1282,11 +1279,7 @@
       font-size: .9rem;
       color: var(--text-1);
     }
-    .persona-age {
-      font-size: .75rem;
-      color: var(--text-3);
-      margin-top: .15rem;
-    }
+    .persona-age { font-size: .75rem; color: var(--text-3); margin-top: .15rem; }
     .persona-card-body { padding: 1rem 1.1rem 1.1rem; }
     .persona-fund {
       font-family: 'Geist', sans-serif;
@@ -1295,13 +1288,9 @@
       line-height: 1.1;
       margin-bottom: .25rem;
     }
-    .persona-card.winner .persona-fund { color: var(--b5); }
-    .persona-card.loser  .persona-fund { color: rgba(255,255,255,.7); }
-    .persona-fund-label {
-      font-size: .72rem;
-      color: var(--text-3);
-      margin-bottom: .85rem;
-    }
+    .persona-card.winner .persona-fund { color: var(--az); }
+    .persona-card.loser  .persona-fund { color: var(--text-2); }
+    .persona-fund-label { font-size: .72rem; color: var(--text-3); margin-bottom: .85rem; }
     .persona-delta {
       font-size: .78rem;
       padding: .25em .75em;
@@ -1309,14 +1298,14 @@
       display: inline-block;
     }
     .persona-card.winner .persona-delta {
-      background: rgba(72,202,228,.1);
-      color: var(--b5);
-      border: 1px solid rgba(72,202,228,.2);
+      background: rgba(0,26,78,.1);
+      color: var(--az);
+      border: 1px solid var(--border-hi);
     }
     .persona-card.loser .persona-delta {
       background: rgba(239,68,68,.1);
-      color: #f87171;
-      border: 1px solid rgba(239,68,68,.2);
+      color: #dc2626;
+      border: 1px solid rgba(239,68,68,.25);
     }
     .costo-espera-footnote {
       font-size: .73rem;
@@ -1327,70 +1316,167 @@
     }
 
     /* ═══════════════════════════════
-       ¿PARA QUIÉN APLICA?
+       AHORRA HOY: BARRAS POR EDAD
     ═══════════════════════════════ */
-    .aplica-section { padding: 2rem 0; }
-    .aplica-section h2 {
+    .age-bars-section { padding: 2rem 0; }
+    .age-bars-section h2 {
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-weight: 800;
+      letter-spacing: -.025em;
+      margin-bottom: .75rem;
+      color: var(--text-1);
+    }
+    .age-bars-intro {
+      font-size: .95rem;
+      color: var(--text-2);
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+    .age-bars-outer {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 1.75rem 1.5rem 1.25rem;
+      box-shadow: var(--sh-sm);
+    }
+    .age-bars-wrap {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: .6rem;
+      height: 220px;
+      margin-bottom: .5rem;
+    }
+    .age-bar-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      height: 100%;
+      gap: .35rem;
+    }
+    .age-bar-amount {
+      font-family: 'Geist', sans-serif;
+      font-size: .78rem;
+      font-weight: 800;
+      color: var(--text-1);
+      text-align: center;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+    .age-bar-col.best .age-bar-amount { color: var(--az); font-size: .88rem; }
+    .age-bar-fill {
+      width: 100%;
+      border-radius: 6px 6px 0 0;
+      background: linear-gradient(180deg, rgba(0,45,122,.55) 0%, var(--az) 100%);
+      transition: opacity .25s;
+      min-height: 8px;
+    }
+    .age-bar-col.best .age-bar-fill {
+      background: linear-gradient(180deg, #38bdf8 0%, #0ea5e9 30%, var(--az-l) 70%, var(--az) 100%);
+    }
+    .age-bar-col:hover .age-bar-fill { opacity: .8; }
+    .age-bars-divider {
+      height: 2px;
+      background: var(--border);
+      margin-bottom: .5rem;
+      border-radius: 1px;
+    }
+    .age-bars-labels {
+      display: flex;
+      justify-content: space-between;
+      gap: .6rem;
+    }
+    .age-bar-label {
+      flex: 1;
+      text-align: center;
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--text-3);
+      line-height: 1.3;
+    }
+    .age-bar-label span {
+      display: block;
+      font-size: .68rem;
+      font-weight: 400;
+      color: var(--text-3);
+      opacity: .7;
+    }
+    .age-bar-col.best + .age-bar-col ~ .age-bar-label,
+    .age-bars-labels .best-label { color: var(--az); }
+    .age-bars-footnote {
+      font-size: .72rem;
+      color: var(--text-3);
+      text-align: center;
+      line-height: 1.55;
+      margin-top: 1rem;
+    }
+
+    /* ═══════════════════════════════
+       ESTE PLAN ES PARA TI
+    ═══════════════════════════════ */
+    .parati-section { padding: 2rem 0; }
+    .parati-section h2 {
       font-size: clamp(1.4rem, 3.5vw, 1.9rem);
       font-weight: 800;
       letter-spacing: -.02em;
       margin-bottom: 1.5rem;
       color: var(--text-1);
     }
-    .aplica-grid {
+    .parati-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
     }
     @media (max-width: 560px) {
-      .aplica-grid { grid-template-columns: 1fr; }
+      .parati-grid { grid-template-columns: 1fr; }
     }
-    .aplica-col { border-radius: var(--r-md); overflow: hidden; }
-    .aplica-col-header {
-      padding: .75rem 1.25rem;
+    .parati-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 1.35rem 1.4rem;
+      box-shadow: var(--sh-sm);
+      transition: border-color var(--t), box-shadow var(--t), transform var(--t);
+      cursor: default;
+    }
+    .parati-card:hover {
+      border-color: var(--border-hi);
+      box-shadow: var(--sh-md);
+      transform: translateY(-2px);
+    }
+    .parati-ico {
+      font-size: 1.6rem;
+      margin-bottom: .65rem;
+      display: block;
+    }
+    .parati-title {
       font-family: 'Geist', sans-serif;
-      font-size: .82rem;
-      font-weight: 700;
-      letter-spacing: .04em;
-      text-align: center;
+      font-weight: 800;
+      font-size: .95rem;
+      color: var(--az);
+      margin-bottom: .45rem;
+      line-height: 1.3;
     }
-    .aplica-col.si .aplica-col-header {
-      background: rgba(34,197,94,.12);
-      border: 1px solid rgba(34,197,94,.25);
-      border-bottom: none;
-      color: #4ade80;
-      border-radius: var(--r-md) var(--r-md) 0 0;
+    .parati-desc {
+      font-size: .83rem;
+      color: var(--text-2);
+      line-height: 1.65;
     }
-    .aplica-col.no .aplica-col-header {
-      background: rgba(239,68,68,.1);
-      border: 1px solid rgba(239,68,68,.2);
-      border-bottom: none;
-      color: #f87171;
-      border-radius: var(--r-md) var(--r-md) 0 0;
-    }
-    .aplica-col.si .aplica-col-body {
-      background: rgba(34,197,94,.04);
-      border: 1px solid rgba(34,197,94,.2);
-      border-top: none;
-      border-radius: 0 0 var(--r-md) var(--r-md);
-    }
-    .aplica-col.no .aplica-col-body {
-      background: rgba(239,68,68,.04);
-      border: 1px solid rgba(239,68,68,.18);
-      border-top: none;
-      border-radius: 0 0 var(--r-md) var(--r-md);
-    }
+
+    /* ═══════════════════════════════
+       ¿PARA QUIÉN APLICA? (legacy, mantenido por compatibilidad)
+    ═══════════════════════════════ */
     .aplica-item {
       padding: .75rem 1.1rem;
       font-size: .84rem;
       color: var(--text-2);
-      border-bottom: 1px solid rgba(255,255,255,.05);
       display: flex;
       align-items: flex-start;
       gap: .5rem;
       line-height: 1.5;
     }
-    .aplica-item:last-child { border-bottom: none; }
     .aplica-ico { flex-shrink: 0; font-size: .9rem; margin-top: .05rem; }
 
     /* ═══════════════════════════════
@@ -1416,14 +1502,15 @@
       pointer-events: all;
     }
     .exit-modal {
-      background: var(--surface-1);
-      border: 1px solid var(--border-hi);
+      background: #fff;
+      border: 1px solid var(--border);
       border-radius: var(--r-lg);
       padding: 2.25rem 2rem 2rem;
       max-width: 450px;
       width: 100%;
       text-align: center;
       position: relative;
+      box-shadow: 0 24px 64px rgba(0,0,0,.3);
       transform: scale(.94) translateY(12px);
       transition: transform .3s ease;
     }
@@ -1435,7 +1522,7 @@
       top: .85rem; right: .85rem;
       width: 28px; height: 28px;
       border-radius: 50%;
-      background: rgba(255,255,255,.07);
+      background: var(--surface-2);
       border: none;
       color: var(--text-3);
       font-size: 1.1rem;
@@ -1446,7 +1533,7 @@
       transition: background var(--t), color var(--t);
       line-height: 1;
     }
-    .exit-modal-close:hover { background: rgba(255,255,255,.14); color: var(--text-1); }
+    .exit-modal-close:hover { background: var(--surface-3); color: var(--text-1); }
     .exit-modal-icon { font-size: 2.2rem; margin-bottom: .9rem; }
     .exit-modal-title {
       font-family: 'Geist', sans-serif;
@@ -1464,8 +1551,8 @@
     }
     .exit-modal-body strong { color: var(--text-1); }
     .exit-modal-stat {
-      background: rgba(72,202,228,.08);
-      border: 1px solid rgba(72,202,228,.2);
+      background: var(--az-ll);
+      border: 1px solid var(--border-hi);
       border-radius: var(--r-sm);
       padding: .85rem 1rem;
       margin-bottom: 1.5rem;
@@ -1473,7 +1560,7 @@
       color: var(--text-2);
       line-height: 1.6;
     }
-    .exit-modal-stat strong { color: var(--b5); }
+    .exit-modal-stat strong { color: var(--az); }
     .exit-modal-dismiss {
       display: block;
       margin-top: .85rem;
@@ -1514,81 +1601,193 @@
       .wa-float { bottom: 24px; }
     }
 
-    /* ─── FORMULARIO CAPTURA ─────────────────────────────────── */
+    /* ─── ESTILOS HEREDADOS ─────────────────────────────────── */
     .lf-section { padding: 2.5rem 0; }
     .lf-card {
-      background: var(--surface-1);
-      border: 1px solid var(--border-hi);
-      border-top: 3px solid var(--b3);
-      border-radius: var(--r-md, 20px);
+      background: #fff;
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--az);
+      border-radius: var(--r-md);
       padding: 2rem 1.75rem;
       margin-top: 1.5rem;
+      box-shadow: var(--sh-md);
     }
-    .lf-header { text-align: center; margin-bottom: 1.5rem; }
-    .lf-title { font-family:'Geist',sans-serif; font-weight:900; font-size:1.25rem; color:var(--text-1); margin-bottom:.4rem; }
-    .lf-subtitle { font-size:.88rem; color:var(--text-2); line-height:1.55; }
-    .lf-fields { display:flex; flex-direction:column; gap:1.2rem; margin-bottom:1.5rem; }
-    .lf-field { display:flex; flex-direction:column; gap:.5rem; }
+    .lf-title { font-family:'Geist',sans-serif; font-weight:900; font-size:1.25rem; color:var(--text-1); margin-bottom:.4rem; text-align:center; }
+    .lf-subtitle { font-size:.88rem; color:var(--text-2); line-height:1.55; text-align:center; margin-bottom:1.5rem; }
+    .lf-field { display:flex; flex-direction:column; gap:.5rem; margin-top:1.2rem; }
     .lf-label-row { display:flex; justify-content:space-between; align-items:baseline; }
     .lf-label { font-size:.82rem; font-weight:600; color:var(--text-2); }
-    .lf-val { font-family:'Geist',sans-serif; font-weight:800; font-size:.88rem; color:var(--b4); }
+    .lf-val { font-family:'Geist',sans-serif; font-weight:800; font-size:.88rem; color:var(--az); }
     .lf-input {
-      width:100%; background:var(--surface-0); border:1.5px solid var(--border);
+      width:100%; background:var(--surface-1); border:1.5px solid var(--border);
       border-radius:10px; color:var(--text-1); font-size:.95rem;
       padding:.75rem 1rem; outline:none; font-family:'Inter',sans-serif;
-      transition:border-color .2s;
+      transition:border-color .2s, box-shadow .2s;
     }
-    .lf-input:focus { border-color:rgba(72,202,228,.4); }
+    .lf-input:focus { border-color:var(--az); box-shadow:0 0 0 3px var(--az-glow); }
     .lf-input::placeholder { color:var(--text-3); }
     .lf-range {
       -webkit-appearance:none; appearance:none; width:100%; height:4px;
       border-radius:4px; outline:none; cursor:pointer; display:block;
-      background:linear-gradient(to right, var(--b3) var(--pct,30%), rgba(255,255,255,.1) var(--pct,30%));
+      background:linear-gradient(to right, var(--az) var(--pct,30%), var(--surface-2) var(--pct,30%));
     }
     .lf-range::-webkit-slider-thumb {
       -webkit-appearance:none; appearance:none; width:18px; height:18px;
-      border-radius:50%; background:var(--b4); cursor:pointer;
-      box-shadow:0 0 0 3px rgba(0,180,216,.25); transition:box-shadow .2s;
+      border-radius:50%; background:var(--az); cursor:pointer;
+      box-shadow:0 0 0 3px var(--az-glow); transition:box-shadow .2s;
     }
-    .lf-range::-webkit-slider-thumb:hover { box-shadow:0 0 0 5px rgba(0,180,216,.35); }
-    .lf-range::-moz-range-thumb { width:18px; height:18px; border-radius:50%; background:var(--b4); border:none; }
+    .lf-range::-webkit-slider-thumb:hover { box-shadow:0 0 0 5px rgba(0,26,78,.25); }
+    .lf-range::-moz-range-thumb { width:18px; height:18px; border-radius:50%; background:var(--az); border:none; }
     .lf-range-labels { display:flex; justify-content:space-between; margin-top:.35rem; font-size:.7rem; color:var(--text-3); }
-    .lf-toggle-group { display:flex; gap:.6rem; }
-    .lf-toggle-btn {
-      flex:1; padding:.65rem; background:var(--surface-0); border:1.5px solid var(--border);
-      border-radius:10px; color:var(--text-2); font-size:.88rem; font-weight:600;
-      cursor:pointer; transition:border-color .2s, background .2s, color .2s; font-family:'Inter',sans-serif;
-    }
-    .lf-toggle-btn.active { background:rgba(0,180,216,.12); border-color:rgba(0,180,216,.4); color:var(--b4); }
     .lf-submit {
-      width:100%; background:linear-gradient(135deg, var(--b2), var(--b3));
-      color:#fff; border:none; font-family:'Geist',sans-serif; font-weight:800;
+      width:100%; margin-top:1.5rem;
+      background:var(--wa-green); color:#fff; border:none;
+      font-family:'Geist',sans-serif; font-weight:800;
       font-size:1rem; padding:1rem; border-radius:50px; cursor:pointer;
-      transition:opacity .2s, transform .15s, box-shadow .2s;
+      transition:background .2s, transform .15s, box-shadow .2s;
+      box-shadow:0 4px 20px var(--wa-glow);
     }
-    .lf-submit:hover { opacity:.9; transform:translateY(-2px); box-shadow:0 8px 28px rgba(0,150,199,.35); }
-    .lf-success { display:none; text-align:center; }
-    .lf-success-icon { font-size:2.5rem; margin-bottom:.75rem; }
-    .lf-success-title { font-family:'Geist',sans-serif; font-weight:900; font-size:1.2rem; color:var(--text-1); margin-bottom:.5rem; }
-    .lf-success-body { font-size:.9rem; color:var(--text-2); line-height:1.65; margin-bottom:1.25rem; }
-    .lf-success-body strong { color:var(--b4); }
+    .lf-submit:hover { background:var(--wa-green-dark); transform:translateY(-2px); box-shadow:0 8px 32px var(--wa-glow); }
     .lf-result-box {
-      background:linear-gradient(135deg, rgba(0,150,199,.1), rgba(0,180,216,.06));
-      border:1px solid rgba(72,202,228,.25); border-radius:14px;
+      background:var(--az-ll);
+      border:1px solid var(--border-hi); border-radius:14px;
       padding:1.25rem; margin-bottom:1.5rem;
     }
     .lf-result-label { font-size:.7rem; font-weight:600; color:var(--text-3); text-transform:uppercase; letter-spacing:.07em; margin-bottom:.3rem; }
-    .lf-result-value { font-family:'Geist',sans-serif; font-weight:900; font-size:1.75rem; color:var(--b4); }
+    .lf-result-value { font-family:'Geist',sans-serif; font-weight:900; font-size:1.75rem; color:var(--az); }
     .lf-result-note { font-size:.72rem; color:var(--text-3); margin-top:.25rem; }
     .lf-wa-btn {
       display:flex; align-items:center; justify-content:center; gap:.6rem; width:100%;
-      background:linear-gradient(135deg, var(--b2), var(--b3)); color:#fff;
+      background:var(--wa-green); color:#fff;
       font-family:'Geist',sans-serif; font-weight:800; font-size:1rem;
-      padding:.9rem; border-radius:50px; text-decoration:none; transition:opacity .2s, transform .15s;
+      padding:.9rem; border-radius:50px; text-decoration:none;
+      transition:background .2s, transform .15s;
+      box-shadow:0 4px 20px var(--wa-glow);
     }
-    .lf-wa-btn:hover { opacity:.9; transform:translateY(-2px); }
+    .lf-wa-btn:hover { background:var(--wa-green-dark); transform:translateY(-2px); }
     .lf-reset { background:none; border:none; color:var(--text-3); font-size:.78rem; cursor:pointer; margin-top:.65rem; text-decoration:underline; transition:color .2s; display:block; margin-left:auto; margin-right:auto; }
-    .lf-reset:hover { color:var(--text-2); }
+    .lf-reset:hover { color:var(--az); }
+
+    /* ── MODAL PROYECCIÓN ── */
+    .proy-overlay {
+      position:fixed; inset:0; z-index:1100;
+      background:rgba(0,0,0,.55); backdrop-filter:blur(6px);
+      display:flex; align-items:center; justify-content:center;
+      padding:1.25rem;
+      opacity:0; pointer-events:none;
+      transition:opacity .25s var(--ease);
+    }
+    .proy-overlay.open { opacity:1; pointer-events:all; }
+    .proy-modal {
+      background:var(--surface-0); border-radius:var(--r-lg);
+      box-shadow:0 20px 60px rgba(0,0,0,.2);
+      width:100%; max-width:460px;
+      transform:translateY(16px) scale(.97);
+      transition:transform .28s var(--ease);
+    }
+    .proy-overlay.open .proy-modal { transform:none; }
+    .proy-modal-head {
+      background:linear-gradient(145deg,var(--az) 0%,var(--b4,#0046a8) 100%);
+      border-radius:var(--r-lg) var(--r-lg) 0 0;
+      padding:1.5rem 1.5rem 1.25rem;
+      display:flex; justify-content:space-between; align-items:flex-start;
+    }
+    .proy-modal-head-txt h3 { font-size:1.1rem; font-weight:800; color:#fff; margin-bottom:.3rem; }
+    .proy-modal-head-txt p  { font-size:.82rem; color:rgba(255,255,255,.72); line-height:1.5; }
+    .proy-modal-close {
+      background:rgba(255,255,255,.15); border:none; border-radius:50%;
+      width:32px; height:32px; display:flex; align-items:center; justify-content:center;
+      font-size:1rem; color:#fff; cursor:pointer; flex-shrink:0;
+      transition:background .2s; margin-left:.75rem; margin-top:-.1rem;
+    }
+    .proy-modal-close:hover { background:rgba(255,255,255,.28); }
+    .proy-modal-body { padding:1.5rem; }
+    .proy-field { display:flex; flex-direction:column; gap:.4rem; margin-bottom:1rem; }
+    .proy-field:last-of-type { margin-bottom:1.25rem; }
+    .proy-label { font-size:.8rem; font-weight:700; color:var(--text-2); }
+    .proy-input {
+      height:46px; padding:0 1rem; border-radius:12px;
+      border:1.5px solid var(--border-hi); background:var(--surface-1);
+      font-size:.95rem; color:var(--text-1); outline:none; width:100%;
+      transition:border-color .2s, box-shadow .2s;
+    }
+    .proy-input:focus { border-color:var(--az); box-shadow:0 0 0 3px rgba(0,26,78,.1); }
+    .proy-input.has-pfx { padding-left:2.6rem; }
+    .proy-pfx-wrap { position:relative; }
+    .proy-pfx { position:absolute; left:.9rem; top:50%; transform:translateY(-50%); font-size:.9rem; font-weight:700; color:var(--text-2); pointer-events:none; }
+    .proy-submit-btn {
+      width:100%; height:50px; border-radius:14px;
+      background:linear-gradient(135deg,var(--az) 0%,var(--b4,#0046a8) 100%);
+      color:#fff; font-size:.98rem; font-weight:800; letter-spacing:.02em;
+      border:none; cursor:pointer; transition:all .2s;
+      box-shadow:0 4px 16px rgba(0,26,78,.18);
+      display:flex; align-items:center; justify-content:center; gap:.5rem;
+    }
+    .proy-submit-btn:hover { transform:translateY(-1px); box-shadow:0 6px 24px rgba(0,26,78,.25); }
+    .proy-hint { font-size:.72rem; color:var(--text-3); text-align:center; margin-top:.75rem; }
+
+    /* ── AVISO PRIVACIDAD ── */
+    .priv-overlay {
+      position:fixed; inset:0; z-index:1200;
+      background:rgba(0,0,0,.6); backdrop-filter:blur(4px);
+      display:flex; align-items:center; justify-content:center;
+      padding:1.25rem;
+      opacity:0; pointer-events:none;
+      transition:opacity .2s var(--ease);
+    }
+    .priv-overlay.open { opacity:1; pointer-events:all; }
+    .priv-box {
+      background:var(--surface-0); border-radius:var(--r-md);
+      box-shadow:0 20px 60px rgba(0,0,0,.22);
+      width:100%; max-width:400px; padding:2rem 1.75rem;
+      text-align:center;
+      transform:scale(.93); transition:transform .22s var(--ease);
+    }
+    .priv-overlay.open .priv-box { transform:scale(1); }
+    .priv-icon { font-size:2.2rem; margin-bottom:.75rem; }
+    .priv-box h4 { font-size:1.05rem; font-weight:800; color:var(--text-1); margin-bottom:.75rem; }
+    .priv-box p { font-size:.87rem; color:var(--text-2); line-height:1.65; margin-bottom:1.5rem; }
+    .priv-actions { display:flex; flex-direction:column; gap:.65rem; }
+    .priv-confirm {
+      height:48px; border-radius:12px;
+      background:linear-gradient(135deg,var(--wa-green) 0%,var(--wa-green-dark) 100%);
+      color:#fff; font-size:.95rem; font-weight:800; border:none; cursor:pointer;
+      transition:all .2s; box-shadow:0 4px 14px var(--wa-glow);
+    }
+    .priv-confirm:hover { transform:translateY(-1px); box-shadow:0 6px 20px var(--wa-glow); }
+    .priv-cancel {
+      background:none; border:1px solid var(--border-hi); border-radius:12px;
+      height:42px; font-size:.85rem; font-weight:600; color:var(--text-2);
+      cursor:pointer; transition:all .2s;
+    }
+    .priv-cancel:hover { background:var(--surface-2); color:var(--text-1); }
+
+    /* Botón "Haz tu proyección" — CTA principal */
+    .btn-proyeccion {
+      display:flex; align-items:center; justify-content:center; gap:.6rem;
+      width:100%; height:58px;
+      background:linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+      color:#fff; font-size:1.05rem; font-weight:800; letter-spacing:.02em;
+      border:none; border-radius:var(--r-sm); cursor:pointer;
+      transition:all .22s; text-decoration:none;
+      box-shadow:0 4px 20px rgba(34,197,94,.35);
+      animation:proyPulse 3s ease-in-out infinite;
+    }
+    .btn-proyeccion:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(34,197,94,.5); animation:none; }
+    .btn-proyeccion svg { width:20px; height:20px; flex-shrink:0; }
+    .btn-proyeccion-sm {
+      display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+      background:linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+      color:#fff; font-size:.9rem; font-weight:800; letter-spacing:.02em;
+      border:none; border-radius:var(--r-sm); cursor:pointer; padding:.7rem 1.5rem;
+      transition:all .22s; text-decoration:none;
+      box-shadow:0 4px 14px rgba(34,197,94,.3);
+    }
+    .btn-proyeccion-sm:hover { transform:translateY(-1px); box-shadow:0 6px 20px rgba(34,197,94,.45); }
+    @keyframes proyPulse {
+      0%,100% { box-shadow:0 4px 20px rgba(34,197,94,.35); }
+      50%      { box-shadow:0 4px 28px rgba(34,197,94,.55), 0 0 0 8px rgba(34,197,94,.1); }
+    }
   </style>
 </head>
 <body>
@@ -1625,16 +1824,16 @@
 
       <div class="hero-stat-badge fade-up">
         <span class="hero-stat-ico">📉</span>
-        <span>Tu AFORE solo te dará entre el <strong>26% y 30% de tu sueldo actual</strong> cuando te jubiles. El 70% restante es tu problema — a menos que tengas un plan real.</span>
+        <span>Tu AFORE solo cubre entre el <strong>26% y 30% de tu sueldo actual</strong> al jubilarte. El 70% restante lo cubre un <strong>Plan Personal de Retiro (PPR)</strong> — o lo cubre nadie.</span>
       </div>
 
       <h1 class="fade-up">
-        La mayoría llega a los 65 años dependiendo de sus hijos o del gobierno.
-        <em>Tú todavía puedes no ser parte de esa estadística.</em>
+        El 70% de los mexicanos llega a los 65 años sin dinero suficiente para retirarse con dignidad.
+        <em>Tu Plan Personal de Retiro puede cambiar esa historia — y empieza hoy.</em>
       </h1>
 
       <p class="hero-sub fade-up">
-        Si tienes entre 30 y 50 años y no tienes un plan de retiro real, cada mes que pasa te cuesta más caro de lo que imaginas. No porque seas irresponsable — sino porque nadie te lo explicó de forma simple y honesta.
+        Si tienes entre 30 y 55 años y aún no tienes un <strong style="color:rgba(255,255,255,.9)">plan de ahorro para el retiro</strong>, cada mes que pasa te cuesta más de lo que imaginas. Con un PPR obtienes <span class="hero-accent-grad">rendimientos del 10% anual</span>, seguro de vida incluido y deducción de impuestos desde el primer año — sin tecnicismos, sin letras pequeñas.
       </p>
 
       <div class="hero-trust fade-up">
@@ -1651,6 +1850,14 @@
         </div>
       </div>
 
+      <div class="fade-up" style="margin-bottom:1.75rem;">
+        <button class="btn-proyeccion" onclick="abrirModalProyeccion()" style="max-width:420px;margin:0 auto;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          Haz tu proyección gratis
+        </button>
+        <p style="font-size:.72rem;color:var(--on-blue-3);text-align:center;margin-top:.6rem;">Sin registro · Resultados en 2 minutos · 100% gratis</p>
+      </div>
+
       <div class="hero-scroll-arrow fade-up">
         <span>Sigue leyendo</span>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -1664,8 +1871,8 @@
   <!-- ══════════════════════════════
        VIDEO PLACEHOLDER
   ══════════════════════════════ -->
-  <section style="padding: 0 0 2.5rem;">
-    <div class="vsl-wrap">
+  <section style="padding: 0 0 2.5rem; background: var(--surface-1); border-bottom: 1px solid var(--border);">
+    <div class="vsl-wrap" style="padding-top:2rem;">
 
       <div class="video-placeholder fade-up" role="button" aria-label="Reproducir video de Erón Bello León">
         <div class="video-bg-pattern"></div>
@@ -1687,7 +1894,7 @@
         </div>
       </div>
 
-      <p style="text-align:center; font-size:.78rem; color:var(--text-3); margin-top:.5rem;">
+      <p style="text-align:center; font-size:.78rem; color:var(--text-3); margin-top:.5rem; padding-bottom:1.5rem;">
         📍 Video explicativo del Plan de Retiro con Ahorro
       </p>
 
@@ -1700,23 +1907,21 @@
   <section style="padding: 0 0 3rem;">
     <div class="vsl-wrap">
       <div class="cta-block fade-up">
-        <p class="cta-block-title">¿Prefieres hablar directamente?</p>
-        <p style="font-size:.9rem; color:var(--text-2);">
-          Escríbeme y en menos de 15 minutos entiendes exactamente cómo funciona tu retiro.
+        <div class="section-label" style="margin-bottom:.3rem;">Empieza aquí</div>
+        <p class="cta-block-title">¿Cuánto tendrás cuando te retires?</p>
+        <p style="font-size:.93rem; color:var(--on-blue-2); max-width:440px; text-align:center; line-height:1.7;">
+          Ingresa tus datos y en 2 minutos tienes una proyección personalizada de tu fondo de retiro, pensión mensual y beneficio fiscal.
         </p>
-        <a href="https://wa.me/message/3D7EGH3EH4FGE1" target="_blank" rel="noopener" class="btn btn-wa btn-lg">
-          <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.104.545 4.082 1.5 5.808L0 24l6.345-1.485A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.368l-.36-.214-3.724.871.903-3.625-.235-.373A9.818 9.818 0 1112 21.818z"/>
-          </svg>
-          Hablar con Erón por WhatsApp
-        </a>
+        <button class="btn-proyeccion" onclick="abrirModalProyeccion()" style="max-width:380px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          Haz tu proyección gratis
+        </button>
         <div class="cta-block-micro">
-          <span>Sin costo</span>
+          <span>Sin registro</span>
           <span class="cta-sep">·</span>
-          <span>Sin compromiso</span>
+          <span>Resultados al instante</span>
           <span class="cta-sep">·</span>
-          <span>Respuesta en minutos</span>
+          <span>100% gratis</span>
         </div>
       </div>
     </div>
@@ -1812,58 +2017,60 @@
   <!-- ══════════════════════════════
        COSTO DE ESPERA
   ══════════════════════════════ -->
-  <section class="costo-espera-section">
+  <!-- ══════════════════════════════
+       AHORRA HOY: BARRAS POR EDAD
+  ══════════════════════════════ -->
+  <section class="age-bars-section">
     <div class="vsl-wrap">
 
-      <div class="section-label fade-up">El precio de esperar</div>
-
-      <h2 class="fade-up">Esperar 10 años puede costarte más de $5 millones de pesos</h2>
-
-      <p class="costo-espera-intro fade-up">
-        Esta es la diferencia real entre tres personas que aportan <strong>$4,500 al mes</strong> — la misma cantidad — pero en momentos distintos de su vida. La única variable es <em>cuándo empezaron</em>.
+      <div class="section-label fade-up">El costo de esperar</div>
+      <h2 class="fade-up">Aportando $2,500 al mes — ¿cuánto tendrás a los 65?</h2>
+      <p class="age-bars-intro fade-up">
+        El dinero que <strong>no inviertes hoy</strong> no se queda igual — se multiplica en tu contra. El interés compuesto premia a quien empieza antes, y castiga a quien espera.
       </p>
 
-      <div class="personas-grid fade-up">
+      <div class="age-bars-outer fade-up">
+        <div class="age-bars-wrap">
 
-        <div class="persona-card winner">
-          <div class="persona-card-header">
-            <div class="persona-name">María R.</div>
-            <div class="persona-age">35 años · empieza hoy</div>
+          <div class="age-bar-col best">
+            <div class="age-bar-amount">$13.5M</div>
+            <div class="age-bar-fill" style="height:220px;"></div>
           </div>
-          <div class="persona-card-body">
-            <div class="persona-fund">~$8.1 M</div>
-            <div class="persona-fund-label">fondo estimado al retiro</div>
-            <span class="persona-delta">✓ Base de comparación</span>
+
+          <div class="age-bar-col">
+            <div class="age-bar-amount">$8.4M</div>
+            <div class="age-bar-fill" style="height:137px;"></div>
           </div>
+
+          <div class="age-bar-col">
+            <div class="age-bar-amount">$5.2M</div>
+            <div class="age-bar-fill" style="height:84px;"></div>
+          </div>
+
+          <div class="age-bar-col">
+            <div class="age-bar-amount">$3.1M</div>
+            <div class="age-bar-fill" style="height:51px;"></div>
+          </div>
+
+          <div class="age-bar-col">
+            <div class="age-bar-amount">$1.8M</div>
+            <div class="age-bar-fill" style="height:29px;"></div>
+          </div>
+
         </div>
 
-        <div class="persona-card loser">
-          <div class="persona-card-header">
-            <div class="persona-name">Carlos M.</div>
-            <div class="persona-age">45 años · empezó a los 45</div>
-          </div>
-          <div class="persona-card-body">
-            <div class="persona-fund">~$3.0 M</div>
-            <div class="persona-fund-label">fondo estimado al retiro</div>
-            <span class="persona-delta">↓ $5.1M menos que María</span>
-          </div>
-        </div>
+        <div class="age-bars-divider"></div>
 
-        <div class="persona-card loser">
-          <div class="persona-card-header">
-            <div class="persona-name">Roberto G.</div>
-            <div class="persona-age">55 años · empezó a los 55</div>
-          </div>
-          <div class="persona-card-body">
-            <div class="persona-fund">~$870 K</div>
-            <div class="persona-fund-label">fondo estimado al retiro</div>
-            <span class="persona-delta">↓ $7.2M menos que María</span>
-          </div>
+        <div class="age-bars-labels">
+          <div class="age-bar-label best-label">25 años<span>el mejor momento</span></div>
+          <div class="age-bar-label">30 años</div>
+          <div class="age-bar-label">35 años</div>
+          <div class="age-bar-label">40 años</div>
+          <div class="age-bar-label">45 años<span>cada año importa</span></div>
         </div>
-
       </div>
 
-      <p class="costo-espera-footnote">Proyección ilustrativa con rendimiento referencial del 9% anual compuesto. No representa rentabilidad garantizada. Los resultados reales dependen de cada plan.</p>
+      <p class="age-bars-footnote fade-up">Proyección ilustrativa con $2,500/mes y rendimiento referencial del 10% anual compuesto hasta los 65 años. No representa rentabilidad garantizada.</p>
 
     </div>
   </section>
@@ -1909,6 +2116,96 @@
   <div class="vsl-wrap"><div class="section-spacer"></div></div>
 
   <!-- ══════════════════════════════
+       COMPARATIVA PPR vs AFORE
+  ══════════════════════════════ -->
+  <section style="padding:2rem 0 0;">
+    <div class="vsl-wrap">
+      <div class="section-label fade-up">PPR vs AFORE</div>
+      <h2 class="fade-up" style="font-size:clamp(1.4rem,3.5vw,2rem);font-weight:800;letter-spacing:-.025em;margin-bottom:.75rem;color:var(--text-1);">No son lo mismo — y la diferencia importa</h2>
+      <p class="fade-up" style="font-size:.95rem;color:var(--text-2);line-height:1.75;margin-bottom:1.5rem;">Puedes tener ambos al mismo tiempo. Pero si solo tienes el AFORE, esto es lo que te estás perdiendo:</p>
+
+      <div class="fade-up" style="overflow-x:auto;margin-bottom:.75rem;">
+        <table style="width:100%;border-collapse:collapse;font-size:.88rem;">
+          <thead>
+            <tr>
+              <th style="padding:.75rem 1rem;text-align:left;background:var(--surface-2);color:var(--text-3);font-weight:600;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;border-radius:var(--r-sm) 0 0 0;"></th>
+              <th style="padding:.75rem 1rem;text-align:center;background:var(--az-ll);color:var(--az);font-weight:700;font-size:.82rem;border-left:1px solid var(--border-hi);">Plan de Retiro (PPR)</th>
+              <th style="padding:.75rem 1rem;text-align:center;background:var(--surface-2);color:var(--text-2);font-weight:700;font-size:.82rem;border-left:1px solid var(--border);border-radius:0 var(--r-sm) 0 0;">AFORE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);color:var(--text-2);font-weight:500;">Control de inversión</td>
+              <td style="padding:.7rem 1rem;border-bottom:1px solid var(--border-hi);border-left:1px solid var(--border-hi);background:rgba(0,26,78,.02);text-align:center;color:var(--az);font-weight:700;">Tú eliges el perfil</td>
+              <td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);border-left:1px solid var(--border);text-align:center;color:var(--text-3);">El gobierno decide</td>
+            </tr>
+            <tr>
+              <td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);color:var(--text-2);font-weight:500;">Deducción de impuestos</td>
+              <td style="padding:.7rem 1rem;border-bottom:1px solid var(--border-hi);border-left:1px solid var(--border-hi);background:rgba(0,26,78,.02);text-align:center;color:var(--az);font-weight:700;">✓ Art. 151 LISR</td>
+              <td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);border-left:1px solid var(--border);text-align:center;color:var(--text-3);">Solo aportaciones voluntarias</td>
+            </tr>
+            <tr>
+              <td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);color:var(--text-2);font-weight:500;">Seguro de vida incluido</td>
+              <td style="padding:.7rem 1rem;border-bottom:1px solid var(--border-hi);border-left:1px solid var(--border-hi);background:rgba(0,26,78,.02);text-align:center;color:var(--az);font-weight:700;">✓ Opcional desde día 1</td>
+              <td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);border-left:1px solid var(--border);text-align:center;color:var(--text-3);">✗ No incluye</td>
+            </tr>
+            <tr>
+              <td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);color:var(--text-2);font-weight:500;">Rendimiento potencial</td>
+              <td style="padding:.7rem 1rem;border-bottom:1px solid var(--border-hi);border-left:1px solid var(--border-hi);background:rgba(0,26,78,.02);text-align:center;color:var(--az);font-weight:700;">Superior a AFORE</td>
+              <td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);border-left:1px solid var(--border);text-align:center;color:var(--text-3);">Limitado por regulación</td>
+            </tr>
+            <tr>
+              <td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);color:var(--text-2);font-weight:500;">Retiros parciales</td>
+              <td style="padding:.7rem 1rem;border-bottom:1px solid var(--border-hi);border-left:1px solid var(--border-hi);background:rgba(0,26,78,.02);text-align:center;color:var(--az);font-weight:700;">✓ Emergencias</td>
+              <td style="padding:.7rem 1rem;border-bottom:1px solid var(--border);border-left:1px solid var(--border);text-align:center;color:var(--text-3);">Muy restringidos</td>
+            </tr>
+            <tr>
+              <td style="padding:.7rem 1rem;color:var(--text-2);font-weight:500;">Asesoría personalizada</td>
+              <td style="padding:.7rem 1rem;border-left:1px solid var(--border-hi);background:rgba(0,26,78,.02);text-align:center;color:var(--az);font-weight:700;">✓ Erón te acompaña</td>
+              <td style="padding:.7rem 1rem;border-left:1px solid var(--border);text-align:center;color:var(--text-3);">Call center impersonal</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fade-up" style="font-size:.75rem;color:var(--text-3);text-align:center;">Nota: Art. 151 LISR permite deducir hasta el 10% del ingreso anual acumulable o 5 UMAs anuales, lo que resulte menor.</p>
+    </div>
+  </section>
+
+  <div class="vsl-wrap"><div class="section-spacer"></div></div>
+
+  <!-- ══════════════════════════════
+       BENEFICIOS FISCALES — strip destacado
+  ══════════════════════════════ -->
+  <section style="padding:0 0 2.5rem;">
+    <div class="vsl-wrap">
+      <div class="fade-up" style="background:linear-gradient(135deg,var(--az) 0%,var(--az-l) 100%);border-radius:var(--r-lg);padding:2rem 1.75rem;color:#fff;">
+        <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1.1rem;">
+          <div style="width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">📋</div>
+          <div>
+            <div style="font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6);">Beneficio fiscal</div>
+            <div style="font-family:'Geist',sans-serif;font-weight:800;font-size:1rem;">El SAT te ayuda a ahorrar</div>
+          </div>
+        </div>
+        <p style="font-size:.92rem;color:rgba(255,255,255,.8);line-height:1.75;margin-bottom:1.25rem;">Bajo el <strong style="color:#fff;">Artículo 151 de la LISR</strong>, tus aportaciones al PPR son deducibles de impuestos. Para un profesionista con ingresos de <strong style="color:#fff;">$50,000 al mes</strong>, esto puede significar un ahorro fiscal de <strong style="color:#7dd3fc;">$20,000–$40,000 pesos al año</strong> — dinero que puedes reinvertir en tu propio retiro.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;">
+          <div style="background:rgba(255,255,255,.1);border-radius:12px;padding:1rem;text-align:center;">
+            <div style="font-family:'Geist',sans-serif;font-weight:900;font-size:1.3rem;color:#fff;">10%</div>
+            <div style="font-size:.72rem;color:rgba(255,255,255,.6);margin-top:.2rem;">Máx. de ingreso anual deducible</div>
+          </div>
+          <div style="background:rgba(255,255,255,.1);border-radius:12px;padding:1rem;text-align:center;">
+            <div style="font-family:'Geist',sans-serif;font-weight:900;font-size:1.3rem;color:#fff;">5 UMA</div>
+            <div style="font-size:.72rem;color:rgba(255,255,255,.6);margin-top:.2rem;">O el límite que resulte menor</div>
+          </div>
+          <div style="background:rgba(255,255,255,.1);border-radius:12px;padding:1rem;text-align:center;">
+            <div style="font-family:'Geist',sans-serif;font-weight:900;font-size:1.3rem;color:#7dd3fc;">Real</div>
+            <div style="font-size:.72rem;color:rgba(255,255,255,.6);margin-top:.2rem;">No es un descuento ficticio</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
        BENEFICIOS
   ══════════════════════════════ -->
   <section class="benefits-section">
@@ -1951,64 +2248,39 @@
   <!-- ══════════════════════════════
        ¿PARA QUIÉN APLICA?
   ══════════════════════════════ -->
-  <section class="aplica-section">
+  <!-- ══════════════════════════════
+       ESTE PLAN ES PARA TI
+  ══════════════════════════════ -->
+  <section class="parati-section">
     <div class="vsl-wrap">
 
-      <div class="section-label fade-up">Sé honesto contigo</div>
-      <h2 class="fade-up">¿Este plan es para ti?</h2>
+      <div class="section-label fade-up">¿Te identificas?</div>
+      <h2 class="fade-up">Este plan es para ti si…</h2>
 
-      <div class="aplica-grid fade-up">
+      <div class="parati-grid">
 
-        <div class="aplica-col si">
-          <div class="aplica-col-header">✓ &nbsp;Sí aplica si…</div>
-          <div class="aplica-col-body">
-            <div class="aplica-item">
-              <span class="aplica-ico">✅</span>
-              <span>Tienes entre <strong>25 y 55 años</strong> y quieres dejar de depender del AFORE</span>
-            </div>
-            <div class="aplica-item">
-              <span class="aplica-ico">✅</span>
-              <span>Puedes apartar al menos <strong>$2,000 al mes</strong> de forma constante</span>
-            </div>
-            <div class="aplica-item">
-              <span class="aplica-ico">✅</span>
-              <span>Quieres <strong>pagar menos ISR</strong> cada año mientras ahorras</span>
-            </div>
-            <div class="aplica-item">
-              <span class="aplica-ico">✅</span>
-              <span>Ves el retiro como una meta real, no solo una idea para "después"</span>
-            </div>
-            <div class="aplica-item">
-              <span class="aplica-ico">✅</span>
-              <span>Trabajas por tu cuenta y no tienes respaldo de IMSS suficiente</span>
-            </div>
-          </div>
+        <div class="parati-card fade-up">
+          <span class="parati-ico">😓</span>
+          <div class="parati-title">Mi AFORE no me va a alcanzar</div>
+          <p class="parati-desc">Trabajo en nómina, pero cuando hice los números me di cuenta que mi pensión del IMSS apenas cubrirá lo básico. No quiero llegar a los 65 contando cada peso y dependiendo de los demás.</p>
         </div>
 
-        <div class="aplica-col no">
-          <div class="aplica-col-header">✗ &nbsp;No aplica si…</div>
-          <div class="aplica-col-body">
-            <div class="aplica-item">
-              <span class="aplica-ico">❌</span>
-              <span>Necesitas <strong>liquidez total</strong> en menos de 3 años</span>
-            </div>
-            <div class="aplica-item">
-              <span class="aplica-ico">❌</span>
-              <span>Tienes deudas de alto costo que resolver antes de ahorrar</span>
-            </div>
-            <div class="aplica-item">
-              <span class="aplica-ico">❌</span>
-              <span>Buscas <strong>rendimientos garantizados muy altos</strong> en el corto plazo</span>
-            </div>
-            <div class="aplica-item">
-              <span class="aplica-ico">❌</span>
-              <span>Tu situación financiera actual no permite un compromiso mensual fijo</span>
-            </div>
-            <div class="aplica-item">
-              <span class="aplica-ico">❌</span>
-              <span>Tienes más de 60 años y el horizonte de ahorro es muy corto</span>
-            </div>
-          </div>
+        <div class="parati-card fade-up">
+          <span class="parati-ico">🧾</span>
+          <div class="parati-title">Trabajo por mi cuenta y quiero deducir</div>
+          <p class="parati-desc">Soy freelancer, profesionista independiente o tengo mi propio negocio. Pago demasiado de ISR y quiero que ese dinero trabaje para mí — no para el SAT.</p>
+        </div>
+
+        <div class="parati-card fade-up">
+          <span class="parati-ico">🛡️</span>
+          <div class="parati-title">Quiero independencia financiera al retirarme</div>
+          <p class="parati-desc">No quiero depender de mis hijos ni de una pensión de subsistencia. Quiero llegar a mis 60s con un fondo real que me permita vivir como quiero — sin pedir permiso a nadie.</p>
+        </div>
+
+        <div class="parati-card fade-up">
+          <span class="parati-ico">👨‍👩‍👧</span>
+          <div class="parati-title">Quiero asegurar el futuro de mi familia</div>
+          <p class="parati-desc">Mi retiro ya está encaminado, pero quiero crear un plan adicional para mis hijos — que empiecen a construir patrimonio desde jóvenes, con el tiempo a su favor.</p>
         </div>
 
       </div>
@@ -2033,24 +2305,21 @@
   <section style="padding: 0 0 3.5rem;">
     <div class="vsl-wrap">
       <div class="cta-block cta-accent fade-up">
-        <div class="section-label" style="margin-bottom:.25rem;">Calcula tu retiro</div>
-        <h3 class="cta-block-title" style="font-size:1.3rem;">¿Quieres saber cuánto necesitarías aportar para tu retiro?</h3>
-        <p style="font-size:.93rem; color:var(--text-2); max-width:480px; text-align:center; line-height:1.7;">
-          En 15 minutos hacemos el cálculo juntos — con tus números reales, sin estimados genéricos. Y es completamente gratis.
+        <div class="section-label" style="margin-bottom:.3rem;">Calculadora de retiro gratis</div>
+        <h3 class="cta-block-title" style="font-size:1.3rem;">Descubre en 2 minutos cuánto tendrás al jubilarte</h3>
+        <p style="font-size:.93rem; color:var(--on-blue-2); max-width:460px; text-align:center; line-height:1.7;">
+          Proyección personalizada de tu fondo, pensión mensual estimada y beneficio fiscal. Con tus números reales, no estimados genéricos.
         </p>
-        <a href="https://wa.me/message/3D7EGH3EH4FGE1" target="_blank" rel="noopener" class="btn btn-wa btn-lg">
-          <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.104.545 4.082 1.5 5.808L0 24l6.345-1.485A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.368l-.36-.214-3.724.871.903-3.625-.235-.373A9.818 9.818 0 1112 21.818z"/>
-          </svg>
-          Calcular mi retiro — es gratis
-        </a>
+        <button class="btn-proyeccion" id="btnAbrirProyeccion" onclick="abrirModalProyeccion()" style="max-width:380px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          Calcular mi Plan de Retiro
+        </button>
         <div class="cta-block-micro">
-          <span>Sin costo</span>
+          <span>Sin registro</span>
           <span class="cta-sep">·</span>
-          <span>Sin compromiso</span>
+          <span>Resultados al instante</span>
           <span class="cta-sep">·</span>
-          <span>Respuesta en minutos</span>
+          <span>100% gratis</span>
         </div>
       </div>
     </div>
@@ -2172,6 +2441,21 @@
           </div>
         </div>
 
+        <div class="testi-card fade-up">
+          <div class="testi-stars" aria-label="5 estrellas">⭐⭐⭐⭐⭐</div>
+          <p class="testi-quote">
+            Siempre pensé que los planes de retiro eran para gente con mucho dinero. Erón me demostró que con $3,000 al mes podía construir algo real. Lo que más me sorprendió fue que el SAT me devuelve parte de lo que aporto — eso no lo sabía. En mi primera declaración anual ya noté la diferencia.
+          </p>
+          <div class="testi-author">
+            <div class="testi-avatar">CP</div>
+            <div>
+              <div class="testi-name">Carlos P.</div>
+              <div class="testi-role">Ingeniero · Querétaro</div>
+            </div>
+            <div class="testi-result">Ahorra $3,000/mes</div>
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -2217,34 +2501,6 @@
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════
-       CTA BLOQUE #3
-  ══════════════════════════════ -->
-  <section style="padding: 0 0 3.5rem;">
-    <div class="vsl-wrap">
-      <div class="cta-block fade-up">
-        <p class="cta-block-title">La primera asesoría no cuesta nada</p>
-        <p style="font-size:.93rem; color:var(--text-2); max-width:460px; text-align:center; line-height:1.7;">
-          Ni tiempo excesivo — la primera llamada dura 15 minutos. En ese tiempo ya tienes un panorama claro de tu situación y qué puedes hacer.
-        </p>
-        <a href="https://wa.me/message/3D7EGH3EH4FGE1" target="_blank" rel="noopener" class="btn btn-wa btn-lg">
-          <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.104.545 4.082 1.5 5.808L0 24l6.345-1.485A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.368l-.36-.214-3.724.871.903-3.625-.235-.373A9.818 9.818 0 1112 21.818z"/>
-          </svg>
-          Escribirle a Erón — es gratis
-        </a>
-        <div class="cta-block-micro">
-          <span>15 minutos</span>
-          <span class="cta-sep">·</span>
-          <span>Sin compromiso</span>
-          <span class="cta-sep">·</span>
-          <span>Respuesta en minutos</span>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -2332,54 +2588,36 @@
           </div>
         </div>
 
-      </div>
-
-    </div>
-  </section>
-
-  <div class="vsl-wrap"><div class="section-spacer"></div></div>
-
-  <!-- ══════════════════════════════
-       SIMULADOR DE RETIRO
-  ══════════════════════════════ -->
-  <section style="padding:2rem 0 0;">
-    <div class="vsl-wrap">
-      <div class="lf-card fade-up" id="ret-form-card">
-        <div class="section-label" style="margin-bottom:.5rem; justify-content:center;">Simulador de Retiro</div>
-        <h3 class="lf-title" style="text-align:center;">Descubre cuánto tendrás cuando dejes de trabajar</h3>
-        <p class="lf-subtitle" style="text-align:center; margin-bottom:1.5rem;">Proyectamos tu fondo con base en tu aportación mensual y los años que te quedan hasta los 65.</p>
-
-        <!-- PASO 1: Formulario -->
-        <div id="ret-step1">
-          <div class="lf-field">
-            <label class="lf-label" for="ret-nombre">Tu nombre</label>
-            <input class="lf-input" id="ret-nombre" type="text" placeholder="¿Cómo te llamas?" autocomplete="given-name" />
+        <div class="faq-item fade-up">
+          <button class="faq-q" aria-expanded="false">
+            ¿Cuánto tiempo lleva contratar un plan?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-a" role="region">
+            <div class="faq-a-inner">
+              La mayoría de mis clientes cierra su plan en 1 o 2 sesiones. La primera es para conocer tu situación y hacer la proyección personalizada — dura entre 30 y 45 minutos. Si todo te parece bien, la contratación se hace de forma digital ese mismo día o al siguiente. No hay papeleo interminable ni trámites presenciales obligatorios.
+            </div>
           </div>
-          <div class="lf-field" style="margin-top:1.2rem;">
-            <label class="lf-label" for="ret-edad">Tu edad actual: <strong id="ret-edad-val" style="color:var(--b4);">35</strong> años</label>
-            <input class="lf-range" id="ret-edad" type="range" min="25" max="60" value="35" step="1" style="--pct:40%;" />
-            <div class="lf-range-labels"><span>25 años</span><span>60 años</span></div>
-          </div>
-          <div class="lf-field" style="margin-top:1.2rem;">
-            <label class="lf-label" for="ret-aporte">Aportación mensual: <strong id="ret-aporte-val" style="color:var(--b4);">$3,000</strong></label>
-            <input class="lf-range" id="ret-aporte" type="range" min="2000" max="10000" value="3000" step="500" style="--pct:12.5%;" />
-            <div class="lf-range-labels"><span>$2,000</span><span>$10,000</span></div>
-          </div>
-          <p style="font-size:.78rem; color:var(--text-3); text-align:center; margin:1rem 0 1.25rem;">Plan a los 65 años · Rendimiento estimado 5% anual</p>
-          <button class="lf-submit" id="ret-submit">Ver mi proyección de retiro →</button>
         </div>
 
-        <!-- PASO 2: Resultados -->
-        <div id="ret-step2" style="display:none;">
-          <div class="lf-result-box" id="ret-result-box"></div>
-          <a href="https://wa.me/message/3D7EGH3EH4FGE1" target="_blank" rel="noopener" class="lf-wa-btn" id="ret-wa-btn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.852L.057 23.743a.5.5 0 0 0 .615.607l6.105-1.603A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.847 0-3.576-.476-5.081-1.313l-.364-.21-3.766.988 1.006-3.671-.229-.376A9.963 9.963 0 0 1 2 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
-            Quiero hablar con Erón sobre mi retiro
-          </a>
-          <button class="lf-reset" id="ret-reset">← Recalcular</button>
-          <p style="font-size:.72rem; color:var(--text-3); text-align:center; margin-top:1rem;">Proyección ilustrativa con fines educativos. Los resultados reales dependen del plan contratado.</p>
+        <div class="faq-item fade-up">
+          <button class="faq-q" aria-expanded="false">
+            ¿Qué pasa si dejo de aportar por unos meses?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-a" role="region">
+            <div class="faq-a-inner">
+              Los primeros 18 meses son el período comprometido — es donde se forman los beneficios más importantes, incluyendo el bono sobre tus aportaciones. A partir del mes 19, las aportaciones son flexibles: puedes ajustar el monto o hacer pausas según tu situación. Esto lo revisamos desde el inicio para que sepas exactamente con qué te estás comprometiendo — sin sorpresas.
+            </div>
+          </div>
         </div>
+
       </div>
+
     </div>
   </section>
 
@@ -2406,12 +2644,23 @@
             No tienes que tener todo claro para dar el primer paso. Solo escríbeme, me cuentas tu situación y vemos juntos si tiene sentido para ti. Si no es el momento correcto, te lo digo directamente — sin rodeos. Así trabajo.
           </p>
 
-          <a href="https://wa.me/message/3D7EGH3EH4FGE1" target="_blank" rel="noopener" class="btn btn-wa btn-xl" style="margin: 0 auto;">
-            <svg style="width:22px;height:22px;flex-shrink:0;" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <button class="btn-proyeccion" onclick="abrirModalProyeccion()" style="max-width:420px;margin:0 auto;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Haz tu proyección ahora — es gratis
+          </button>
+
+          <div style="display:flex;align-items:center;gap:.9rem;margin:.8rem auto;max-width:420px;flex-wrap:wrap;">
+            <div style="height:1px;flex:1;min-width:30px;background:rgba(10,22,40,.12);"></div>
+            <span style="font-size:.73rem;color:var(--text-3);white-space:nowrap;">o prefiero hablar directamente</span>
+            <div style="height:1px;flex:1;min-width:30px;background:rgba(10,22,40,.12);"></div>
+          </div>
+
+          <a href="https://wa.me/message/3D7EGH3EH4FGE1" target="_blank" rel="noopener" class="btn btn-wa-outline" style="margin:0 auto;max-width:420px;display:flex;align-items:center;justify-content:center;gap:.5rem;height:50px;border-radius:var(--r-sm);font-weight:700;font-size:.92rem;">
+            <svg style="width:18px;height:18px;flex-shrink:0;" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
               <path d="M12 0C5.373 0 0 5.373 0 12c0 2.104.545 4.082 1.5 5.808L0 24l6.345-1.485A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.368l-.36-.214-3.724.871.903-3.625-.235-.373A9.818 9.818 0 1112 21.818z"/>
             </svg>
-            Quiero mi asesoría gratuita
+            Escribirle a Erón por WhatsApp
           </a>
 
           <div class="final-close-micro">
@@ -2464,6 +2713,67 @@
   <!-- ══════════════════════════════
        WA FLOAT
   ══════════════════════════════ -->
+  <!-- ══════════════════════════════
+       MODAL PROYECCIÓN
+  ══════════════════════════════ -->
+  <div class="proy-overlay" id="proyOverlay" role="dialog" aria-modal="true" aria-labelledby="proyTitle">
+    <div class="proy-modal">
+      <div class="proy-modal-head">
+        <div class="proy-modal-head-txt">
+          <h3 id="proyTitle">Un paso antes de tu proyección</h3>
+          <p>Déjanos tus datos para enviarte los resultados y darte seguimiento personalizado.</p>
+        </div>
+        <button class="proy-modal-close" onclick="cerrarModalProyeccion()" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="proy-modal-body">
+        <form id="proyForm" novalidate>
+          <div class="proy-field">
+            <label class="proy-label" for="proy-nombre">Nombre completo</label>
+            <input class="proy-input" id="proy-nombre" type="text" placeholder="Ej. Ana Martínez" autocomplete="name">
+          </div>
+          <div class="proy-field">
+            <label class="proy-label" for="proy-correo">Correo electrónico</label>
+            <input class="proy-input" id="proy-correo" type="email" placeholder="Ej. ana@correo.com" autocomplete="email">
+          </div>
+          <div class="proy-field">
+            <label class="proy-label" for="proy-wa">WhatsApp</label>
+            <input class="proy-input" id="proy-wa" type="tel" placeholder="Ej. 33 1234 5678" autocomplete="tel">
+          </div>
+          <div class="proy-field">
+            <label class="proy-label" for="proy-aporte">Aportación mensual estimada</label>
+            <div class="proy-pfx-wrap">
+              <span class="proy-pfx">$</span>
+              <input class="proy-input has-pfx" id="proy-aporte" type="number" min="500" step="100" placeholder="Ej. 2,500">
+            </div>
+          </div>
+          <button type="submit" class="proy-submit-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Ver mi proyección
+          </button>
+        </form>
+        <p class="proy-hint">🔒 Tus datos están seguros y solo se usan para tu asesoría</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       AVISO DE PRIVACIDAD
+  ══════════════════════════════ -->
+  <div class="priv-overlay" id="privOverlay" role="dialog" aria-modal="true">
+    <div class="priv-box">
+      <div class="priv-icon">🔒</div>
+      <h4>Aviso de privacidad</h4>
+      <p>
+        Al continuar, confirmas que usaremos tus datos para contactarte y brindarte una mejor atención personalizada.<br><br>
+        Tu información es confidencial y nunca será compartida con terceros sin tu autorización.
+      </p>
+      <div class="priv-actions">
+        <button class="priv-confirm" id="privConfirm">Sí, acepto y quiero mi proyección</button>
+        <button class="priv-cancel" id="privCancel" onclick="cerrarPrivacidad()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
   <a class="wa-float" href="https://wa.me/message/3D7EGH3EH4FGE1" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
     <svg viewBox="0 0 24 24" fill="white" aria-hidden="true">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
@@ -2578,6 +2888,69 @@
       });
     })();
 
+    /* ── Modal Proyección ── */
+    var _proyDatos = null;
+
+    function abrirModalProyeccion() {
+      document.getElementById('proyOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+      setTimeout(function(){ document.getElementById('proy-nombre').focus(); }, 80);
+    }
+    function cerrarModalProyeccion() {
+      document.getElementById('proyOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function abrirPrivacidad() {
+      document.getElementById('privOverlay').classList.add('open');
+    }
+    function cerrarPrivacidad() {
+      document.getElementById('privOverlay').classList.remove('open');
+    }
+
+    document.getElementById('proyForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var nombre = document.getElementById('proy-nombre').value.trim();
+      var correo = document.getElementById('proy-correo').value.trim();
+      var wa     = document.getElementById('proy-wa').value.trim();
+      var aporte = document.getElementById('proy-aporte').value.trim();
+      /* Validación básica */
+      var ok = true;
+      [['proy-nombre', nombre.length > 0],
+       ['proy-correo', /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo)],
+       ['proy-wa',     wa.replace(/\D/g,'').length >= 10],
+       ['proy-aporte', parseFloat(aporte) >= 500]
+      ].forEach(function(p){ document.getElementById(p[0]).style.borderColor = p[1] ? '' : '#ef4444'; ok = ok && p[1]; });
+      if (!ok) return;
+      _proyDatos = { nombre: nombre, correo: correo, wa: wa, aporte: aporte };
+      abrirPrivacidad();
+    });
+
+    document.getElementById('privConfirm').addEventListener('click', function() {
+      cerrarPrivacidad();
+      cerrarModalProyeccion();
+      /* Redirigir con datos precargados via query string */
+      if (_proyDatos) {
+        var params = new URLSearchParams({
+          name:   _proyDatos.nombre,
+          correo: _proyDatos.correo,
+          wa:     _proyDatos.wa,
+          aporte: _proyDatos.aporte
+        });
+        window.location.href = 'calculadora.html?' + params.toString();
+      } else {
+        window.location.href = 'calculadora.html';
+      }
+    });
+
+    /* Cerrar modales con Escape o clic en backdrop */
+    document.getElementById('proyOverlay').addEventListener('click', function(e){ if (e.target === this) cerrarModalProyeccion(); });
+    document.getElementById('privOverlay').addEventListener('click', function(e){ if (e.target === this) cerrarPrivacidad(); });
+    document.addEventListener('keydown', function(e){
+      if (e.key !== 'Escape') return;
+      if (document.getElementById('privOverlay').classList.contains('open')) cerrarPrivacidad();
+      else if (document.getElementById('proyOverlay').classList.contains('open')) cerrarModalProyeccion();
+    });
+
     /* ── Fade-up IntersectionObserver ── */
     (function () {
       if (!('IntersectionObserver' in window)) {
@@ -2600,7 +2973,7 @@
     })();
   </script>
 
-  <!-- ── Supabase + Simulador de Retiro ── -->
+  <!-- ── Supabase ── -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
   <script>
   (function() {
